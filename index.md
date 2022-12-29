@@ -12,7 +12,7 @@ Hi, my name is **Trent Thomas**. I am an **astrobiologist** and **planetary scie
 
 I am an **NSF Graduate Research Fellow** pursuing a **dual-title Ph.D.** in Earth and Space Sciences and Astrobiology at the **University of Washington, Seattle**. I am also a researcher at **NASA's Jet Propulsion Laboratory** in Pasadena, California.
 
-To contact me, send me an email ([tbthomas@uw.edu](tbthomas@uw.edu)) or reach out on twitter ([@trentag0n](https://twitter.com/trentag0n)).
+To contact me, send me an email ([tbthomas@uw.edu](mailto:tbthomas@uw.edu)) or reach out on twitter ([@trentag0n](https://twitter.com/trentag0n)).
 
 ## About My Research
 
