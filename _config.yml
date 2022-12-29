@@ -1,9 +1,14 @@
 theme: jekyll-theme-minimal
-title: GitHub pages template
-description: A simple template based on minimal jekyll theme
+title: Trent Thomas
+description: Astrobiologist and Planetary Scientist
 show_downloads: True
 navigation:
   - title: Home
     url: /
-  - title: Setup
-    url: setup
+  - title: Research Highlights
+    url: research
+  - title: Outreach
+    url: outreach
+  - title: Curriculum Vitae
+    url: assets/cvs/tthomas_cv.pdf
+
