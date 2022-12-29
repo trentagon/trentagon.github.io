@@ -6,7 +6,7 @@ layout: default
 
 ## About Me
 
-![alt text](assets/img/trent_and_renyu.jpg "Trent and Renyu at DPS 2022")
+
 
 Hi, my name is **Trent Thomas**. I am an **astrobiologist** and **planetary scientist**. 
 
@@ -35,3 +35,6 @@ Here are some helpful links to learn more about astrobiology:
 * [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/)
 * [National Geographic](https://www.nationalgeographic.com/astrobiology/)
 
+------------------------- 
+![alt text](assets/img/trent_and_renyu.jpg "Trent and Renyu at DPS 2022")
+Me (left) and Dr. Renyu Hu (right) at the 54th American Astronomical Society Divison for Planetary Sciences Conference in October 2022.
