@@ -6,8 +6,6 @@ layout: default
 
 ## About Me
 
-
-
 Hi, my name is Trent Thomas. I am an astrobiologist and planetary scientist. 
 
 I am an NSF Graduate Research Fellow pursuing a dual-title Ph.D. in Earth and Space Sciences and Astrobiology at the University of Washington, Seattle. I am also a researcher at NASA's Jet Propulsion Laboratory in Pasadena, California. A full list of my credentials can be found in my **[cv](assets/cvs/tthomas_cv.pdf)**.
