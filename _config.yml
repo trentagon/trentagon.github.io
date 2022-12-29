@@ -5,7 +5,7 @@ show_downloads: False
 navigation:
   - title: Home
     url: /
-  - title: Research Highlights
+  - title: Research
     url: research
   - title: Outreach
     url: outreach

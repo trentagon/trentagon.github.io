@@ -1,3 +1,8 @@
+# Hello! 
+This is the code that corresponds to my personal website (trentagon.github.io). 
+The site uses Jekyll and is hosted by Github Pages. 
+The code is based on the gh-pages-template, described below.
+
 # gh-pages-template
 A GitHub pages template based on [minimal Jekyll theme.](https://github.com/pages-themes/minimal)
 Couple of additional futures such as a navigation bar and a full page layout are added to the minimal theme.
