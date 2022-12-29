@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 title: Trent Thomas
 description: Astrobiologist and Planetary Scientist
-show_downloads: True
+show_downloads: False
 navigation:
   - title: Home
     url: /
