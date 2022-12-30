@@ -13,4 +13,20 @@ This section is under construction. Come back soon!
 
 ## Ancient Mars
 
+Modern Mars is cold and dry, but there was abundant liquid water on ancient Mars. We know this from two lines of evidence: (1) pictures of Mars's surface show geologic features that resulted from flowing liquid water, like ancient river valleys and deltas; (2) chemical analysis from Mars rovers has revealed the presence of minerals that can only form when there is liquid water.
+
+All known life requires liquid water. Organisms on Earth occupy a wide range of environments: from acid mine drainage, to deep sea trenches, to permafrost ice. The one thing that all of these organisms have in common is that they need liquid water to grow, survive, and thrive. So, when we search for life on other planets, it is our first instinct to search for places that have liquid water. This is what makes ancient Mars so interesting: It is the only other place in the history of the solar system, besides Earth, where we have evidence for liquid water on the surface of a planet or moon.
+
+This sets the stage for the major, overarching scientific question regarding ancient Mars: did ancient Mars have the conditions to support life? If so, was ancient Mars inhabited?
+
+At the Jet Propulsion Laboratory, Dr. Renyu Hu and I investigate the atmospheric conditions on ancient Mars. Warm conditions that prevent liquid water from freezing or boiling would require a thick atmosphere with a strong greenhouse effect on ancient Mars; however, modern Mars has a thin atmosphere with a negligible greenhouse effect. So, how did ancient Mars stay warm? We study this problem by building numerical models to trace the evolution of atmospheric species (e.g. CO2, N2, H2O, Ar) in Mars's atmosphere over the last 4 billion years. By tracking the sources and sinks of these species over time, we can reconstruct their abundances in Mars's ancient atmosphere and assess their contribution to the early Mars greenhouse effect.
+
+#### **A Nitrogen-Rich Atmosphere on Ancient Mars.** 
+In our first investigation, we focused specifically on the evolution of atmospheric nitrogen. Our models indicate that the ancient Martian atmosphere contained much more nitrogen than previously thought. A large amount of atmospheric nitrogen on ancient Mars may contribute substantially to the greenhouse effect by enhancing the effects of other greenhouse gases. 
+
+See our paper: **[A nitrogen-rich atmosphere on ancient Mars consistent with isotopic evolution models](https://www.nature.com/articles/s41561-021-00886-y)**, published in Nature Geoscience.
+
+#### **A Multi-Component Atmospheric Evolution Model.** 
+In our second investigation, we are focused on simultaneously modeling the evolution of multiple important components in Mars's atmosphere. This work is in revision. Come back soon to see it published!
+
 ## Snowball Earth
