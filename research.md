@@ -11,7 +11,7 @@ I address these questions by investigating the atmospheric conditions on ancient
 
 **[A nitrogen-rich atmosphere on ancient Mars consistent with isotopic evolution models](https://www.nature.com/articles/s41561-021-00886-y)**
 
-In this first paper, published in 2022 in Nature Geoscience, we predict that the ancient Martian atmosphere contained much more nitrogen than previously thought. A large amount of atmospheric nitrogen on ancient Mars may contribute substantially to the greenhouse effect by enhancing the effects of other greenhouse gases. 
+In this paper, published in 2022 in Nature Geoscience, we predict that the ancient Martian atmosphere contained much more nitrogen than previously thought. A large amount of atmospheric nitrogen on ancient Mars may contribute substantially to the greenhouse effect by enhancing the effects of other greenhouse gases. 
 The model we built for this project is called PIGEON; it is open-source and freely available at [Zenodo](https://doi.org/10.5281/zenodo.5760095) and [GitHub](https://github.com/trentagon/pigeon).
 
 
