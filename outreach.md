@@ -13,7 +13,7 @@ I am passionate about communicating science to wide range of audiences. Below yo
 
 [Speaker at Delran Schools STEM night - my high school alma mater](https://www.delranstem.org/post/destination-mars-family-stem-night)
 
-[UW Astrobiology Instagram account](https://www.instagram.com/uw.astrobiology/)
+[UW Astrobiology Instagram](https://www.instagram.com/uw.astrobiology/)
 
 [Geoscience Education and Mentorship Support](https://gems-program.org)
 
