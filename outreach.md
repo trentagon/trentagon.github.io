@@ -5,7 +5,7 @@ I am passionate about communicating science to wide range of audiences. Below yo
 
 [UW Astrobiology Presents: The Biggest Questions in the Universe](https://youtube.com/playlist?list=PLRJuY_2Dl8nRwkjHCqP1_8TJIqNl1sJCB)
 
-[NASA Science Nuggets](https://www.nfold.org/nuggets)
+[NASA Science Nuggets: NFOLD](https://www.nfold.org/nuggets)
 
 [Public talk "Mars: Why the Hype" at Astronomy on Tap](https://www.youtube.com/live/kYVjcI13mpg?feature=share)
 
@@ -15,3 +15,8 @@ I am passionate about communicating science to wide range of audiences. Below yo
 
 [UW Astrobiology Instagram account](https://www.instagram.com/uw.astrobiology/)
 
+[Geoscience Education and Mentorship Support](https://gems-program.org)
+
+[UW Rockin' Out](https://rockinoutuw.wixsite.com/home)
+
+[UCLA Exploring Your Universe](https://exploringyouruniverse.ucla.edu)
