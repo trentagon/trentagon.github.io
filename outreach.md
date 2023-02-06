@@ -1,7 +1,8 @@
 # Outreach
+
 -------------------------
 
-I am passionate about communicating science to wide range of audiences. Below you will find some outreach projects I have been part of.
+I am passionate about communicating science to a wide range of audiences. Below you will find some outreach projects I have been part of.
 
 [UW Astrobiology Presents: The Biggest Questions in the Universe](https://youtube.com/playlist?list=PLRJuY_2Dl8nRwkjHCqP1_8TJIqNl1sJCB)
 

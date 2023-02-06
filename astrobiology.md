@@ -1,13 +1,14 @@
 # What is Astrobiology?
+
 -------------------------
 
 Astrobiology is the study of the origin, evolution, and distribution of life in the universe. It has been a part of NASA since the 1960's (then called "exobiology") and is the driving force behind many space exploration missions, including the [Perseverance rover on Mars](https://astrobiology.nasa.gov/missions/2020-mars-rover/) and the [James Webb Space Telescope](https://astrobiology.nasa.gov/missions/jwst/).
 
 Here are some helpful links to learn more about astrobiology:
+
 * [NASA Astrobiology](https://astrobiology.nasa.gov/about/)
 * [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/)
 * [National Geographic Astrobiology](https://www.nationalgeographic.com/astrobiology/)
-
 
 ## The connection to planetary science
 
