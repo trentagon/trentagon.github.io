@@ -5,11 +5,7 @@ layout: default
 
 -------------------------
 
-Hi, I am Trent Thomas: astrobiologist and planetary scientist. I am an NSF Graduate Research Fellow pursuing a dual-title Ph.D. in Earth and Space Sciences and Astrobiology at the University of Washington, Seattle. A full list of my credentials can be found in my **[cv](assets/cvs/tthomas_cv.pdf)**.
-
-## Contact Information
-
-I am happy to discuss science, share my code, or engage in a wide range of outreach activities.
+Hi, I am Trent Thomas: astrobiologist and planetary scientist. I am an NSF Graduate Research Fellow pursuing a dual-title Ph.D. in Earth and Space Sciences and Astrobiology at the University of Washington, Seattle. A full list of my credentials can be found in my **[cv](assets/cvs/tthomas_cv.pdf)**. I am happy to discuss science, share my code, or engage in a wide range of outreach activities.
 
 Send me an email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu)
 
