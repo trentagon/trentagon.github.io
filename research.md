@@ -1,6 +1,8 @@
-# Research Topics
+# Research
 
 -------------------------
+
+I use numerical modeling to simulate how planets (e.g., Earth, Mars, exoplanets) evolve over time, which sheds light on the origin and evolution of life, and the search for life elsewhere. I am actively working on scientific research, publishing papers, and presenting at scientific conferences.
 
 ## Astrobiology and Planetary Science
 
@@ -16,10 +18,10 @@ Here are some helpful links to learn more about astrobiology:
 
 ## Ancient Mars
 
-All known life requires liquid water. Modern Mars is cold and dry, but there was abundant liquid water on ancient Mars. We know this from two lines of evidence: (1) pictures of Mars's surface show geologic features that resulted from flowing liquid water, like ancient river valleys and deltas; (2) chemical analysis from Mars rovers has revealed the presence of minerals that can only form when there is liquid water. Organisms on Earth occupy a wide range of environments: from acid mine drainage, to deep sea trenches, to permafrost ice. The one thing that all of these organisms have in common is that they need liquid water to grow, survive, and thrive. So, when we search for life on other planets, it is our first instinct to search for places that have liquid water. This is what makes ancient Mars so interesting: It is the only place in the history of the solar system - besides Earth - where we have evidence for liquid water on the surface of a planet or moon. Thus, the overarching scientific question regarding ancient Mars is: did ancient Mars have the conditions to support life? If so, was ancient Mars inhabited?
+<!-- All known life requires liquid water. Modern Mars is cold and dry, but there was abundant liquid water on ancient Mars. We know this from two lines of evidence: (1) pictures of Mars's surface show geologic features that resulted from flowing liquid water, like ancient river valleys and deltas; (2) chemical analysis from Mars rovers has revealed the presence of minerals that can only form when there is liquid water. Organisms on Earth occupy a wide range of environments: from acid mine drainage, to deep sea trenches, to permafrost ice. The one thing that all of these organisms have in common is that they need liquid water to grow, survive, and thrive. So, when we search for life on other planets, it is our first instinct to search for places that have liquid water. This is what makes ancient Mars so interesting: It is the only place in the history of the solar system - besides Earth - where we have evidence for liquid water on the surface of a planet or moon. Thus, the overarching scientific question regarding ancient Mars is: did ancient Mars have the conditions to support life? If so, was ancient Mars inhabited? -->
 
-I address these questions by investigating the atmospheric conditions on ancient Mars. Warm conditions that prevent liquid water from freezing or boiling would require a thick atmosphere with a strong greenhouse effect; however, modern Mars has a thin atmosphere with a negligible greenhouse effect. So, how did ancient Mars stay warm? I study this problem by building numerical models to trace the evolution of atmospheric species (e.g., CO2, N2, H2O, Ar) in Mars's atmosphere over Mars's history. By tracking the sources and sinks of these species over time, we can reconstruct their abundances in Mars's ancient atmosphere and assess their contribution to the early Mars greenhouse effect.
+Modern Mars is cold and dry, but there is abundant evidence that oceans, rivers, and lakes were present on ancient Mars. Organisms on Earth occupy a wide range of environments: from acid mine drainage, to deep sea trenches, to permafrost ice - the one thing that all of these organisms have in common is that they need liquid water to grow, survive, and thrive. Thus, ancient Mars may have been a habitable environment, and may have even been inhabited. I study the surface environment of ancient Mars and how it has changed over time, with the goal of providing geologic context for its potential habitability.
 
 ## Earth's Neoproterozoic Era
 
-This section is under construction. Come back soon!
+The Neoproterozoic Era on Earth is the time period from 540 million years ago to 1 billion years ago. During this time, Earth went through several dramatic global changes: (1) ice covered the planet from pole-to-pole in the "Snowball Earth" events, (2) atmospheric oxygen rose by several orders of magnitude to reach its modern level, and (3) large, complex organisms appeared in the fossil record for the first time. I study these global changes and try to untangle their relationship and potential causes.

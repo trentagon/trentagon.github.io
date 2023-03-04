@@ -5,7 +5,7 @@ show_downloads: False
 navigation:
   - title: Home
     url: /
-  - title: Research Topics
+  - title: Research
     url: research
   - title: Publications and Code
     url: publications
