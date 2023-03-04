@@ -2,7 +2,7 @@
 
 -------------------------
 
-## Hu, R., Thomas, T. B. (2022) A nitrogen-rich atmosphere on ancient Mars consistent with isotopic evolution models. *Nature Geoscience.*
+Hu, R., Thomas, T. B. (2022) A nitrogen-rich atmosphere on ancient Mars consistent with isotopic evolution models. *Nature Geoscience.*
 
 We predict that the ancient Martian atmosphere contained much more nitrogen than previously thought. A large amount of atmospheric nitrogen on ancient Mars may contribute substantially to the greenhouse effect by enhancing the effects of other greenhouse gases
 
