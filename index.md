@@ -9,11 +9,11 @@ Hi, I am Trent Thomas: astrobiologist and planetary scientist. I am an NSF Gradu
 
 Send me an email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu)
 
-View my google scholar page: [Trent Thomas](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1)
+View my [google scholar page](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1)
 
-Mention me on twitter: [@trentag0n](https://twitter.com/trentag0n)
+Mention me on [twitter](https://twitter.com/trentag0n)
 
-See my code on github: [@trentagon](https://github.com/trentagon)
+See my code on [github](https://github.com/trentagon)
 
 -------------------------
 ![alt text](assets/img/trent_and_renyu.jpg "Trent and Renyu at DPS 2022")
