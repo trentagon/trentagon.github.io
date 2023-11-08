@@ -5,10 +5,20 @@ title: Trent Thomas
 
 # Trent Thomas's personal website.
 
-Short description of me.
+I study planetary science and astrobiology.
 
-Links to other things.
+About me
 
-Contact.
+My research interests
 
-Why does this website look like this?
+My publications and code
+
+Outreach
+
+Curriculum Vitae
+
+### Contact.
+email:           tbthomas@uw.edu
+google scholar:  Trent Thomas
+twitter:         https://twitter.com/trentag0n
+github:          https://github.com/trentagon
