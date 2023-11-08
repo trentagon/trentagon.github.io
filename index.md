@@ -7,21 +7,19 @@ title: Trent B. Thomas
 I study planetary science and astrobiology.
 
 See my [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"}
-and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}.
-
-Warning: some of these links are empty. Give me a minute. I am redesigning.
-
-### Personal
-
-[About me](/pages/about.md) \
-[Trent's book club](/pages/trents_book_club.md) \
-[Creative coding](/pages/creative_coding.md)
+and [Google Scholar](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}.
 
 ### Science
 
 [Research interests](/pages/research_interests.md) \
 [Publications and code](/pages/publications_and_code.md) \
 [Outreach](/pages/outreach.md)
+
+### Personal
+
+[About me](/pages/about.md) \
+[Trent's book club](/pages/trents_book_club.md) \
+[Creative coding](/pages/creative_coding.md)
 
 ### Contact
 
