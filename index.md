@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trent's website
+title: Trent Thomas
 ---
 
 # Trent Thomas's website is under construction
