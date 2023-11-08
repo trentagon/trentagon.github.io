@@ -9,15 +9,15 @@ I use computers to study how planets work.
 
 ### Astrobiology and Planetary Science
 
-Astrobiology is the study of the origin, evolution, and distribution of life in the universe. It has been a part of NASA since the 1960's (then called "exobiology") and is the driving force behind many space exploration missions, including the [Perseverance rover on Mars](https://astrobiology.nasa.gov/missions/2020-mars-rover/) and the [James Webb Space Telescope](https://astrobiology.nasa.gov/missions/jwst/) (JWST).
+Astrobiology is the study of the origin, evolution, and distribution of life in the universe. It has been a part of NASA since the 1960's (then called "exobiology") and is the driving force behind many space exploration missions, including the [Perseverance rover on Mars](https://astrobiology.nasa.gov/missions/2020-mars-rover/){:target="_blank"} and the [James Webb Space Telescope](https://astrobiology.nasa.gov/missions/jwst/){:target="_blank"} (JWST).
 
 Every planet is a complex system. Earth's behavior is a mosaic of interactions between the atmosphere (air), hydrosphere (ocean), geosphere (rocks), and biosphere (life). Mars, Venus, Jupiter, and the other planets in and out of our solar system are also complex systems, but with notable differences from Earth. By studying and comparing planets, we get closer to answering astrobiology questions like "how did life originate?", "how did life evolve to its modern state?", and "is there life elsewhere in the universe?".
 
 Here are some helpful links to learn more about astrobiology:
 
-* [NASA Astrobiology](https://astrobiology.nasa.gov/about/)
-* [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/)
-* [National Geographic Astrobiology](https://www.nationalgeographic.com/astrobiology/)
+* [NASA Astrobiology](https://astrobiology.nasa.gov/about/){:target="_blank"}
+* [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/){:target="_blank"}
+* [National Geographic Astrobiology](https://www.nationalgeographic.com/astrobiology/){:target="_blank"}
 
 ### Ancient Mars
 
