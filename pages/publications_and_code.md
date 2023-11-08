@@ -11,7 +11,7 @@ title: Publications and code
 <br />
 >Run the CANARY model source code: [Zenodo](https://zenodo.org/record/7600495#.ZAKP0S-B0Q0), [GitHub](https://github.com/trentagon/canary).
 
-Hu, Renyu, and **Trent B. Thomas**. 2022. A Nitrogen-Rich Atmosphere on Ancient Mars Consistent with Isotopic Evolution Models.*Nature Geoscience.*
+Hu, Renyu, and **Trent B. Thomas**. 2022. A Nitrogen-Rich Atmosphere on Ancient Mars Consistent with Isotopic Evolution Models. *Nature Geoscience.*
 
 >Read the paper: [Nature Geoscience](https://www.nature.com/articles/s41561-021-00886-y), [ArXiv](https://arxiv.org/abs/2202.04825).
 <br />
