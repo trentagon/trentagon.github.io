@@ -4,7 +4,8 @@ title: Trent B. Thomas
 ---
 # Trent B. Thomas's personal website.
 
-I study planetary science and astrobiology. \
+I study planetary science and astrobiology.
+
 See my [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"}
 and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}.
 
