@@ -5,7 +5,7 @@ title: Research interests
 
 # Research interests.
 
-I use numerical modeling to simulate how planets (e.g., Earth, Mars, exoplanets) evolve over time. This helps us understand the origin of life, the evolution of life, and the search for life elsewhere. I am actively working on scientific research, publishing papers, and presenting at scientific conferences.
+I use computers to study how planets work.
 
 ### Astrobiology and Planetary Science
 
