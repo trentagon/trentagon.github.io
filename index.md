@@ -10,9 +10,9 @@ Warning: some (most) of these links are empty. Give me a minute. I am redesignin
 
 ### Personal.
 
-[About me](/about.md) \
-[Trent's book club](/trents_book_club.md) \
-[Creative coding](/creative_coding.md)
+[About me](/pages/about.md) \
+[Trent's book club](/pages/trents_book_club.md) \
+[Creative coding](/pages/creative_coding.md)
 
 ### Science.
 
