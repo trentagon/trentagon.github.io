@@ -16,9 +16,9 @@ Warning: some (most) of these links are empty. Give me a minute. I am redesignin
 
 ### Science.
 
-[Research interests](/research_interests.md) \
-[Publications and code](/publications_and_code.md) \
-[Outreach](/outreach.md)
+[Research interests](/pages/research_interests.md) \
+[Publications and code](/pages/publications_and_code.md) \
+[Outreach](/pages/outreach.md)
 
 ### Contact.
 
