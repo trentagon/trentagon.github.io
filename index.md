@@ -10,19 +10,19 @@ and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAA
 
 Warning: some of these links are empty. Give me a minute. I am redesigning.
 
-### Personal.
+### Personal
 
 [About me](/pages/about.md) \
 [Trent's book club](/pages/trents_book_club.md) \
 [Creative coding](/pages/creative_coding.md)
 
-### Science.
+### Science
 
 [Research interests](/pages/research_interests.md) \
 [Publications and code](/pages/publications_and_code.md) \
 [Outreach](/pages/outreach.md)
 
-### Contact.
+### Contact
 
 Email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu){:target="_blank"} \
 Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n){:target="_blank"} \
