@@ -9,7 +9,7 @@ I am passionate about communicating science to a wide range of audiences. Here a
 
 ### Videos
 
-[Mars: Why the Hype?](https://www.youtube.com/live/kYVjcI13mpg?feature=share){:target="_blank"}  
+[Mars: Why the Hype?](https://www.youtube.com/live/kYVjcI13mpg?si=Ot8U1gE9dQE8RNIu){:target="_blank"}  
 
 [UW Astrobiology Presents: The Biggest Questions in the Universe](https://youtube.com/playlist?list=PLRJuY_2Dl8nRwkjHCqP1_8TJIqNl1sJCB){:target="_blank"}  
 
@@ -25,4 +25,4 @@ I am passionate about communicating science to a wide range of audiences. Here a
 
 [I made the Wikipedia page for "Prebiotic Atmosphere"](https://en.wikipedia.org/wiki/Prebiotic_atmosphere){:target="_blank"}  
 
-[I spoke at Delran Schools STEM night - my high school alma mater](https://www.delranstem.org/post/destination-mars-family-stem-night){:target="_blank"}  
+[I spoke at Delran Schools STEM night (my high school alma mater)](https://www.delranstem.org/post/destination-mars-family-stem-night){:target="_blank"}  

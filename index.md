@@ -5,8 +5,8 @@ title: Trent B. Thomas
 # Trent B. Thomas's personal website.
 
 I study planetary science and astrobiology. \
-See my [Curriculum Vitae](assets/tthomas_cv.pdf)
-and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1).
+See my [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"}
+and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}.
 
 Warning: some of these links are empty. Give me a minute. I am redesigning.
 
@@ -24,6 +24,6 @@ Warning: some of these links are empty. Give me a minute. I am redesigning.
 
 ### Contact.
 
-Email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu) \
-Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n) \
-Github: [https://github.com/trentagon](https://github.com/trentagon)
+Email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu){:target="_blank"} \
+Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n){:target="_blank"} \
+Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_blank"}
