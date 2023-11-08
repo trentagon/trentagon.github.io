@@ -5,8 +5,8 @@ title: Trent Thomas
 # Trent Thomas's personal website.
 
 I study planetary science and astrobiology. \
-This is my [Curriculum Vitae](assets/tthomas_cv.pdf). \
-This is my [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1).
+See my [Curriculum Vitae](assets/tthomas_cv.pdf)
+and [Google Scholar Profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1).
 
 Warning: some of these links are empty. Give me a minute. I am redesigning.
 
