@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Trent Thomas
+title: Trent B. Thomas
 ---
-# Trent Thomas's personal website.
+# Trent B. Thomas's personal website.
 
 I study planetary science and astrobiology. \
 See my [Curriculum Vitae](assets/tthomas_cv.pdf)
