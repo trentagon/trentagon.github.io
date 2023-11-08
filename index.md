@@ -18,7 +18,9 @@ Outreach
 Curriculum Vitae
 
 ### Contact.
-email:           tbthomas@uw.edu
-google scholar:  Trent Thomas
-twitter:         https://twitter.com/trentag0n
-github:          https://github.com/trentagon
+<pre>
+email:           tbthomas@uw.edu \
+google scholar:  Trent Thomas \
+twitter:         https://twitter.com/trentag0n \
+github:          https://github.com/trentagon \
+</pre>
