@@ -6,7 +6,7 @@ title: Trent Thomas
 
 I study planetary science and astrobiology. This is my [Curriculum Vitae](assets/tthomas_cv.pdf).
 
-Warning: some of these links are empty. Give me a minute.
+Warning: some (most) of these links are empty. Give me a minute. I am redesigning.
 
 ### Personal.
 
@@ -22,7 +22,7 @@ Warning: some of these links are empty. Give me a minute.
 
 ### Contact.
 
-Email:           [tbthomas@uw.edu](mailto:tbthomas@uw.edu) \
-Google Scholar:  [Trent Thomas](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1) \
-Twitter:     [https://twitter.com/trentag0n](https://twitter.com/trentag0n) \
-Github:          [https://github.com/trentagon](https://github.com/trentagon)
+Email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu) \
+Google Scholar: [Trent Thomas](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1) \
+Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n) \
+Github: [https://github.com/trentagon](https://github.com/trentagon)
