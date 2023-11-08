@@ -1,6 +1,6 @@
 ---
 layout: default
 ---
-# Test website
+# Trent Thomas's website is under construction
 
-Basic text
+It used to look a lot nicer than this. I am currently redesigning. Come back soon :-)
