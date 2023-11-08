@@ -10,7 +10,7 @@ Warning: some of these links are empty. Give me a minute.
 
 ### Personal.
 
-<link>[About me](/about.md)</link> \
+[About me](/about.md) \
 [Trent's book club](/trents_book_club.md) \
 [Creative coding](/creative_coding.md)
 
