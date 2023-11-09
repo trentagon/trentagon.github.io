@@ -16,10 +16,5 @@ I am a cat person.
 
 My website looks this way because \
 I am a fan of digital brutalism. \
-I am tired of noisy user interfaces that are neither efficient nor functional. \
-I am inspired by:
-
-[Berkeley Graphics](){:target="_blank"} \
-[Tanner](https://t0.vc){:target="_blank"} \
-[Yossarian](https://yossarian.net){:target="_blank"} \
-The [10kb](https://10kbclub.com){:target="_blank"}, [250kb](https://250kb.club){:target="_blank"}, [512kb](https://512kb.club){:target="_blank"}, and [1mb](https://1mb.club){:target="_blank"} clubs
+I am tired of noisy, inefficient user interfaces. \
+I am inspired by [Berkeley Graphics](){:target="_blank"}, [Tanner](https://t0.vc){:target="_blank"}, [Yossarian](https://yossarian.net){:target="_blank"}, and the [10kb](https://10kbclub.com){:target="_blank"}, [250kb](https://250kb.club){:target="_blank"}, [512kb](https://512kb.club){:target="_blank"}, and [1mb](https://1mb.club){:target="_blank"} clubs.
