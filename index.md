@@ -18,7 +18,7 @@ and [Google Scholar](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=e
 ### Personal
 
 [About me](/pages/about.md) \
-[Trent's book club](/pages/trents_book_club.md) \
+[Trent's Book Club](/pages/trents_book_club.md) \
 [Creative coding](/pages/creative_coding.md)
 
 ### Contact
