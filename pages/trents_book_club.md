@@ -7,7 +7,7 @@ title: Trent's book club
 
 I like to read books. Here are some of my personal favorites:
 
-Calvino, Italo - Invisible Cities (1972) \
+Calvino, Italo &emsp &emsp- Invisible Cities (1972) \
 Egan, Jennifer - A Visit from the Goon Squad (2010) \
 Gabriel Garcia Marquez - One Hundred Years of Solitude (1967) \
 Hesse, Herman - The Glass Bead Game (1943) \
