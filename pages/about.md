@@ -11,7 +11,7 @@ I am based out of Seattle (95%) and Philadelphia (5%). \
 I am from Southern New Jersey. \
 I am a diehard fan of Philadelphia sports teams, as painful as it may be. \
 I am an avid soccer player. \
-I am interested in chess. \
+I am interested in chess, creative expression, and self-sustaining aquariums. \
 I am a cat person.
 
 The design of this website embraces digital brutalism. I am tired of noisy user interfaces that are neither efficient nor functional. I was inspired by:
