@@ -5,7 +5,7 @@ title: About me
 
 # About me.
 
-I am Trent Thomas. \
+I am Trent B. Thomas. \
 I am a Ph.D. student at the University of Washington. \
 I am based out of Seattle (95%) and Philadelphia (5%). \
 I am from Southern New Jersey. \
