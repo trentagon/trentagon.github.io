@@ -15,8 +15,8 @@ I am interested in chess and self-sustaining aquariums. \
 I am a cat person.
 
 My website looks this way because \
-I am a fan of digital brutalism.
-I am tired of noisy user interfaces that are neither efficient nor functional.
+I am a fan of digital brutalism. \
+I am tired of noisy user interfaces that are neither efficient nor functional. \
 I am inspired by:
 
 [Berkeley Graphics](){:target="_blank"} \
