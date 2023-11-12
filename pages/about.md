@@ -14,6 +14,8 @@ I am an avid soccer player. \
 I am interested in chess and self-sustaining aquariums. \
 I am a cat person.
 
+<img src="/assets/pfp_2023.JPG" alt="Profile Picture" width="800"/>
+
 My website looks this way because \
 I am a fan of digital brutalism. \
 I am tired of noisy, inefficient user interfaces. \
