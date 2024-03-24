@@ -23,6 +23,8 @@ I run Trent's Book Club. Here are the [community guidelines](https://docs.google
 09/08/2023: Whitehead, Colson - *The Underground Railroad* (2016) \
 10/03/2023: Cain, James M. - *The Postman Always Rings Twice* (1934) \
 11/03/2023: Moshfegh, Ottessa - *My Year of Rest and Relaxation* (2018) \
-12/12/2023: Saunders, George - *Lincoln in the Bardo* (2017)
+12/12/2023: Saunders, George - *Lincoln in the Bardo* (2017) \
+02/02/2023: Brown, Daniel J. - *The Boys in the Boat* (2013) \
+03/23/2023: Kundera, Milan - *The Unbearable Lightness of Being* (1984) \
 
 <img src="/assets/tbc.png" alt="Trent's Book Club Logo" width="400"/>
