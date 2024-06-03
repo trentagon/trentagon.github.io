@@ -5,9 +5,9 @@ title: Trent B. Thomas
 # Trent B. Thomas's personal website.
 
 I study planetary science and astrobiology.
-
-See my [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"}
-and [Google Scholar](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}.
+- [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"}
+- [Google Scholar](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}
+- University of Washington Profiles: [Earth and Space Sciences Department](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}, [Astrobiology Program](https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/){:target="_blank"}
 
 ### Science
 
