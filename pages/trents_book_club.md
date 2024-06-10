@@ -119,6 +119,12 @@ I run Trent's Book Club. Here are the [community guidelines](https://docs.google
       <td style="border: 1px solid black; padding: 8px;"><em>The Unbearable Lightness of Being</em></td>
       <td style="border: 1px solid black; padding: 8px;">1984</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">06/07/2024</td>
+      <td style="border: 1px solid black; padding: 8px;">El-Mohtar, Amal and Gladstone, Max</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>This Is How You Lose the Time War</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2020</td>
+    </tr>
   </tbody>
 </table>
 
