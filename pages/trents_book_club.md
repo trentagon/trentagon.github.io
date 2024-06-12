@@ -7,7 +7,7 @@ title: Trent's Book Club
     <img src="/assets/tbc.png" alt="Logo of Trent's Book Club" style="width: 100%;" />
 </div>
 
-### The Mission.
+### The Mission
 Welcome to Trent's Book Club! Each month, we will all read the same book and then come to this book club to (1) discuss the book and (2) to hang out with friends. All are welcome.
 
 Attendees of the book club can generally be classified into four categories:
@@ -18,7 +18,7 @@ Attendees of the book club can generally be classified into four categories:
 
 We all strive to be the scholar, but sometimes we can’t quite get there. That’s ok. Consider which category you fall into before each meeting and be respectful of those in other categories. Meetings will prioritize discussion of the book, but other topics are welcome.
 
-### Book Selection.
+### Book Selection
 There is one rule for book selection: the book must be good. Nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. Books will be selected based on member suggestions and discussion at each meeting. Here's what we've read so far:
 
 <table style="border-collapse: collapse; width: 100%;">
@@ -88,10 +88,10 @@ There is one rule for book selection: the book must be good. Nobody wants to spe
   </tbody>
 </table>
 
-### Meeting Schedule.
+### Meeting Schedule
 The group meets monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
 
-### Contact and Updates.
+### Contact and Updates
 Book club information is disseminated by email and text message. To join, send Trent your name, phone number, and email address via text or email.
 
 ### Trent's Personal Favorites
