@@ -5,7 +5,7 @@ title: Trent's Book Club
 
 # Trent's Book Club
 
-I run Trent's Book Club. Here are the [community guidelines](pages/community_guidelines.md){:target="_blank"} and the books we've read so far:
+I run Trent's Book Club. Here are the [community guidelines](community_guidelines.md){:target="_blank"} and the books we've read so far:
 
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
