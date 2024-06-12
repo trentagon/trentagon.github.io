@@ -3,9 +3,9 @@ layout: page
 title: Trent's Book Club
 ---
 
-# Trent's Book Club
+<img src="/assets/tbc.png" alt="Logo of Trent's Book Club" width="500"/>
 
-I run Trent's Book Club. Here are the [community guidelines](community_guidelines.md){:target="_blank"} and the books we've read so far:
+I run Trent's Book Club. Here are books we've read so far:
 
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -74,8 +74,6 @@ I run Trent's Book Club. Here are the [community guidelines](community_guideline
   </tbody>
 </table>
 
-<img src="/assets/tbc.png" alt="Logo of Trent's Book Club" width="400"/>
-
 ## Community Guidelines
 
 ### The Mission.
@@ -98,7 +96,9 @@ The group meets monthly - the exact date is specified before each meeting. We me
 ### Contact and Updates.
 Book club information is disseminated by email and text message. To join, send Trent your name, phone number, and email address via text or email.
 
-### I like to read other books too. Here are some of my personal favorites:
+## Trent's Personal Favorites
+
+I like to read other books too. Here are some of my personal favorites:
 
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
