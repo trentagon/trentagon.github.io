@@ -5,60 +5,6 @@ title: Trent's Book Club
 
 # Trent's Book Club
 
-I like to read books. Here are some of my personal favorites:
-
-<table style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr>
-      <th style="border: 1px solid black; padding: 8px;">Author</th>
-      <th style="border: 1px solid black; padding: 8px;">Title</th>
-      <th style="border: 1px solid black; padding: 8px;">Year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Calvino, Italo</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Invisible Cities</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1972</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Egan, Jennifer</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>A Visit from the Goon Squad</em></td>
-      <td style="border: 1px solid black; padding: 8px;">2010</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Garcia Marquez, Gabriel</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>One Hundred Years of Solitude</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1967</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Hesse, Herman</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>The Glass Bead Game</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1943</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Hard-Boiled Wonderland and the End of the World</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1985</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Kafka on the Shore</em></td>
-      <td style="border: 1px solid black; padding: 8px;">2002</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Nabokov, Vladimir</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Pale Fire</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1962</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Saunders, George</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>CivilWarLand in Bad Decline</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1996</td>
-    </tr>
-  </tbody>
-</table>
-
 I run Trent's Book Club. Here are the [community guidelines](https://docs.google.com/document/d/1-sjWrt8bizXn5u8OWppDBE8s5gKnXoA6tz9os0eFwsE/edit?usp=sharing){:target="_blank"} and the books we've read so far:
 
 <table style="border-collapse: collapse; width: 100%;">
@@ -129,3 +75,57 @@ I run Trent's Book Club. Here are the [community guidelines](https://docs.google
 </table>
 
 <img src="/assets/tbc.png" alt="Logo of Trent's Book Club" width="400"/>
+
+I like to read other books too. Here are some of my personal favorites:
+
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid black; padding: 8px;">Author</th>
+      <th style="border: 1px solid black; padding: 8px;">Title</th>
+      <th style="border: 1px solid black; padding: 8px;">Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Calvino, Italo</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Invisible Cities</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1972</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Egan, Jennifer</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>A Visit from the Goon Squad</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2010</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Garcia Marquez, Gabriel</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>One Hundred Years of Solitude</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1967</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Hesse, Herman</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>The Glass Bead Game</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1943</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Hard-Boiled Wonderland and the End of the World</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1985</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Kafka on the Shore</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2002</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Nabokov, Vladimir</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Pale Fire</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1962</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">Saunders, George</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>CivilWarLand in Bad Decline</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1996</td>
+    </tr>
+  </tbody>
+</table>
