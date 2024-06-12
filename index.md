@@ -25,3 +25,7 @@ See my [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"} and [Google S
 Email: [tbthomas@uw.edu](mailto:tbthomas@uw.edu){:target="_blank"} \
 Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n){:target="_blank"} \
 Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_blank"}
+
+<div style="color: lightgray;">
+    The design of this website embraces digital brutalism: a desire for fast and clear user interfaces. This landing page is under 2 kb when compressed.
+</div>
