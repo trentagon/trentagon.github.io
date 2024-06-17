@@ -12,18 +12,18 @@ I study a wide range of topics related to planetary science, astrobiology, and t
     <div style="flex: 1; margin-right: 20px;">
         <h3>Professional</h3>
         <ul>
-            <li><a href="{{ '/pages/research_interests.md' | relative_url }}">Research interests</a></li>
-            <li><a href="{{ '/assets/tthomas_cv.pdf' | relative_url }}" target="_blank">Curriculum Vitae</a></li>
-            <li><a href="{{ '/pages/publications_and_code.md' | relative_url }}">Publications and code</a></li>
-            <li><a href="{{ '/pages/outreach.md' | relative_url }}">Outreach</a></li>
+            <li><a href="pages/research_interests.md">Research interests</a></li>
+            <li><a href="assets/tthomas_cv.pdf" target="_blank">Curriculum Vitae</a></li>
+            <li><a href="pages/publications_and_code.md">Publications and code</a></li>
+            <li><a href="pages/outreach.md">Outreach</a></li>
         </ul>
     </div>
     <div style="flex: 1; margin-left: 20px;">
         <h3>Personal</h3>
         <ul>
-            <li><a href="{{ '/pages/about.md' | relative_url }}">About me</a></li>
-            <li><a href="{{ '/pages/trents_book_club.md' | relative_url }}">Trent's Book Club</a></li>
-            <li><a href="{{ '/pages/creative_coding.md' | relative_url }}">Art + Science</a></li>
+            <li><a href="pages/about.md">About me</a></li>
+            <li><a href="pages/trents_book_club.md">Trent's Book Club</a></li>
+            <li><a href="pages/creative_coding.md">Art + Science</a></li>
         </ul>
     </div>
 </div>
