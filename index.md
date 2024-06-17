@@ -4,7 +4,7 @@ title: Trent B. Thomas
 ---
 # <span class="title">Trent B. Thomas's personal website</span>
 
-<hr style="border-color: lightgray; margin-bottom: 20px;">
+<hr style="border-color: lightgray; margin-bottom: 15px;">
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
@@ -42,6 +42,6 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 <style>
 .title:hover {
-    color: #0073e6; /* Change to your preferred hover color */
+    color: #ff7c00; /* Change to your preferred hover color */
 }
 </style>
