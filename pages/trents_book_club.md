@@ -89,7 +89,7 @@ There is one rule for book selection: the book must be good. Nobody wants to spe
 </table>
 
 ### Meeting Schedule
-The group meets monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
+The group aims to meets monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
 
 ### Contact and Updates
 Book club information is disseminated by email and text message. To join, send Trent your name, phone number, and email address via text or email.

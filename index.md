@@ -27,5 +27,5 @@ Twitter: [https://twitter.com/trentag0n](https://twitter.com/trentag0n){:target=
 Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_blank"}
 
 <div style="color: lightgray;">
-    The design of this website embraces digital brutalism: a desire for fast and clear user interfaces. This landing page is under 2 kb when compressed.
+    The design of this website embraces digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
