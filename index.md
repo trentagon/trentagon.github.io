@@ -45,8 +45,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 @keyframes colorChange {
     0% { color: blue; } /* Define colors at different keyframe percentages */
-    33% { color: red; }
-    66% { color: yellow; }
+    50% { color: black; }
     100% { color: blue; }
 }
 </style>
