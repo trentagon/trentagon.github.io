@@ -2,9 +2,7 @@
 layout: default
 title: Trent B. Thomas
 ---
-# <span class="title">Trent B. Thomas's personal website</span>
-
-<hr style="border-color: lightgray; margin-bottom: 15px;">
+# <span id="title" class="color-animation">Trent B. Thomas's personal website</span>
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
@@ -41,7 +39,15 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 </div>
 
 <style>
-.title:hover {
-    color: #ff7c00; /* Change to your preferred hover color */
+.color-animation {
+    animation: colorChange 30s infinite; /* Animation name, duration, and iteration */
+}
+
+@keyframes colorChange {
+    0% { color: #9caf88; } /* Define colors at different keyframe percentages */
+    25% { color: #708238, }
+    50% { color: #8a9a5b; }
+    75% { color: #556b2f; }
+    100% { color: #bcbfa3; }
 }
 </style>
