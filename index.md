@@ -4,6 +4,8 @@ title: Trent B. Thomas
 ---
 # <span class="title">Trent B. Thomas's personal website</span>
 
+<hr style="border-color: lightgray; margin-bottom: 20px;">
+
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
 I study a wide range of topics related to planetary science, astrobiology, and the evolution of planetary atmospheres. I am dedicated to communicating science to a large audience and exploring the intersection of art and science. Explore the links below to learn more.
@@ -14,16 +16,16 @@ I study a wide range of topics related to planetary science, astrobiology, and t
         <ul>
             <li><a href="pages/research_interests.html">Research interests</a></li>
             <li><a href="assets/tthomas_cv.pdf" target="_blank">Curriculum Vitae</a></li>
-            <li><a href="pages/publications_and_code.md">Publications and code</a></li>
-            <li><a href="pages/outreach.md">Outreach</a></li>
+            <li><a href="pages/publications_and_code.html">Publications and code</a></li>
+            <li><a href="pages/outreach.html">Outreach</a></li>
         </ul>
     </div>
     <div style="flex: 1; margin-left: 20px;">
         <h3>Personal</h3>
         <ul>
-            <li><a href="pages/about.md">About me</a></li>
-            <li><a href="pages/trents_book_club.md">Trent's Book Club</a></li>
-            <li><a href="pages/creative_coding.md">Art + Science</a></li>
+            <li><a href="pages/about.html">About me</a></li>
+            <li><a href="pages/trents_book_club.html">Trent's Book Club</a></li>
+            <li><a href="pages/creative_coding.html">Art + Science</a></li>
         </ul>
     </div>
 </div>
@@ -39,12 +41,6 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 </div>
 
 <style>
-.title {
-    display: inline-block;
-    border-bottom: 1px solid lightgray;
-    transition: color 0.3s ease;
-}
-
 .title:hover {
     color: #0073e6; /* Change to your preferred hover color */
 }
