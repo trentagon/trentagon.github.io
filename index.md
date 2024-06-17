@@ -40,7 +40,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 <style>
 .color-animation {
-    animation: colorChange 30s infinite; /* Animation name, duration, and iteration */
+    animation: colorChange 45s infinite; /* Animation name, duration, and iteration */
 }
 
 @keyframes colorChange {
