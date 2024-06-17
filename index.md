@@ -12,7 +12,7 @@ I study a wide range of topics related to planetary science, astrobiology, and t
     <div style="flex: 1; margin-right: 20px;">
         <h3>Professional</h3>
         <ul>
-            <li><a href="pages/research_interests.md">Research interests</a></li>
+            <li><a href="pages/research_interests.html">Research interests</a></li>
             <li><a href="assets/tthomas_cv.pdf" target="_blank">Curriculum Vitae</a></li>
             <li><a href="pages/publications_and_code.md">Publications and code</a></li>
             <li><a href="pages/outreach.md">Outreach</a></li>
