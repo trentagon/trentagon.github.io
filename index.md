@@ -40,14 +40,15 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 <style>
 .color-animation {
-    animation: colorChange 30s infinite; /* Animation name, duration, and iteration */
+    animation: colorChange 10s infinite; /* Animation name, duration, and iteration */
 }
 
 @keyframes colorChange {
     0% { color: #feda75; } /* Define colors at different keyframe percentages */
-    25% { color: #fa7e1e, }
-    50% { color: #d62976; }
-    75% { color: #962fbf; }
-    100% { color: #4f5bd5; }
+    20% { color: #fa7e1e; }
+    40% { color: #d62976; }
+    60% { color: #962fbf; }
+    80% { color: #4f5bd5; }
+    100% { color: #feda75; } /* Smooth transition back to the initial color */
 }
 </style>
