@@ -8,19 +8,21 @@ Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and A
 
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; margin-right: 20px;">
-        ### Professional
-
-        [Research interests](/pages/research_interests.md) \
-        [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"} \
-        [Publications and code](/pages/publications_and_code.md) \
-        [Outreach](/pages/outreach.md)
+        <h3>Professional</h3>
+        <ul>
+            <li><a href="/pages/research_interests.md">Research interests</a></li>
+            <li><a href="assets/tthomas_cv.pdf" target="_blank">Curriculum Vitae</a></li>
+            <li><a href="/pages/publications_and_code.md">Publications and code</a></li>
+            <li><a href="/pages/outreach.md">Outreach</a></li>
+        </ul>
     </div>
     <div style="flex: 1; margin-left: 20px;">
-        ### Personal
-
-        [About me](/pages/about.md) \
-        [Trent's Book Club](/pages/trents_book_club.md) \
-        [Art + Science](/pages/creative_coding.md)
+        <h3>Personal</h3>
+        <ul>
+            <li><a href="/pages/about.md">About me</a></li>
+            <li><a href="/pages/trents_book_club.md">Trent's Book Club</a></li>
+            <li><a href="/pages/creative_coding.md">Art + Science</a></li>
+        </ul>
     </div>
 </div>
 
