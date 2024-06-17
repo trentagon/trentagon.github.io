@@ -6,7 +6,7 @@ title: Trent B. Thomas
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
-I study a wide range of topics related to planetary science, astrobiology, and the evolution of planetary atmospheres. I am dedicated to communicating science to a large audience and exploring the intersection of art and science. Explore the links below to learn more.
+I study topics related to planetary science, astrobiology, and the evolution of planetary atmospheres. I am dedicated to communicating science to a wide variety of audiences and exploring the intersection of art and science. Explore the links below to learn more.
 
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; margin-right: 20px;">
@@ -44,10 +44,10 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 }
 
 @keyframes colorChange {
-    0% { color: #9caf88; } /* Define colors at different keyframe percentages */
-    25% { color: #708238, }
-    50% { color: #8a9a5b; }
-    75% { color: #556b2f; }
-    100% { color: #bcbfa3; }
+    0% { color: #feda75; } /* Define colors at different keyframe percentages */
+    25% { color: #fa7e1e, }
+    50% { color: #d62976; }
+    75% { color: #962fbf; }
+    100% { color: #4f5bd5; }
 }
 </style>
