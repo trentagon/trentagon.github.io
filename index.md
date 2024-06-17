@@ -6,18 +6,23 @@ title: Trent B. Thomas
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}. 
 
-### Professional
+<div style="display: flex; justify-content: space-between;">
+    <div style="flex: 1; margin-right: 20px;">
+        ### Professional
 
-[Research interests](/pages/research_interests.md) \
-[Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"} \
-[Publications and code](/pages/publications_and_code.md) \
-[Outreach](/pages/outreach.md)
+        [Research interests](/pages/research_interests.md) \
+        [Curriculum Vitae](assets/tthomas_cv.pdf){:target="_blank"} \
+        [Publications and code](/pages/publications_and_code.md) \
+        [Outreach](/pages/outreach.md)
+    </div>
+    <div style="flex: 1; margin-left: 20px;">
+        ### Personal
 
-### Personal
-
-[About me](/pages/about.md) \
-[Trent's Book Club](/pages/trents_book_club.md) \
-[Art + Science](/pages/creative_coding.md)
+        [About me](/pages/about.md) \
+        [Trent's Book Club](/pages/trents_book_club.md) \
+        [Art + Science](/pages/creative_coding.md)
+    </div>
+</div>
 
 ### Contact
 
