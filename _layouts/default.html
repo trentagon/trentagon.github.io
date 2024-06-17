@@ -1,16 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="google-site-verification" content="DYGSqushAeeVqVPEb21IVVZbd5ifpgav1cZRmq0NHcw" />
+    <meta name="google-site-verification" content="DYGSqushAeeVqVPEb21IVVZbd5ifpgav1cZRmq0NHcw">
     <meta name="keywords" content="Trent, Thomas, Trentagon, Trentag0n, UCLA, UW, NASA, JPL, science, scientist, planetary, planet, astrobiology, chemistry, physics, astrophysics, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, pluto, atmosphere, oxygen, nitrogen, carbon, argon, archean, neoproterozoic, snowball">
-    <link rel="icon" type="image/png"  href="assets/favicon_pentagon_small.png">
+    <link rel="icon" type="image/png" href="assets/favicon_pentagon_small.png">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css?v=' | append: site.github.build_revision | relative_url }}">
     <title>{{ page.title }}</title>
-  </head>
-  <body style="font-family: Helvetica">
+    <style>
+        body {
+            font-family: Helvetica;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
     <div class="content">
-    {{ content }}
+        {{ content }}
     </div> 
     {% if site.google_analytics %}
     <script>
@@ -22,5 +33,5 @@
         ga('send', 'pageview');
     </script>
     {% endif %}
-  </body>
+</body>
 </html>
