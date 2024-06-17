@@ -2,7 +2,7 @@
 layout: default
 title: Trent B. Thomas
 ---
-# Trent B. Thomas's personal website.
+# <span class="title">Trent B. Thomas's personal website</span>
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
@@ -37,3 +37,15 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 <div style="color: lightgray;">
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
+
+<style>
+.title {
+    display: inline-block;
+    border-bottom: 1px solid lightgray;
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: #0073e6; /* Change to your preferred hover color */
+}
+</style>
