@@ -4,7 +4,7 @@ title: Trent B. Thomas
 ---
 # Trent B. Thomas's personal website.
 
-I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}. 
+Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}. 
 
 ### Professional
 
