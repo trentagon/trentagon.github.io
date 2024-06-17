@@ -6,7 +6,7 @@ title: Trent B. Thomas
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
-I study topics related to planetary science, astrobiology, and the evolution of planetary atmospheres. I am dedicated to communicating science to a wide variety of audiences and exploring the intersection of art and science. Explore the links below to learn more.
+I study topics related to planetary science, astrobiology, and the evolution of planetary atmospheres. Explore the links below to learn more.
 
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; margin-right: 20px;">
