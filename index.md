@@ -39,10 +39,10 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
 
-<div id="p5-sketch-container"></div>
+<div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
 <script>
-  let shapeRadius = 5.0; // Width of the shape
+  let shapeRadius = 3.0; // Width of the shape
   let orbitRadiusFactor = 1;
   let orbitRadius;
 
@@ -60,7 +60,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
   let numFrames = 200;
 
   function setup() {
-    let canvas = createCanvas(500, 500);
+    let canvas = createCanvas(300, 300);
     canvas.parent('p5-sketch-container');
     frameRate(30);
     ellipseMode(RADIUS);
