@@ -2,7 +2,9 @@
 layout: default
 title: Trent B. Thomas
 ---
-# <span id="title" class="color-animation">Trent B. Thomas's personal website</span>
+<!-- # <span id="title" class="color-animation">Trent B. Thomas's personal website</span> -->
+
+# <span id="title" style="color: blue;">Trent B. Thomas's personal website</span>
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
