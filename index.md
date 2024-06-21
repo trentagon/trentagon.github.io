@@ -116,7 +116,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     
     .subtitle {
         text-align: center;
-        color: gray;
+        color: black;
         font-size: 14px; /* Adjust font size as needed */
     }
 </style>
