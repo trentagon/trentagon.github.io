@@ -3,7 +3,7 @@ layout: default
 title: Trent B. Thomas
 ---
 
-<span id="title" style="display: flex; justify-content: center; align-items: center;">Trent B. Thomas's personal website</span> 
+<h1 class="title">Trent B. Thomas's personal website</h1>
 
 <div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
@@ -42,7 +42,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 </div>
 
 <script>
-  let shapeRadius = 3.0; // Width of the shape
+  let shapeRadius = 2.0; // Width of the shape
   let orbitRadiusFactor = 1;
   let orbitRadius;
 
@@ -60,7 +60,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
   let numFrames = 200;
 
   function setup() {
-    let canvas = createCanvas(300, 300);
+    let canvas = createCanvas(200, 200);
     canvas.parent('p5-sketch-container');
     frameRate(30);
     ellipseMode(RADIUS);
@@ -105,6 +105,11 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 </script>
 
+<style>
+    h1.title {
+        text-align: center;
+    }
+</style>
 
 <!-- 
 # <span id="title" class="color-animation">Trent B. Thomas's personal website</span> 
