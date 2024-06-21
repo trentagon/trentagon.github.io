@@ -120,18 +120,3 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
         font-size: 16px; /* Adjust font size as needed */
     }
 </style>
-
-<!-- 
-# <span id="title" class="color-animation">Trent B. Thomas's personal website</span> 
-<style>
-.color-animation {
-    animation: colorChange 60s infinite; /* Animation name, duration, and iteration */
-}
-
-@keyframes colorChange {
-    0% { color: blue; } /* Define colors at different keyframe percentages */
-    50% { color: black; }
-    100% { color: blue; }
-}
-</style>
--->
