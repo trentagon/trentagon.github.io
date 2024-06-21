@@ -2,7 +2,7 @@
 layout: default
 title: Trent B. Thomas
 ---
-<!-- # <span id="title" class="color-animation">Trent B. Thomas's personal website</span> -->
+
 
 # Trent B. Thomas's personal website
 
@@ -40,6 +40,8 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
 
+<!-- 
+# <span id="title" class="color-animation">Trent B. Thomas's personal website</span> 
 <style>
 .color-animation {
     animation: colorChange 60s infinite; /* Animation name, duration, and iteration */
@@ -51,3 +53,4 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     100% { color: blue; }
 }
 </style>
+-->
