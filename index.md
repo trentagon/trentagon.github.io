@@ -60,7 +60,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
   let numFrames = 200;
 
   function setup() {
-    let canvas = createCanvas(1080, 1080);
+    let canvas = createCanvas(500, 500);
     canvas.parent('p5-sketch-container');
     frameRate(30);
     ellipseMode(RADIUS);
