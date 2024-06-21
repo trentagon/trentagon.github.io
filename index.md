@@ -99,7 +99,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
         stroke(c2)
         fill(c);
 
-        ellipse(x, y, r1, r1);
+        rect(x, y, r1, r1);
 
       }
     }
