@@ -43,10 +43,10 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 
 <script>
   let shapeRadius = 1.5; // Width of the shape
-  let orbitRadiusFactor = 1;
+  let orbitRadiusFactor = 1.5;
   let orbitRadius;
 
-  let gridSize = 25;
+  let gridSize = 15;
   let gridShift;
   let xgridCenter;
   let ygridCenter;
