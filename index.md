@@ -39,20 +39,72 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
 
-<div id="p5-sketch"></div>
+<div id="p5-sketch-container"></div>
 
 <script>
-    function setup() {
-        let canvas = createCanvas(400, 400);
-        canvas.parent('p5-sketch');
-        background(255);
-    }
+  let shapeRadius = 5.0; // Width of the shape
+  let orbitRadiusFactor = 1;
+  let orbitRadius;
 
-    function draw() {
-        fill(0);
-        ellipse(mouseX, mouseY, 50, 50);
+  let gridSize = 25;
+  let gridShift;
+  let xgridCenter;
+  let ygridCenter;
+
+  let x;
+  let y;
+
+  let c1;
+  let c2;
+
+  let numFrames = 200;
+
+  function setup() {
+    let canvas = createCanvas(1080, 1080);
+    canvas.parent('p5-sketch-container');
+    frameRate(30);
+    ellipseMode(RADIUS);
+    orbitRadius = orbitRadiusFactor * shapeRadius;
+    gridShift = 2 * (orbitRadius + (shapeRadius / 2));
+    xgridCenter = ((width - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
+    ygridCenter = ((height - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
+
+    c1 = color(232, 82, 112);
+    c2 = color(82, 168, 232);
+  }
+
+  function draw() {
+    background(255);
+    noStroke();
+
+    let t = 2.0 * frameCount / numFrames;
+
+    for (let i = 0; i < gridSize; i++) {
+      for (let j = 0; j < gridSize; j++) {
+
+        x = xgridCenter + (gridShift * i);
+        y = ygridCenter + (gridShift * j);
+
+        let distanceFromCenter;
+        distanceFromCenter = sqrt(pow((i - (gridSize - 1) / 2), 2) + pow((j - (gridSize - 1) / 2), 2)) / ((gridSize - 1) / 2);
+
+        let centerOffset;
+        centerOffset = map(distanceFromCenter, 0, 1, 0, PI);
+
+        let r1;
+        r1 = shapeRadius * map(abs(sin(TWO_PI * t - centerOffset)), 0, 1, 2.5, 8);
+
+        let c = lerpColor(c1, c2, map(sin(TWO_PI * t - centerOffset), -1, 1, 0, 1));
+        fill(c);
+
+        ellipse(x, y, r1, r1);
+
+      }
     }
+  }
+
 </script>
+
 
 <!-- 
 # <span id="title" class="color-animation">Trent B. Thomas's personal website</span> 
