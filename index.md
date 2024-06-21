@@ -42,7 +42,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 </div>
 
 <script>
-  let shapeRadius = 2.0; // Width of the shape
+  let shapeRadius = 1.5; // Width of the shape
   let orbitRadiusFactor = 1;
   let orbitRadius;
 
@@ -60,7 +60,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
   let numFrames = 200;
 
   function setup() {
-    let canvas = createCanvas(200, 200);
+    let canvas = createCanvas(150, 150);
     canvas.parent('p5-sketch-container');
     frameRate(30);
     ellipseMode(RADIUS);
@@ -69,8 +69,8 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     xgridCenter = ((width - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
     ygridCenter = ((height - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
 
-    c1 = color(232, 82, 112);
-    c2 = color(82, 168, 232);
+    c1 = color(255,255,255);
+    c2 = color(0,0,255);
   }
 
   function draw() {
