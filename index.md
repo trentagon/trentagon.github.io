@@ -3,7 +3,7 @@ layout: default
 title: Trent B. Thomas
 ---
 
-<h1 class="title">Trent B. Thomas's personal website</h1>
+<h1 class="title">Trent B. Thomas</h1>
 
 <div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
@@ -60,7 +60,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
   let numFrames = 200;
 
   function setup() {
-    let canvas = createCanvas(150, 150);
+    let canvas = createCanvas(120, 120);
     canvas.parent('p5-sketch-container');
     frameRate(30);
     rectMode(CENTER);
