@@ -43,7 +43,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 <div id="p5-sketch-container">
 
 <!-- Include the p5.js sketch -->
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">
     let shapeRadius = 5.0; // Width of the shape
     let orbitRadiusFactor = 1;
     let orbitRadius;
