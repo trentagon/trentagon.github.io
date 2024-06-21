@@ -4,7 +4,7 @@ title: Trent B. Thomas
 ---
 
 <h1 class="title">Trent B. Thomas</h1>
-<h2 class="subtitle">personal website</h2>
+<h2 class="subtitle">Personal Website</h2>
 
 <div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
@@ -111,7 +111,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 <style>
     h1.title {
         text-align: center;
-        margin-bottom: 10px; /* Adjust margin as needed */
+        margin-bottom: 5px; /* Adjust margin as needed */
     }
     
     .subtitle {
