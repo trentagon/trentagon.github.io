@@ -40,7 +40,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
 
-<div id="p5-sketch-container"></div>
+<div id="p5-sketch-container">
 
 <!-- Include the p5.js sketch -->
 <script>
@@ -103,6 +103,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     }
 </script>
 
+</div>
 
 <!-- 
 # <span id="title" class="color-animation">Trent B. Thomas's personal website</span> 
