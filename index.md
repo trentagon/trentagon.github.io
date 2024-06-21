@@ -3,7 +3,9 @@ layout: default
 title: Trent B. Thomas
 ---
 
-# Trent B. Thomas's personal website
+<span id="title" style="display: flex; justify-content: center; align-items: center;">Trent B. Thomas's personal website</span> 
+
+<div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
 Welcome! I am a Ph.D. candidate in the Earth and Space Sciences Department and Astrobiology Program at the [University of Washington](https://ess.uw.edu/people/trent-thomas/){:target="_blank"}.
 
@@ -38,8 +40,6 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 <div style="color: lightgray;">
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
-
-<div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
 <script>
   let shapeRadius = 3.0; // Width of the shape
