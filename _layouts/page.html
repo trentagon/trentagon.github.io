@@ -7,8 +7,23 @@
     <link rel="icon" type="image/png"  href="assets/favicon_pentagon_small.png">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css?v=' | append: site.github.build_revision | relative_url }}">
     <title>{{ page.title }}</title>
+    <style>
+      body {
+          font-family: Helvetica;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start; /* Align to the top */
+          height: 100vh;
+          margin: 0;
+      }
+
+      .content {
+          padding: 40px; /* Add padding */
+          /* Add other styles for your content container */
+      }
+  </style>
   </head>
-  <body style="font-family: Helvetica">
+  <body>
     <div class="content">
       {% include navigation.html %}
       {{ content }}

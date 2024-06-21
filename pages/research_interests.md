@@ -7,7 +7,7 @@ title: Research interests
 
 In summary, I use computers to study how planets work.
 
-## Astrobiology and Planetary Science
+## Overview: Astrobiology and Planetary Science
 
 Astrobiology is the study of the origin, evolution, and distribution of life in the universe. It has been a part of NASA since the 1960's (then called "exobiology") and is the driving force behind many space exploration missions, including the [Perseverance rover on Mars](https://astrobiology.nasa.gov/missions/2020-mars-rover/){:target="_blank"} and the [James Webb Space Telescope](https://astrobiology.nasa.gov/missions/jwst/){:target="_blank"} (JWST). Planets seem to be a favorable environment for life (we live on one), so they are the setting for many astrobiology-related research topics, including those that I am interested in.
 
@@ -19,9 +19,9 @@ Here are some helpful links to learn more about astrobiology:
 * [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/){:target="_blank"}
 * [National Geographic Astrobiology](https://www.nationalgeographic.com/astrobiology/){:target="_blank"}
 
-## Atmospheric Evolution
+## My Interests: Planetary Evolution
 
-I am generally interested in how the surface environment, atmosphere, and geochemistry of planets change over time. Below are a few projects I've worked on that are related to this topic.
+I am generally interested in how the surface environment, atmosphere, and geochemistry of planets change over time. I typically approach these problems by building theoretical computer simulations and comparing them to data from sources such as planetary rovers, telescopes, or laboratory measurements. Below are a few projects I've worked on that are related to this topic.
 
 ### Ancient Mars
 
