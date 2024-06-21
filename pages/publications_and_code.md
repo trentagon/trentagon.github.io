@@ -5,7 +5,7 @@ title: Publications and code
 
 # Publications and code.
 
-[Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"} \
+[Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"}
 
 **Thomas, Trent B.**, Renyu Hu, and Daniel Y. Lo. 2023. Constraints on the Size and Composition of the Ancient Martian Atmosphere from Coupled CO<sub>2</sub>-N<sub>2</sub>-Ar Isotopic Evolution Models. *Planetary Science Journal.*
 
