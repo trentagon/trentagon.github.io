@@ -3,7 +3,7 @@ layout: default
 title: Trent B. Thomas
 ---
 
-<h1 class="title">Trent B. Thomas's personal website</h1>
+<h1 class="title">Trent B. Thomas</h1>
 
 <div id="p5-sketch-container" style="display: flex; justify-content: center; align-items: center;"></div>
 
