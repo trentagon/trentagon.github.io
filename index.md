@@ -40,6 +40,8 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     The design of this website is inspired by digital brutalism, which emphasizes fast, clear, and memory-efficient user interfaces.
 </div>
 
+<div id="p5-sketch-container"></div>
+
 <!-- Include the p5.js sketch -->
 <script>
     let shapeRadius = 5.0; // Width of the shape
