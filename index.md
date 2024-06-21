@@ -63,6 +63,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     let canvas = createCanvas(150, 150);
     canvas.parent('p5-sketch-container');
     frameRate(30);
+    rectMode(CENTER);
     ellipseMode(RADIUS);
     orbitRadius = orbitRadiusFactor * shapeRadius;
     gridShift = 2 * (orbitRadius + (shapeRadius / 2));
