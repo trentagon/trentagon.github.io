@@ -42,11 +42,11 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
 </div>
 
 <script>
-  let shapeRadius = 1.5; // Width of the shape
-  let orbitRadiusFactor = 1;
+  let shapeRadius = 1; // Width of the shape
+  let orbitRadiusFactor = 2.5;
   let orbitRadius;
 
-  let gridSize = 25;
+  let gridSize = 10;
   let gridShift;
   let xgridCenter;
   let ygridCenter;
@@ -69,6 +69,7 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
     xgridCenter = ((width - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
     ygridCenter = ((height - (gridShift * gridSize)) / 2) + (orbitRadius + (shapeRadius / 2));
 
+    rectMode(CENTER);
     c1 = color(255,255,255);
     c2 = color(0,0,255);
   }
@@ -95,10 +96,11 @@ Github: [https://github.com/trentagon](https://github.com/trentagon){:target="_b
         r1 = shapeRadius * map(abs(sin(TWO_PI * t - centerOffset)), 0, 1, 2.5, 8);
 
         let c = lerpColor(c1, c2, map(sin(TWO_PI * t - centerOffset), -1, 1, 0, 1));
+        stroke(c2;)
         fill(c);
 
-        ellipse(x, y, r1, r1);
-
+        rect(x, y, r1, r1);
+        
       }
     }
   }
