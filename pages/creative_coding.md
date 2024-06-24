@@ -3,7 +3,7 @@ layout: page
 title: Creative coding
 ---
 
-# Creative coding
+# Art & Science
 
 One of my hobbies is making art with code. I mostly like to make [generative art](https://en.wikipedia.org/wiki/Generative_art){:target="_blank"}, but I have also done some stuff with [datamoshing](http://datamoshing.com/about/){:target="_blank"}. I'd like to display some of my projects directly on this page, but I haven't figured out the best way to do it yet. Web development is not my specialty.
 

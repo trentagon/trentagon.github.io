@@ -3,7 +3,7 @@ layout: page
 title: Publications and code
 ---
 
-# Publications and Code
+# Publications & Code
 
 See my [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="_blank"} for more.
 
