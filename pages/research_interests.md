@@ -15,9 +15,12 @@ Every planet is a complex system. Earth's behavior is a mosaic of interactions b
 
 Here are some helpful links to learn more about astrobiology:
 
-* [NASA Astrobiology](https://astrobiology.nasa.gov/about/){:target="_blank"}
-* [University of Washington Astrobiology](https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/){:target="_blank"}
-* [National Geographic Astrobiology](https://www.nationalgeographic.com/astrobiology/){:target="_blank"}
+<ul style="list-style-type: square;">
+  <li><a href="https://astrobiology.nasa.gov/about/" target="_blank">NASA Astrobiology</a></li>
+  <li><a href="https://depts.washington.edu/astrobio/wordpress/about-us/what-is-astrobiology/" target="_blank">University of Washington Astrobiology</a></li>
+  <li><a href="https://www.nationalgeographic.com/astrobiology/" target="_blank">National Geographic Astrobiology</a></li>
+</ul>
+
 
 ## My Interests: Planetary Evolution
 
