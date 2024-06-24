@@ -3,7 +3,7 @@ layout: page
 title: Research interests
 ---
 
-# Research interests.
+# Research interests
 
 In summary, I use computers to study how planets work.
 

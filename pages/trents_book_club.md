@@ -11,10 +11,10 @@ title: Trent's Book Club
 Welcome to Trent's Book Club! Each month, we will all read the same book and then come to this book club to (1) discuss the book and (2) to hang out with friends. All are welcome.
 
 Attendees of the book club can generally be classified into four categories:
-- *The scholar* has thoroughly read the book and wants to have an in-depth discussion about their opinions and analyses.
-- *The student* has read enough of the book to understand the general idea and wants to have a broad discussion.
-- *The busybody* couldn’t find the time to read the book, but really wanted to. They’ve read the sparknotes and want to learn more about what happened in the book.
-- *The homie* just wants to hang out and enjoy the vibes.
+- **The scholar** has thoroughly read the book and wants to have an in-depth discussion about their opinions and analyses.
+- **The student** has read enough of the book to understand the general idea and wants to have a broad discussion.
+- **The busybody** couldn’t find the time to read the book, but really wanted to. They’ve read the sparknotes and want to learn more about what happened in the book.
+- **The homie** just wants to hang out and enjoy the vibes.
 
 We all strive to be the scholar, but sometimes we can’t quite get there. That’s ok. Consider which category you fall into before each meeting and be respectful of those in other categories. Meetings will prioritize discussion of the book, but other topics are welcome.
 

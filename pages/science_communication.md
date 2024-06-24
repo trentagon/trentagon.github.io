@@ -3,7 +3,7 @@ layout: page
 title: Science Communication
 ---
 
-# Science Communication.
+# Science Communication
 
 I am passionate about communicating science to a wide range of audiences. Here are some outreach projects I have been part of.
 

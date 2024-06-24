@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-# About me.
+# About me
 
 I am Trent B. Thomas. \
 I am based out of Seattle (95%) and Philadelphia (5%). \
