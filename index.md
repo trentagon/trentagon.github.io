@@ -27,7 +27,7 @@ I study topics related to planetary science, astrobiology, and the evolution of 
         <ul style="list-style-type: square;">
             <li><a href="pages/about.html">About Me</a></li>
             <li><a href="pages/trents_book_club.html">Trent's Book Club</a></li>
-            <li><a href="pages/creative_coding.html">Art & Science</a></li>
+            <li><a href="pages/art_and_science.html">Art & Science</a></li>
         </ul>
     </div>
 </div>
