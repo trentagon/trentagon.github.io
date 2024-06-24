@@ -19,7 +19,10 @@ Attendees of the book club can generally be classified into four categories:
 We all strive to be the scholar, but sometimes we can’t quite get there. That’s ok. Consider which category you fall into before each meeting and be respectful of those in other categories. Meetings will prioritize discussion of the book, but other topics are welcome.
 
 ### Book Selection
-There is one rule for book selection: the book must be good. Nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. Books will be selected based on member suggestions and discussion at each meeting. Here's what we've read so far:
+
+*"One can never read too little of bad, or too much of good books: bad books are intellectual poison; they destroy the mind. In order to read what is good one must make it a condition never to read what is bad; for life is short, and both time and strength limited"* - Arthur Schopenhauer
+
+There is one rule for book selection: the book must be good. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. Books will be selected based on member suggestions and discussion at each meeting. Here's what we've read so far:
 
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
