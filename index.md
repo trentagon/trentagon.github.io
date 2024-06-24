@@ -16,18 +16,18 @@ I study topics related to planetary science, astrobiology, and the evolution of 
     <div style="flex: 1; margin-right: 20px;">
         <h3>Professional</h3>
         <ul style="list-style-type: square;">
-            <li><a href="pages/research_interests.html">Research interests</a></li>
+            <li><a href="pages/research_interests.html">Research Interests</a></li>
             <li><a href="assets/tthomas_cv.pdf" target="_blank">Curriculum Vitae</a></li>
-            <li><a href="pages/publications_and_code.html">Publications and code</a></li>
-            <li><a href="pages/outreach.html">Outreach</a></li>
+            <li><a href="pages/publications_and_code.html">Publications & Code</a></li>
+            <li><a href="pages/science_communication.html">Science Communication</a></li>
         </ul>
     </div>
     <div style="flex: 1; margin-left: 20px;">
         <h3>Personal</h3>
         <ul style="list-style-type: square;">
-            <li><a href="pages/about.html">About me</a></li>
+            <li><a href="pages/about.html">About Me</a></li>
             <li><a href="pages/trents_book_club.html">Trent's Book Club</a></li>
-            <li><a href="pages/creative_coding.html">Art + Science</a></li>
+            <li><a href="pages/creative_coding.html">Art & Science</a></li>
         </ul>
     </div>
 </div>
