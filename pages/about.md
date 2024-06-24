@@ -5,12 +5,6 @@ title: About me
 
 # About me
 
-I am Trent B. Thomas. \
-I am based out of Seattle (95%) and Philadelphia (5%). \
-I am from Southern New Jersey. \
-I am a diehard fan of Philadelphia sports teams, as painful as it may be. \
-I am an avid soccer player. \
-I am interested in chess and self-sustaining aquariums. \
-I am a cat person.
+Hello, I am Trent B. Thomas. I am originally from a town in Southern New Jersey just outside of Camden, NJ and Philadelphia, PA. Because of this, I am a diehard fan of all Philadelphia sports teams, as painful as it may be. In my free time, I am an avid soccer player, runner, and reader. 
 
 <img src="/assets/pfp_2023.JPG" alt="Profile Picture" style="width: 100%;"/>
