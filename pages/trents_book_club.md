@@ -8,7 +8,7 @@ title: Trent's Book Club
 </div>
 
 ### The Mission
-Welcome to Trent's Book Club! Each month, we will all read the same book and then come to this book club to (1) discuss the book and (2) to hang out with friends. All are welcome.
+Welcome to Trent's Book Club! Each month, we read a book and then come to this book club to (1) discuss the book and (2) to hang out with friends. All are welcome.
 
 Attendees of the book club can generally be classified into four categories:
 - **The scholar** has thoroughly read the book and wants to have an in-depth discussion about their opinions and analyses.
