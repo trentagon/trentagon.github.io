@@ -20,7 +20,7 @@ We all strive to be the scholar, but sometimes we canâ€™t quite get there. Thatâ
 
 ### Book Selection
 
-*"One can never read too little of bad, or too much of good books: bad books are intellectual poison; they destroy the mind. In order to read what is good one must make it a condition never to read what is bad; for life is short, and both time and strength limited"* - Arthur Schopenhauer
+*"One can never read too little of bad, or too much of good books: bad books are intellectual poison; they destroy the mind. In order to read what is good one must make it a condition never to read what is bad; for life is short, and both time and strength limited."* - Arthur Schopenhauer
 
 There is one rule for book selection: the book must be good. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. Books will be selected based on member suggestions and discussion at each meeting. Here's what we've read so far:
 
