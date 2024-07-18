@@ -88,6 +88,12 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
       <td style="border: 1px solid black; padding: 8px;"><em>This Is How You Lose the Time War</em></td>
       <td style="border: 1px solid black; padding: 8px;">2020</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">07/10/2024</td>
+      <td style="border: 1px solid black; padding: 8px;">Shafak, Elif</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>10 Minutes 38 Seconds in this Strange World</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2019</td>
+    </tr>
   </tbody>
 </table>
 
