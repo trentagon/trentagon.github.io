@@ -5,7 +5,7 @@ title: Art & Science
 
 # Art & Science
 
-I am passionate about the intersection of art and science, and I think there is a lot more to be done in this realm. There's a reason most universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/){:target="_blank"}.
+Art and science are often seperated in the world and in peoples' minds. I don't see this distinction so strongly, and I am passionate about creating, exploring, and sharing areas where they intersect. After all, there's a reason many universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/){:target="_blank"}.
 
 <!-- ## Projects
 
