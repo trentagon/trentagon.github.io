@@ -137,3 +137,8 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+function mousePressed() {
+  loop(); // Starts the draw loop if it's stopped
+  setup(); // Calls the setup function to restart the animation
+}
+
