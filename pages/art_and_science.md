@@ -15,3 +15,6 @@ The code that generates this animation takes a seed number as input and then ran
 ## Teaching
 
 I designed and taught a class called "Generative Design: Making Art with Code" at the Coyote Central youth arts organization. The class was 20 hours long, taught over 5 days, with 8 students aged 10-15 and no prior coding experience. It is remarkable how much they learned and what they were able to accomplish, shown below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h2j7Wz74lHA" frameborder="0" allowfullscreen></iframe>
+
