@@ -38,4 +38,4 @@ First poster coming September 2024
 
 There is tendency in academia to overexplain and overcomplicate things. This is understandable given the amount of time and energy it takes to do research, and the fear of omitting something important or being flat out wrong. However, this tendency is a massive barrier for public engagement with science. With this project, I want to go in the complete opposite direction.
 
-Whenever I publish a new academic paper, I commission an artist to make a poster advertising it. The goal is not to provide a graphic summary of the findings or a complete description of the methods, check out the paper itself if you want that. The goal is to make some cool art to go along with the science.
+Whenever I publish a new academic paper, I commission an artist to make a poster advertising it. The goal is not to provide a graphic summary of the findings or a complete description of the methods, check out the paper itself if you want that. The goal is to make some cool art to go along with the science and get people interested.
