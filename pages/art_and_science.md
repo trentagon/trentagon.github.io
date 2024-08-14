@@ -5,16 +5,21 @@ title: Art & Science
 
 # Art & Science
 
-I like to make art with code. I mostly like to make [generative art](https://en.wikipedia.org/wiki/Generative_art){:target="_blank"}, but I have also done some [datamoshing](http://datamoshing.com/about/){:target="_blank"}. 
+I am passionate about the intersection of art and science. I think there is a lot more to be done in this realm. There's a reason most universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/).
 
 ## Projects
 
-[Crystal Bouquet](https://www.fxhash.xyz/generative/7163){:target="_blank"} \
-The code that generates this animation takes a seed number as input and then randomly generates each flower's form, color, and movement. Because I made this at the height of the 2020-2022 cryptocurrency craze (lol), I turned it into an NFT that can be minted on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different.
+I like to make art with code. I mostly like to make [generative art](https://en.wikipedia.org/wiki/Generative_art){:target="_blank"}, but I have also done some [datamoshing](http://datamoshing.com/about/){:target="_blank"}. 
+
+### Crystal Bouquet
+
+The code that generates this animation takes a seed number as input and then randomly generates each flower's form, color, and movement. Because I made this at the height of the 2020-2022 cryptocurrency craze (lol), I turned it into an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} that can be minted on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different.
 
 ## Teaching
 
 I designed and taught a class called "Generative Design: Making Art with Code" at the Coyote Central youth arts organization. The class was 20 hours long, taught over 5 days, with 8 students aged 10-15 and no prior coding experience. It is remarkable how much they learned and what they were able to accomplish, shown below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h2j7Wz74lHA" frameborder="0" allowfullscreen></iframe>
+
+## Publication Posters 
 
