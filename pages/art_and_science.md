@@ -7,11 +7,11 @@ title: Art & Science
 
 I am passionate about the intersection of art and science. I think there is a lot more to be done in this realm. There's a reason most universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/).
 
-## Projects
+<!-- ## Projects
 
-I like to make art with code. I mostly like to make [generative art](https://en.wikipedia.org/wiki/Generative_art){:target="_blank"}, but I have also done some [datamoshing](http://datamoshing.com/about/){:target="_blank"}. 
+I like to make art with code. I mostly like to make [generative art](https://en.wikipedia.org/wiki/Generative_art){:target="_blank"}, but I have also done some [datamoshing](http://datamoshing.com/about/){:target="_blank"}.  -->
 
-### Crystal Bouquet
+## Crystal Bouquet
 
 <div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 

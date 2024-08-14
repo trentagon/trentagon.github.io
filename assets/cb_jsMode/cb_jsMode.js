@@ -47,7 +47,8 @@ function setup() {
   textSize(30);
   
   //Set background color
-  bg_col = color('#f6f4ec'); //Background color
+  // bg_col = color('#f6f4ec'); //Background color
+  bg_col = color('#FFFFFF');
   sky_col = color('#4eabff');
   trim_col = color('#ffeead');
   background(bg_col);
@@ -136,9 +137,5 @@ function draw() {
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-}
-function mousePressed() {
-  loop(); // Starts the draw loop if it's stopped
-  setup(); // Calls the setup function to restart the animation
 }
 
