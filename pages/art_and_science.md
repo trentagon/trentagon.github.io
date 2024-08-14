@@ -5,7 +5,7 @@ title: Art & Science
 
 # Art & Science
 
-I am passionate about the intersection of art and science, and I think there is a lot more to be done in this realm. There's a reason most universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/).
+I am passionate about the intersection of art and science, and I think there is a lot more to be done in this realm. There's a reason most universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/){:target="_blank"}.
 
 <!-- ## Projects
 
@@ -19,7 +19,7 @@ I like to make art with code. I mostly like to make [generative art](https://en.
   frameborder="0" allowfullscreen></iframe>
 </div>
 
-[**[View in fullscreen]**](/assets/cb_jsMode/index.html) Crystal bouquet was created entirely using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly.
+[**[View in fullscreen]**](/assets/cb_jsMode/index.html){:target="_blank"} Crystal bouquet was created entirely using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly.
 <!-- Crystal bouquet was previously made as an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different. -->
 
 ## Teaching
