@@ -19,7 +19,7 @@ I like to make art with code. I mostly like to make [generative art](https://en.
   frameborder="0" allowfullscreen></iframe>
 </div>
 
-[[View in fullscreen]](/assets/cb_jsMode/index.html) Crystal bouquet was created entirely using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly.
+[**[View in fullscreen]**](/assets/cb_jsMode/index.html) Crystal bouquet was created entirely using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly.
 <!-- Crystal bouquet was previously made as an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different. -->
 
 ## Teaching
@@ -30,12 +30,12 @@ I like to make art with code. I mostly like to make [generative art](https://en.
   frameborder="0" allowfullscreen></iframe>
 </div>
 
-I designed and taught a class called "Generative Design: Making Art with Code" at the Coyote Central youth arts organization. The class was 20 hours long, taught over 5 days, with 8 students aged 10-15 and no prior coding experience. It is remarkable how much they learned and what they were able to accomplish with their final projects (see video).
+I designed and taught a class called **Generative Design: Making Art with Code** at the Coyote Central youth arts organization. The class was 20 hours long, taught over 5 days, with 8 students aged 10-15 and no prior coding experience. It is remarkable how much they learned and what they were able to accomplish with their final projects (see video).
 
 ## Publication Posters 
 
-First poster coming September 2024
+*First poster coming September 2024*
 
 There is tendency in academia to overexplain and overcomplicate things. This is understandable given the amount of time and energy it takes to do research, and the fear of omitting something important or being flat out wrong. However, this tendency is a massive barrier for public engagement with science. With this project, I want to go in the complete opposite direction.
 
-Whenever I publish a new academic paper, I commission an artist to make a poster advertising it. The goal is not to provide a graphic summary of the findings or a complete description of the methods, check out the paper itself if you want that. The goal is to make some cool art to go along with the science and get people interested.
+Whenever I publish a new academic paper, I commission an artist to make a poster advertising it. The goal is not to provide a graphic summary of the findings or a complete description of the methods - check out the paper itself if you want that. The goal is to make some cool art to go along with the science and get people interested.
