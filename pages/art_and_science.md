@@ -16,10 +16,10 @@ I like to make art with code. I mostly like to make [generative art](https://en.
 <div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
   src="{{ '/assets/cb_jsMode/index.html' | relative_url }}" 
-  frameborder="2" allowfullscreen></iframe>
+  frameborder="0" allowfullscreen></iframe>
 </div>
 
-[View in fullscreen.](animation/index.html) This is some code I wrote that randomly generates each flower's form, color, and movement. Because I made this at the height of the 2020-2022 cryptocurrency craze (lol), I turned it into an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} that can be minted on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different.
+[[View in fullscreen]](/assets/cb_jsMode/index.html) This is some code I wrote that randomly generates each flower's form, color, and movement. Because I made this at the height of the 2020-2022 cryptocurrency craze (lol), I turned it into an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} that can be minted on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different.
 
 ## Teaching
 
