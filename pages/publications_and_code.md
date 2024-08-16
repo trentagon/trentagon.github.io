@@ -17,7 +17,7 @@ See my [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiK
   <tbody>
   <tr>
       <td style="border: 1px solid black; padding: 8px;">
-        <strong>Thomas, T. B., </strong>& Catling, D.C. 2024 Three-stage Formation of Cap Carbonates after Marinoan Snowball Glaciations Consistent with Depositional Timescales and Geochemistry. <a href="doi.org/10.1038/s41467-024-51412-8" target="_blank">Nature Communications</a>.
+        <strong>Thomas, T. B., </strong>& Catling, D.C. 2024 Three-stage Formation of Cap Carbonates after Marinoan Snowball Glaciations Consistent with Depositional Timescales and Geochemistry. <a href="https://www.nature.com/articles/s41467-024-51412-8" target="_blank">Nature Communications</a>.
       </td>
       <td style="border: 1px solid black; padding: 8px;"> 
         GOOSE: <a href="https://github.com/trentagon/goose" target="_blank">GitHub</a>, <a href="https://doi.org/10.5281/zenodo.12786460" target="_blank">Zenodo</a>.
