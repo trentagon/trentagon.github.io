@@ -100,6 +100,12 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
       <td style="border: 1px solid black; padding: 8px;"><em>The Brief Wondrous Life of Oscar Wao</em></td>
       <td style="border: 1px solid black; padding: 8px;">2007</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">10/19/2024</td>
+      <td style="border: 1px solid black; padding: 8px;">Tokarczuk, Olga</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Drive Your Plow Over the Bones of the Dead</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2009</td>
+    </tr>
   </tbody>
 </table>
 
