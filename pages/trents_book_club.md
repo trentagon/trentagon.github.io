@@ -106,6 +106,12 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
       <td style="border: 1px solid black; padding: 8px;"><em>Drive Your Plow Over the Bones of the Dead</em></td>
       <td style="border: 1px solid black; padding: 8px;">2009</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">12/07/2024</td>
+      <td style="border: 1px solid black; padding: 8px;">King, Stephen</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Carrie</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1974</td>
+    </tr>
   </tbody>
 </table>
 
@@ -129,16 +135,6 @@ I like to read other books too. Here are some of my personal favorites:
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Calvino, Italo</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Invisible Cities</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1972</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Egan, Jennifer</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>A Visit from the Goon Squad</em></td>
-      <td style="border: 1px solid black; padding: 8px;">2010</td>
-    </tr>
-    <tr>
       <td style="border: 1px solid black; padding: 8px;">Garcia Marquez, Gabriel</td>
       <td style="border: 1px solid black; padding: 8px;"><em>One Hundred Years of Solitude</em></td>
       <td style="border: 1px solid black; padding: 8px;">1967</td>
@@ -149,19 +145,19 @@ I like to read other books too. Here are some of my personal favorites:
       <td style="border: 1px solid black; padding: 8px;">1943</td>
     </tr>
     <tr>
+      <td style="border: 1px solid black; padding: 8px;">Labatut, Benjamin</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>When We Cease to Understand the World</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2020</td>
+    </tr>
+    <tr>
       <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Hard-Boiled Wonderland and the End of the World</em></td>
       <td style="border: 1px solid black; padding: 8px;">1985</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Kafka on the Shore</em></td>
-      <td style="border: 1px solid black; padding: 8px;">2002</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 8px;">Nabokov, Vladimir</td>
-      <td style="border: 1px solid black; padding: 8px;"><em>Pale Fire</em></td>
-      <td style="border: 1px solid black; padding: 8px;">1962</td>
+      <td style="border: 1px solid black; padding: 8px;">Sagan, Carl</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>The Demon-Haunted World: Science as a Candle in the Dark</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1995</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">Saunders, George</td>
