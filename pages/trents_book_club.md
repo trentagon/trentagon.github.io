@@ -8,9 +8,11 @@ title: Trent's Book Club
 </div>
 
 ### The Mission
+
 Welcome to Trent's Book Club! Each month, we read a book and then come to this book club to (1) discuss the book and (2) to hang out with friends. All are welcome.
 
 Attendees of the book club can generally be classified into four categories:
+
 - **The scholar** has thoroughly read the book and wants to have an in-depth discussion about their opinions and analyses.
 - **The student** has read enough of the book to understand the general idea and wants to have a broad discussion.
 - **The busybody** couldn’t find the time to read the book, but really wanted to. They’ve read the sparknotes and want to learn more about what happened in the book.
@@ -20,7 +22,7 @@ We all strive to be the scholar, but sometimes we can’t quite get there. That�
 
 ### Book Selection
 
-*"One can never read too little of bad, or too much of good books: bad books are intellectual poison; they destroy the mind. In order to read what is good one must make it a condition never to read what is bad; for life is short, and both time and strength limited."* - Arthur Schopenhauer
+_"One can never read too little of bad, or too much of good books: bad books are intellectual poison; they destroy the mind. In order to read what is good one must make it a condition never to read what is bad; for life is short, and both time and strength limited."_ - Arthur Schopenhauer
 
 There is one rule for book selection: the book must be good. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. Books will be selected based on member suggestions and discussion at each meeting. Here's what we've read so far:
 
@@ -112,13 +114,21 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
       <td style="border: 1px solid black; padding: 8px;"><em>Carrie</em></td>
       <td style="border: 1px solid black; padding: 8px;">1974</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">01/25/2025</td>
+      <td style="border: 1px solid black; padding: 8px;">-</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Book exchange round-up</em></td>
+      <td style="border: 1px solid black; padding: 8px;">-</td>
+    </tr>
   </tbody>
 </table>
 
 ### Meeting Schedule
+
 The group aims to meets monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
 
 ### Contact and Updates
+
 Book club information is disseminated by email and text message. To join, send Trent your name, phone number, and email address via text or email.
 
 ### Trent's Personal Favorites
