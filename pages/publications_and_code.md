@@ -5,7 +5,7 @@ title: Publications and code
 
 # Publications & Code
 
-See my [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="\_blank"} for more.
+Here are the pupblications for which I've developed open-source code. For a full list of publications, see my CV or [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="\_blank"} for more.
 
 <table style="border: 1px solid black; border-collapse: collapse;">
   <thead>
