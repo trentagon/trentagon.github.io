@@ -5,7 +5,7 @@ title: Art & Science
 
 # Art & Science
 
-Art and science are often separated in the world and in peoples' minds. I don't see this distinction so strongly, and I am passionate about creating, exploring, and sharing areas where art and science intersect. After all, there's a reason many universities group humanities and science majors into the same [college](https://www.college.ucla.edu/about/){:target="\_blank"}.
+Art and science are often separated in the world and in peoples' minds. I don't see this distinction so strongly, and I am passionate about creating, exploring, and sharing areas where art and science intersect. After all, art and science have been indistinguishable for much of [human history](https://www.embopress.org/doi/full/10.15252/embr.201847061){:target="\_blank"}.
 
 <!-- ## Projects
 
