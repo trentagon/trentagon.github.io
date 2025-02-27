@@ -5,7 +5,7 @@ title: Publications and code
 
 # Publications & Code
 
-Here are the publications for which I've developed open-source code. For a full list of publications, see my [CV](trentagon.github.io/assets/tthomas_cv.pdf){:target="\_blank"} or [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="\_blank"}.
+Here are the publications for which I've developed open-source code. For a full list of publications, see my [CV](https://trentagon.github.io/assets/tthomas_cv.pdf){:target="\_blank"} or [Google Scholar profile](https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1){:target="\_blank"}.
 
 <table style="border: 1px solid black; border-collapse: collapse;">
   <thead>
