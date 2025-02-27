@@ -19,7 +19,7 @@ I like to make art with code. I mostly like to make [generative art](https://en.
   frameborder="0" allowfullscreen></iframe>
 </div>
 
-[**[View in fullscreen]**](/assets/cb_jsMode/index.html){:target="\_blank"} Crystal bouquet was created entirely using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly. The code for this animation is running in your browser right now.
+[**[View in fullscreen]**](/assets/cb_jsMode/index.html){:target="\_blank"} I created crystal bouquet using JavaScript and the p5.js library. Each flower's form, color, and movement is randomly generated endlessly. The code for this animation is running in your browser right now.
 
 <!-- Crystal bouquet was previously made as an [NFT](https://www.fxhash.xyz/generative/7163){:target="_blank"} on the Tezos blockchain. The hash code for the transaction becomes the seed, so every edition on the blockchain is different. -->
 

@@ -125,7 +125,7 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
 
 ### Meeting Schedule
 
-The group aims to meets monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
+The group aims to meet monthly - the exact date is specified before each meeting. We meet at varying places in the Seattle area and are always looking for hosts!
 
 ### Contact and Updates
 
