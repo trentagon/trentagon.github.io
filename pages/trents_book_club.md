@@ -122,7 +122,7 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">03/09/2025</td>
-      <td style="border: 1px solid black; padding: 8px;">Elena Ferrante</td>
+      <td style="border: 1px solid black; padding: 8px;">Ferrante, Elena</td>
       <td style="border: 1px solid black; padding: 8px;"><em>My Brilliant Friend</em></td>
       <td style="border: 1px solid black; padding: 8px;">2012</td>
     </tr>
