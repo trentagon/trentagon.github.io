@@ -126,6 +126,12 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
       <td style="border: 1px solid black; padding: 8px;"><em>My Brilliant Friend</em></td>
       <td style="border: 1px solid black; padding: 8px;">2012</td>
     </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">04/22/2025</td>
+      <td style="border: 1px solid black; padding: 8px;">Didion, Joan</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Play It as It Lays</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1970</td>
+    </tr>
   </tbody>
 </table>
 
