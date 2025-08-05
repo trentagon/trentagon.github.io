@@ -27,7 +27,7 @@ I like to make art with code. I mostly like to make [generative art](https://en.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-  src="https://youtu.be/zYrPedQT-Kk?si=tqiGkLovdiMvaEdE" 
+  src="https://www.youtube.com/embed/zYrPedQT-Kk?si=9KAMTRY8W9EqH7A1" 
   frameborder="0" allowfullscreen></iframe>
 </div>
 
