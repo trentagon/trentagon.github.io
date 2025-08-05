@@ -175,32 +175,32 @@ I like to read other books too. Here are some of my personal favorites:
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Garcia Marquez, Gabriel</td>
+      <td style="border: 1px solid black; padding: 8px;">Gabriel Garcia Marquez</td>
       <td style="border: 1px solid black; padding: 8px;"><em>One Hundred Years of Solitude</em></td>
       <td style="border: 1px solid black; padding: 8px;">1967</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Hesse, Herman</td>
+      <td style="border: 1px solid black; padding: 8px;">Herman Hesse</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Glass Bead Game</em></td>
       <td style="border: 1px solid black; padding: 8px;">1943</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Labatut, Benjamin</td>
+      <td style="border: 1px solid black; padding: 8px;">Benjamin Labatut</td>
       <td style="border: 1px solid black; padding: 8px;"><em>When We Cease to Understand the World</em></td>
       <td style="border: 1px solid black; padding: 8px;">2020</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Murakami, Haruki</td>
+      <td style="border: 1px solid black; padding: 8px;">Haruki Murakami</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Hard-Boiled Wonderland and the End of the World</em></td>
       <td style="border: 1px solid black; padding: 8px;">1985</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Sagan, Carl</td>
+      <td style="border: 1px solid black; padding: 8px;">Carl Sagan</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Demon-Haunted World: Science as a Candle in the Dark</em></td>
       <td style="border: 1px solid black; padding: 8px;">1995</td>
     </tr>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">Saunders, George</td>
+      <td style="border: 1px solid black; padding: 8px;">George Saunders</td>
       <td style="border: 1px solid black; padding: 8px;"><em>CivilWarLand in Bad Decline</em></td>
       <td style="border: 1px solid black; padding: 8px;">1996</td>
     </tr>
