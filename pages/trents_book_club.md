@@ -38,31 +38,31 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
   <tbody>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">In progress</td>
-      <td style="border: 1px solid black; padding: 8px;">Habeck, Emily</td>
+      <td style="border: 1px solid black; padding: 8px;">Emily Habeck</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Shark Heart</em></td>
       <td style="border: 1px solid black; padding: 8px;">2023</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">07/22/2025</td>
-      <td style="border: 1px solid black; padding: 8px;">Sammartino, Alexander</td>
+      <td style="border: 1px solid black; padding: 8px;">Alexander Sammartino</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Last Acts</em></td>
       <td style="border: 1px solid black; padding: 8px;">2024</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">06/04/2025</td>
-      <td style="border: 1px solid black; padding: 8px;">VanderMeer, Jeff</td>
+      <td style="border: 1px solid black; padding: 8px;">Jeff VanderMeer</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Annihilation</em></td>
       <td style="border: 1px solid black; padding: 8px;">2014</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">04/22/2025</td>
-      <td style="border: 1px solid black; padding: 8px;">Didion, Joan</td>
+      <td style="border: 1px solid black; padding: 8px;">Joan Didion</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Play It as It Lays</em></td>
       <td style="border: 1px solid black; padding: 8px;">1970</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">03/09/2025</td>
-      <td style="border: 1px solid black; padding: 8px;">Ferrante, Elena</td>
+      <td style="border: 1px solid black; padding: 8px;">Elena Ferrante</td>
       <td style="border: 1px solid black; padding: 8px;"><em>My Brilliant Friend</em></td>
       <td style="border: 1px solid black; padding: 8px;">2012</td>
     </tr>
@@ -74,79 +74,79 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">12/07/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">King, Stephen</td>
+      <td style="border: 1px solid black; padding: 8px;">Stephen King</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Carrie</em></td>
       <td style="border: 1px solid black; padding: 8px;">1974</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">10/19/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">Tokarczuk, Olga</td>
+      <td style="border: 1px solid black; padding: 8px;">Olga Tokarczuk</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Drive Your Plow Over the Bones of the Dead</em></td>
       <td style="border: 1px solid black; padding: 8px;">2009</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">08/27/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">Diaz, Junot</td>
+      <td style="border: 1px solid black; padding: 8px;">Junot Diaz</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Brief Wondrous Life of Oscar Wao</em></td>
       <td style="border: 1px solid black; padding: 8px;">2007</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">07/10/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">Shafak, Elif</td>
+      <td style="border: 1px solid black; padding: 8px;">Elif Shafak</td>
       <td style="border: 1px solid black; padding: 8px;"><em>10 Minutes 38 Seconds in this Strange World</em></td>
       <td style="border: 1px solid black; padding: 8px;">2019</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">06/07/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">El-Mohtar, Amal and Gladstone, Max</td>
+      <td style="border: 1px solid black; padding: 8px;">Amal El-Mohtar and Max Gladstone</td>
       <td style="border: 1px solid black; padding: 8px;"><em>This Is How You Lose the Time War</em></td>
       <td style="border: 1px solid black; padding: 8px;">2020</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">03/23/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">Kundera, Milan</td>
+      <td style="border: 1px solid black; padding: 8px;">Milan Kundera</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Unbearable Lightness of Being</em></td>
       <td style="border: 1px solid black; padding: 8px;">1984</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">02/02/2024</td>
-      <td style="border: 1px solid black; padding: 8px;">Brown, Daniel J.</td>
+      <td style="border: 1px solid black; padding: 8px;">Daniel J. Brown</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Boys in the Boat</em></td>
       <td style="border: 1px solid black; padding: 8px;">2013</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">12/12/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Saunders, George</td>
+      <td style="border: 1px solid black; padding: 8px;">George Saunders</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Lincoln in the Bardo</em></td>
       <td style="border: 1px solid black; padding: 8px;">2017</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">11/03/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Moshfegh, Ottessa</td>
+      <td style="border: 1px solid black; padding: 8px;">Ottessa Moshfegh</td>
       <td style="border: 1px solid black; padding: 8px;"><em>My Year of Rest and Relaxation</em></td>
       <td style="border: 1px solid black; padding: 8px;">2018</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">10/03/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Cain, James M.</td>
+      <td style="border: 1px solid black; padding: 8px;">James M. Cain</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Postman Always Rings Twice</em></td>
       <td style="border: 1px solid black; padding: 8px;">1934</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">09/08/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Whitehead, Colson</td>
+      <td style="border: 1px solid black; padding: 8px;">Colson Whitehead</td>
       <td style="border: 1px solid black; padding: 8px;"><em>The Underground Railroad</em></td>
       <td style="border: 1px solid black; padding: 8px;">2016</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">08/04/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Ishiguro, Kazuo</td>
+      <td style="border: 1px solid black; padding: 8px;">Kazuo Ishiguro</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Never Let Me Go</em></td>
       <td style="border: 1px solid black; padding: 8px;">2005</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">07/03/2023</td>
-      <td style="border: 1px solid black; padding: 8px;">Van Pelt, Shelby</td>
+      <td style="border: 1px solid black; padding: 8px;">Shelby Van Pelt</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Remarkably Bright Creatures</em></td>
       <td style="border: 1px solid black; padding: 8px;">2022</td>
     </tr>
