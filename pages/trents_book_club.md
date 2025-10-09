@@ -37,7 +37,13 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid black; padding: 8px;">In progress</td>
+      <td style="border: 1px solid black; padding: 8px;">In Progress</td>
+      <td style="border: 1px solid black; padding: 8px;">Agatha Christie</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Murder on the Orient Express</em></td>
+      <td style="border: 1px solid black; padding: 8px;">1934</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">10/06/2025</td>
       <td style="border: 1px solid black; padding: 8px;">Emily Habeck</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Shark Heart</em></td>
       <td style="border: 1px solid black; padding: 8px;">2023</td>
