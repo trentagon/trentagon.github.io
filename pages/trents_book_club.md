@@ -38,6 +38,12 @@ There is one rule for book selection: the book must be good. As Arthur said, nob
   <tbody>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">In Progress</td>
+      <td style="border: 1px solid black; padding: 8px;">David Szalay</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Flesh</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2025</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">11/21/2025</td>
       <td style="border: 1px solid black; padding: 8px;">Agatha Christie</td>
       <td style="border: 1px solid black; padding: 8px;"><em>Murder on the Orient Express</em></td>
       <td style="border: 1px solid black; padding: 8px;">1934</td>
@@ -194,6 +200,11 @@ I like to read other books too. Here are some of my personal favorites:
       <td style="border: 1px solid black; padding: 8px;">Benjamin Labatut</td>
       <td style="border: 1px solid black; padding: 8px;"><em>When We Cease to Understand the World</em></td>
       <td style="border: 1px solid black; padding: 8px;">2020</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; padding: 8px;">David Mitchell</td>
+      <td style="border: 1px solid black; padding: 8px;"><em>Cloud Atlas</em></td>
+      <td style="border: 1px solid black; padding: 8px;">2004</td>
     </tr>
     <tr>
       <td style="border: 1px solid black; padding: 8px;">Haruki Murakami</td>
