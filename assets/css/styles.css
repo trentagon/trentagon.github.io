@@ -18,3 +18,22 @@ div.content {
     max-width: 720px;
     line-height: 1.4;
 }
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 20px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: black;
+  border: 2px solid black;
+  border-radius: 0;
+  cursor: pointer;
+}
