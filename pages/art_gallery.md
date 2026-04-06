@@ -36,7 +36,7 @@ I am passionate about exploring the intersection of [art and science](https://ww
                pointer-events: auto;"></iframe>
     </div>
     <p class="art-tile-title">Planet.Gen &nbsp;<a href="/assets/planet/index.html" target="_blank" style="font-size:0.75rem; font-weight:normal; text-transform:none; letter-spacing:0;">[fullscreen]</a></p>
-    <p class="art-tile-caption">Sculpt your own world, or choose from preset solar system bodies and exoplanets. View sideways on mobile for sliders.</p>
+    <p class="art-tile-caption">Sculpt your own world, or choose from preset solar system bodies and exoplanets.</p>
   </div>
 
 </div>

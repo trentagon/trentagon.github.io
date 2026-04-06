@@ -41,6 +41,7 @@ let PRESET_START_Y = REF_PRESET_START_Y;
 let UI_FPS_WIDTH = REF_UI_FPS_WIDTH;
 let UI_NOTE_WIDTH = PANEL_WIDTH;
 let uiVisible = true;
+let portraitMode = false;
 const ENABLE_PRESET_EXPORT_HELPER =
   typeof window !== "undefined" && window.PLANET_DEBUG === true;
 const EXPORT_BUTTON_WIDTH = 232;
@@ -297,8 +298,13 @@ let _lastFpsValue = 0;
 // INITIALIZATION & SETUP
 // ============================================================================
 
-function updateUIScale(canvasWidth) {
-  if (canvasWidth < MIN_UI_CANVAS_WIDTH) {
+function updateUIScale(canvasWidth, canvasHeight) {
+  portraitMode = canvasWidth < canvasHeight && canvasWidth < 500;
+  if (portraitMode) {
+    uiVisible = true;
+    // Scale so panel fills screen width
+    uiScale = Math.min(0.97, canvasWidth / REF_PANEL_WIDTH);
+  } else if (canvasWidth < MIN_UI_CANVAS_WIDTH) {
     uiVisible = false;
     uiScale = 1;
   } else {
@@ -334,7 +340,7 @@ function setup() {
   // across full-page and embedded/container rendering.
   setAttributes("alpha", false);
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
-  updateUIScale(canvasWidth);
+  updateUIScale(canvasWidth, canvasHeight);
   _canvasRenderer = createCanvas(canvasWidth, canvasHeight, WEBGL);
   const container = getSketchContainer();
   if (container) {
@@ -363,6 +369,13 @@ function getSketchDimensions() {
 }
 
 function getControlPanelBasePosition() {
+  if (portraitMode) {
+    // Center panel horizontally, flush to bottom of canvas
+    return {
+      x: (width - PANEL_WIDTH) / 2 + PANEL_OFFSET_X,
+      y: height - PANEL_HEIGHT + PANEL_OFFSET_Y - 4,
+    };
+  }
   const rawX = width * CONTROL_PANEL_CENTER_X - CONTROL_PANEL_BASE_X_OFFSET;
   // Clamp so the panel right edge never exceeds canvas width
   const maxX = width - PANEL_WIDTH + PANEL_OFFSET_X - 4;
@@ -613,7 +626,14 @@ function draw() {
   // Use orthographic camera to eliminate perspective distortion
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
-  translate(width * (uiVisible ? PLANET_VIEW_OFFSET_X : 0), 0, 0);
+  let planetTransX = width * (uiVisible && !portraitMode ? PLANET_VIEW_OFFSET_X : 0);
+  let planetTransY = 0;
+  if (portraitMode) {
+    // Shift planet up to center it in the area above the UI panel
+    const planetAreaHeight = height - PANEL_HEIGHT - 4;
+    planetTransY = -(height - planetAreaHeight) / 2;
+  }
+  translate(planetTransX, planetTransY, 0);
 
   // Draw halo first in 3D (no rotation) so planet depth-tests in front of it
   drawAtmosphericEscapeHalo(params.effectiveSphereSize);
@@ -648,7 +668,15 @@ function updateParameters() {
   // Scale planet to fit smaller canvases while keeping atmosphere opacity correct.
   // At REFERENCE_CANVAS_WIDTH the max planet diameter (with atmosphere) is roughly
   // REFERENCE_SIZE_MAX * 2.5. Scale so the planet fits in the smaller canvas dimension.
-  const fitDim = uiVisible ? Math.min(width * 0.45, height * 0.85) : Math.min(width, height) * 0.85;
+  let fitDim;
+  if (portraitMode) {
+    const planetAreaHeight = height - PANEL_HEIGHT - 4;
+    fitDim = Math.min(width * 0.8, planetAreaHeight * 0.8);
+  } else if (uiVisible) {
+    fitDim = Math.min(width * 0.45, height * 0.85);
+  } else {
+    fitDim = Math.min(width, height) * 0.85;
+  }
   const refFit = REFERENCE_SIZE_MAX * 2.5;
   params.renderScale = Math.min(1, fitDim / refFit);
   params.effectiveSphereSize = params.sphereSize * params.renderScale;
@@ -657,7 +685,7 @@ function updateParameters() {
 }
 
 function drawUIPanel() {
-  if (!uiVisible) return;
+  if (!uiVisible || portraitMode) return;
   const { x: baseX, y: baseY } = getControlPanelBasePosition();
   push();
   translate(-width / 2, -height / 2, 0);
@@ -717,7 +745,7 @@ function styleButton(button) {
 
 function windowResized() {
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
-  updateUIScale(canvasWidth);
+  updateUIScale(canvasWidth, canvasHeight);
   if (canvasWidth !== width || canvasHeight !== height) {
     resizeCanvas(canvasWidth, canvasHeight);
   }
@@ -731,7 +759,7 @@ function windowResized() {
 function applyUIVisibility() {
   const displayVal = uiVisible ? "block" : "none";
   const allElements = [
-    ui.fps, ui.scaleNote,
+    ui.fps,
     ...Object.values(ui.presetButtons),
     ...Object.values(ui.sliders).filter(Boolean),
     ...Object.values(ui.labels).filter(Boolean),
@@ -739,6 +767,8 @@ function applyUIVisibility() {
   if (ui.exportPresetButton) allElements.push(ui.exportPresetButton);
   if (ui.exportPresetStatus) allElements.push(ui.exportPresetStatus);
   allElements.forEach(el => { if (el) el.style("display", displayVal); });
+  // Hide scale note in portrait (would overflow canvas bottom)
+  if (ui.scaleNote) ui.scaleNote.style("display", (uiVisible && !portraitMode) ? "block" : "none");
 }
 
 function restyleAllUI() {
