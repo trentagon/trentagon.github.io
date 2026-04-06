@@ -2,27 +2,45 @@
 // CONSTANTS & CONFIGURATION
 // ============================================================================
 
-// Canvas & UI Layout
-const PANEL_WIDTH = 510;
-const PANEL_HEIGHT = 541;
-const PANEL_OFFSET_X = 20;
-const PANEL_OFFSET_Y = 155;
+// Canvas & UI Layout (reference values at full size)
+const REF_PANEL_WIDTH = 510;
+const REF_PANEL_HEIGHT = 541;
+const REF_PANEL_OFFSET_X = 20;
+const REF_PANEL_OFFSET_Y = 155;
 const CONTROL_PANEL_CENTER_X = 3 / 4;
 const CONTROL_PANEL_CENTER_Y = 1 / 2;
-const CONTROL_PANEL_BASE_X_OFFSET = PANEL_WIDTH / 2 - PANEL_OFFSET_X;
-const CONTROL_PANEL_BASE_Y_OFFSET = PANEL_HEIGHT / 2 - PANEL_OFFSET_Y;
-const SLIDER_WIDTH = 200;
-const BUTTON_WIDTH = 112;
-const BUTTON_HEIGHT = 24;
+const REF_SLIDER_WIDTH = 200;
+const REF_BUTTON_WIDTH = 112;
+const REF_BUTTON_HEIGHT = 24;
 const PRESET_COLUMNS = 4;
-const PRESET_GAP_X = 8;
-const PRESET_GAP_Y = 8;
+const REF_PRESET_GAP_X = 8;
+const REF_PRESET_GAP_Y = 8;
 const PRESET_START_X = 0;
-const PRESET_START_Y = -133;
-const UI_FPS_WIDTH = 120;
+const REF_PRESET_START_Y = -133;
+const REF_UI_FPS_WIDTH = 120;
 const UI_FPS_ROW_Y_INSET = 5;
 const UI_NOTE_BOTTOM_OFFSET = 4;
-const UI_NOTE_WIDTH = PANEL_WIDTH;
+
+// Responsive scaling — UI hides below this width
+const MIN_UI_CANVAS_WIDTH = 600;
+
+// Computed scaled values (updated on resize)
+let uiScale = 1;
+let PANEL_WIDTH = REF_PANEL_WIDTH;
+let PANEL_HEIGHT = REF_PANEL_HEIGHT;
+let PANEL_OFFSET_X = REF_PANEL_OFFSET_X;
+let PANEL_OFFSET_Y = REF_PANEL_OFFSET_Y;
+let CONTROL_PANEL_BASE_X_OFFSET = PANEL_WIDTH / 2 - PANEL_OFFSET_X;
+let CONTROL_PANEL_BASE_Y_OFFSET = PANEL_HEIGHT / 2 - PANEL_OFFSET_Y;
+let SLIDER_WIDTH = REF_SLIDER_WIDTH;
+let BUTTON_WIDTH = REF_BUTTON_WIDTH;
+let BUTTON_HEIGHT = REF_BUTTON_HEIGHT;
+let PRESET_GAP_X = REF_PRESET_GAP_X;
+let PRESET_GAP_Y = REF_PRESET_GAP_Y;
+let PRESET_START_Y = REF_PRESET_START_Y;
+let UI_FPS_WIDTH = REF_UI_FPS_WIDTH;
+let UI_NOTE_WIDTH = PANEL_WIDTH;
+let uiVisible = true;
 const ENABLE_PRESET_EXPORT_HELPER =
   typeof window !== "undefined" && window.PLANET_DEBUG === true;
 const EXPORT_BUTTON_WIDTH = 232;
@@ -65,9 +83,12 @@ const RIGHT_COLUMN_KEYS = [
   "polarCaps",
   "biosphere",
 ];
-const COLUMN_OFFSET = 250;
-const Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
-const LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
+const REF_COLUMN_OFFSET = 250;
+const REF_Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
+const REF_LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
+let COLUMN_OFFSET = REF_COLUMN_OFFSET;
+let Y_OFFSETS = REF_Y_OFFSETS;
+let LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS;
 
 // Slider Configuration: [min, max, default, step]
 const SLIDER_CONFIGS = {
@@ -276,11 +297,39 @@ let _lastFpsValue = 0;
 // INITIALIZATION & SETUP
 // ============================================================================
 
+function updateUIScale(canvasWidth) {
+  if (canvasWidth < MIN_UI_CANVAS_WIDTH) {
+    uiVisible = false;
+    uiScale = 1;
+  } else {
+    uiVisible = true;
+    uiScale = Math.min(1, canvasWidth / REFERENCE_CANVAS_WIDTH);
+  }
+  PANEL_WIDTH = Math.round(REF_PANEL_WIDTH * uiScale);
+  PANEL_HEIGHT = Math.round(REF_PANEL_HEIGHT * uiScale);
+  PANEL_OFFSET_X = Math.round(REF_PANEL_OFFSET_X * uiScale);
+  PANEL_OFFSET_Y = Math.round(REF_PANEL_OFFSET_Y * uiScale);
+  CONTROL_PANEL_BASE_X_OFFSET = PANEL_WIDTH / 2 - PANEL_OFFSET_X;
+  CONTROL_PANEL_BASE_Y_OFFSET = PANEL_HEIGHT / 2 - PANEL_OFFSET_Y;
+  SLIDER_WIDTH = Math.round(REF_SLIDER_WIDTH * uiScale);
+  BUTTON_WIDTH = Math.round(REF_BUTTON_WIDTH * uiScale);
+  BUTTON_HEIGHT = Math.round(REF_BUTTON_HEIGHT * uiScale);
+  PRESET_GAP_X = Math.round(REF_PRESET_GAP_X * uiScale);
+  PRESET_GAP_Y = Math.round(REF_PRESET_GAP_Y * uiScale);
+  PRESET_START_Y = Math.round(REF_PRESET_START_Y * uiScale);
+  UI_FPS_WIDTH = Math.round(REF_UI_FPS_WIDTH * uiScale);
+  UI_NOTE_WIDTH = PANEL_WIDTH;
+  COLUMN_OFFSET = Math.round(REF_COLUMN_OFFSET * uiScale);
+  Y_OFFSETS = REF_Y_OFFSETS.map(v => Math.round(v * uiScale));
+  LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map(v => Math.round(v * uiScale));
+}
+
 function setup() {
   // Force opaque WebGL output so atmospheric alpha blends are consistent
   // across full-page and embedded/container rendering.
   setAttributes("alpha", false);
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
+  updateUIScale(canvasWidth);
   _canvasRenderer = createCanvas(canvasWidth, canvasHeight, WEBGL);
   const container = getSketchContainer();
   if (container) {
@@ -338,7 +387,7 @@ function initializeUI() {
   );
   attachUIElement(ui.scaleNote);
   styleLabel(ui.scaleNote);
-  ui.scaleNote.style("font-size", "12px");
+  ui.scaleNote.style("font-size", Math.round(12 * uiScale) + "px");
   ui.scaleNote.style("line-height", "1.2");
   ui.scaleNote.style("font-family", "Arial, Helvetica, sans-serif");
   ui.scaleNote.style("text-align", "center");
@@ -356,6 +405,9 @@ function initializeUI() {
 
   // Create right column sliders
   createColumnSliders(RIGHT_COLUMN_KEYS, baseX + COLUMN_OFFSET, baseY);
+
+  // Hide UI on small screens
+  applyUIVisibility();
 }
 
 function createPresetButtons(baseX, baseY) {
@@ -552,7 +604,7 @@ function draw() {
   // Use orthographic camera to eliminate perspective distortion
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
-  translate(width * PLANET_VIEW_OFFSET_X, 0, 0);
+  translate(width * (uiVisible ? PLANET_VIEW_OFFSET_X : 0), 0, 0);
 
   // Draw halo first in 3D (no rotation) so planet depth-tests in front of it
   drawAtmosphericEscapeHalo(params.effectiveSphereSize);
@@ -584,15 +636,19 @@ function updateParameters() {
   params.polygonRes = ui.sliders.polygonRes.value();
   params.volcanism = ui.sliders.volcanism.value();
   // Per-frame derived caches
-  // Keep visual tuning tied to slider values directly so embedded/container
-  // layouts do not dim atmospheric layers by shrinking the whole planet.
-  params.renderScale = 1;
-  params.effectiveSphereSize = params.sphereSize;
+  // Scale planet to fit smaller canvases while keeping atmosphere opacity correct.
+  // At REFERENCE_CANVAS_WIDTH the max planet diameter (with atmosphere) is roughly
+  // REFERENCE_SIZE_MAX * 2.5. Scale so the planet fits in the smaller canvas dimension.
+  const fitDim = uiVisible ? Math.min(width * 0.45, height * 0.85) : Math.min(width, height) * 0.85;
+  const refFit = REFERENCE_SIZE_MAX * 2.5;
+  params.renderScale = Math.min(1, fitDim / refFit);
+  params.effectiveSphereSize = params.sphereSize * params.renderScale;
   params.landThreshold = 1 - params.landRatio;
   params.topographyRatio = params.mountainHeight / REFERENCE_MOUNTAIN_MAX;
 }
 
 function drawUIPanel() {
+  if (!uiVisible) return;
   const { x: baseX, y: baseY } = getControlPanelBasePosition();
   push();
   translate(-width / 2, -height / 2, 0);
@@ -622,13 +678,13 @@ function styleSlider(slider) {
   slider.style("appearance", "none");
   slider.style("background", "white");
   slider.style("outline", "none");
-  slider.style("height", "4px");
+  slider.style("height", Math.max(2, Math.round(4 * uiScale)) + "px");
   slider.style("border-radius", "0");
 }
 
 function styleLabel(label) {
   label.style("font-family", "monospace");
-  label.style("font-size", "14px");
+  label.style("font-size", Math.round(14 * uiScale) + "px");
   label.style("line-height", "1");
   label.style("margin", "0");
   label.style("color", "white");
@@ -638,7 +694,7 @@ function styleButton(button) {
   button.style("width", BUTTON_WIDTH + "px");
   button.style("height", BUTTON_HEIGHT + "px");
   button.style("font-family", "Arial, Helvetica, sans-serif");
-  button.style("font-size", "11px");
+  button.style("font-size", Math.round(11 * uiScale) + "px");
   button.style("color", "black");
   button.style("background", "white");
   button.style("border", "1px solid white");
@@ -652,10 +708,38 @@ function styleButton(button) {
 
 function windowResized() {
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
+  updateUIScale(canvasWidth);
   if (canvasWidth !== width || canvasHeight !== height) {
     resizeCanvas(canvasWidth, canvasHeight);
   }
-  positionUIElements();
+  applyUIVisibility();
+  if (uiVisible) {
+    restyleAllUI();
+    positionUIElements();
+  }
+}
+
+function applyUIVisibility() {
+  const displayVal = uiVisible ? "block" : "none";
+  const allElements = [
+    ui.fps, ui.scaleNote,
+    ...Object.values(ui.presetButtons),
+    ...Object.values(ui.sliders).filter(Boolean),
+    ...Object.values(ui.labels).filter(Boolean),
+  ];
+  if (ui.exportPresetButton) allElements.push(ui.exportPresetButton);
+  if (ui.exportPresetStatus) allElements.push(ui.exportPresetStatus);
+  allElements.forEach(el => { if (el) el.style("display", displayVal); });
+}
+
+function restyleAllUI() {
+  Object.values(ui.sliders).forEach(s => { if (s) styleSlider(s); });
+  Object.values(ui.labels).forEach(l => { if (l) styleLabel(l); });
+  Object.values(ui.presetButtons).forEach(b => { if (b) styleButton(b); });
+  if (ui.scaleNote) {
+    ui.scaleNote.style("font-size", Math.round(12 * uiScale) + "px");
+    ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
+  }
 }
 
 function positionUIElements() {
