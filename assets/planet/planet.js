@@ -4,11 +4,13 @@
 
 // Canvas & UI Layout
 const PANEL_WIDTH = 510;
-const PANEL_HEIGHT = 600;
+const PANEL_HEIGHT = 541;
 const PANEL_OFFSET_X = 20;
-const PANEL_OFFSET_Y = 200;
-const CONTROL_PANEL_X = 2 / 3;
-const CONTROL_PANEL_Y_BASE = 1 / 2;
+const PANEL_OFFSET_Y = 155;
+const CONTROL_PANEL_CENTER_X = 3 / 4;
+const CONTROL_PANEL_CENTER_Y = 1 / 2;
+const CONTROL_PANEL_BASE_X_OFFSET = PANEL_WIDTH / 2 - PANEL_OFFSET_X;
+const CONTROL_PANEL_BASE_Y_OFFSET = PANEL_HEIGHT / 2 - PANEL_OFFSET_Y;
 const SLIDER_WIDTH = 200;
 const BUTTON_WIDTH = 112;
 const BUTTON_HEIGHT = 24;
@@ -16,15 +18,30 @@ const PRESET_COLUMNS = 4;
 const PRESET_GAP_X = 8;
 const PRESET_GAP_Y = 8;
 const PRESET_START_X = 0;
-const PRESET_START_Y = -155;
-const ENABLE_PRESET_EXPORT_HELPER = true; // Set false (or delete helper code) for final release.
+const PRESET_START_Y = -133;
+const UI_FPS_WIDTH = 120;
+const UI_FPS_ROW_Y_INSET = 5;
+const UI_NOTE_BOTTOM_OFFSET = 4;
+const UI_NOTE_WIDTH = PANEL_WIDTH;
+const ENABLE_PRESET_EXPORT_HELPER =
+  typeof window !== "undefined" && window.PLANET_DEBUG === true;
 const EXPORT_BUTTON_WIDTH = 232;
-const SKETCH_CONTAINER_ID = "planet-sketch-container";
+const SKETCH_CONTAINER_ID =
+  (typeof window !== "undefined" && window.PLANET_SKETCH_CONTAINER_ID) ||
+  "planet-sketch-container";
+const PLANET_VIEW_OFFSET_X =
+  (typeof window !== "undefined" &&
+    typeof window.PLANET_VIEW_OFFSET_X === "number" &&
+    Number.isFinite(window.PLANET_VIEW_OFFSET_X) &&
+    window.PLANET_VIEW_OFFSET_X >= -1 &&
+    window.PLANET_VIEW_OFFSET_X <= 1 &&
+    window.PLANET_VIEW_OFFSET_X) ||
+  -1 / 6;
 // Presets were tuned at this canvas width. Rendering uses this as a reference so
 // visuals stay consistent when embedded in smaller/larger containers (e.g. iframe).
 const REFERENCE_CANVAS_WIDTH = 1728;
 const REFERENCE_SIZE_DEFAULT = REFERENCE_CANVAS_WIDTH / 6;
-const REFERENCE_SIZE_MAX = REFERENCE_CANVAS_WIDTH / 5;
+const REFERENCE_SIZE_MAX = (REFERENCE_CANVAS_WIDTH / 5) * 0.9;
 const REFERENCE_MOUNTAIN_MAX = REFERENCE_CANVAS_WIDTH / 10;
 
 // UI Column Configuration
@@ -50,7 +67,7 @@ const RIGHT_COLUMN_KEYS = [
 ];
 const COLUMN_OFFSET = 250;
 const Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
-const LABEL_Y_OFFSETS = [2, 48, 94, 140, 186, 232, 278, 324];
+const LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
 
 // Slider Configuration: [min, max, default, step]
 const SLIDER_CONFIGS = {
@@ -112,38 +129,15 @@ const PRESET_BUTTONS = [
 const NOISE_SCALE = 2;
 const NOISE_DRIFT_SCALE_Y = 0.7;
 const NOISE_DRIFT_SCALE_Z = 0.4;
-const ELEVATION_FACTOR_SCALE = 2;
-
 // Terrain Thresholds
 const OCEAN_DEEP_THRESHOLD = 0.5;
 const OCEAN_MID_THRESHOLD = 0.9;
-const MOUNTAIN_BASE_THRESHOLD = 0.75;
-const MOUNTAIN_THRESHOLD_RANGE = 0.3;
 const POLAR_CAP_SOFTNESS = 0.1;
-
-// Atmospheric Escape - Bayer 4×4 ordered dithering matrix (flat, row-major)
-const BAYER4 = [
-  0 / 16,
-  8 / 16,
-  2 / 16,
-  10 / 16,
-  12 / 16,
-  4 / 16,
-  14 / 16,
-  6 / 16,
-  3 / 16,
-  11 / 16,
-  1 / 16,
-  9 / 16,
-  15 / 16,
-  7 / 16,
-  13 / 16,
-  5 / 16,
-];
 
 // UI controls
 const ui = {
-  presetLabel: null,
+  fps: null,
+  scaleNote: null,
   exportPresetButton: null,
   exportPresetStatus: null,
   presetButtons: {},
@@ -275,14 +269,14 @@ let _planetVertexPool = null;
 let _haloCache = null;
 let _haloCacheKey = { innerRadius: -1, outerRadius: -1, cellSize: -1 };
 let _canvasRenderer = null;
+let _lastFpsUpdate = 0;
+let _lastFpsValue = 0;
 
 // ============================================================================
 // INITIALIZATION & SETUP
 // ============================================================================
 
 function setup() {
-  window._lastFpsUpdate = 0;
-  window._lastFpsValue = 0;
   // Force opaque WebGL output so atmospheric alpha blends are consistent
   // across full-page and embedded/container rendering.
   setAttributes("alpha", false);
@@ -314,6 +308,13 @@ function getSketchDimensions() {
   };
 }
 
+function getControlPanelBasePosition() {
+  return {
+    x: width * CONTROL_PANEL_CENTER_X - CONTROL_PANEL_BASE_X_OFFSET,
+    y: height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET,
+  };
+}
+
 function attachUIElement(element) {
   const container = getSketchContainer();
   if (container) {
@@ -323,25 +324,30 @@ function attachUIElement(element) {
 }
 
 function initializeUI() {
-  const baseX = width * CONTROL_PANEL_X;
-  const baseY = height * CONTROL_PANEL_Y_BASE;
+  const { x: baseX, y: baseY } = getControlPanelBasePosition();
   // FPS tracker (HTML element)
   ui.fps = createP("FPS:");
   attachUIElement(ui.fps);
-  // Position at top right of the UI panel
-  const panelRight = baseX - PANEL_OFFSET_X + PANEL_WIDTH;
-  positionElement(ui.fps, panelRight - 90, baseY - PANEL_OFFSET_Y + 6);
   styleLabel(ui.fps);
+  ui.fps.style("font-family", "Arial, Helvetica, sans-serif");
+  ui.fps.style("width", UI_FPS_WIDTH + "px");
+  ui.fps.style("text-align", "right");
+
+  ui.scaleNote = createP(
+    "This animation was created by Trent Thomas using p5.js. Slider values are not to scale, and they prioritize aesthetics over scientific accuracy.",
+  );
+  attachUIElement(ui.scaleNote);
+  styleLabel(ui.scaleNote);
+  ui.scaleNote.style("font-size", "12px");
+  ui.scaleNote.style("line-height", "1.2");
+  ui.scaleNote.style("font-family", "Arial, Helvetica, sans-serif");
+  ui.scaleNote.style("text-align", "center");
+  ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
+  ui.scaleNote.style("opacity", "0.75");
+
+  positionPanelMeta(baseX, baseY);
 
   // Preset controls
-  ui.presetLabel = createP("Presets:");
-  attachUIElement(ui.presetLabel);
-  positionElement(
-    ui.presetLabel,
-    baseX + PRESET_START_X,
-    baseY + PRESET_START_Y - 28,
-  );
-  styleLabel(ui.presetLabel);
   createPresetButtons(baseX, baseY);
   createPresetExportHelper(baseX, baseY);
 
@@ -355,7 +361,7 @@ function initializeUI() {
 function createPresetButtons(baseX, baseY) {
   PRESET_BUTTONS.forEach(({ key, label }, index) => {
     if (!ui.presetButtons[key]) {
-      const button = createButton(label);
+      const button = createButton(label.toUpperCase());
       attachUIElement(button);
       styleButton(button);
       button.mousePressed(() => applyPreset(key));
@@ -427,7 +433,7 @@ function createColumnSliders(columnKeys, baseX, baseY) {
 
     // Only create label if not already present
     if (!ui.labels[key]) {
-      const label = createP(LABEL_CONFIGS[key]);
+      const label = createP(LABEL_CONFIGS[key].toUpperCase());
       attachUIElement(label);
       const labelYPos = baseY + LABEL_Y_OFFSETS[i];
       positionElement(label, baseX, labelYPos);
@@ -495,6 +501,7 @@ function draw() {
     const influenceAngle = 0.05 + params.volcanism * 0.5;
     volcanismCache.activeCount = activeCount;
     volcanismCache.cosInfluence = Math.cos(influenceAngle);
+    volcanismCache.looseCosThreshold = volcanismCache.cosInfluence - 0.45;
     // Drift hotspot positions with noiseTime to match terrain plate movement
     const lonDrift = params.noiseTime * NOISE_SCALE;
     const phiDrift = params.noiseTime * NOISE_DRIFT_SCALE_Y * 0.3;
@@ -545,7 +552,7 @@ function draw() {
   // Use orthographic camera to eliminate perspective distortion
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
-  translate(-width / 6, 0, 0);
+  translate(width * PLANET_VIEW_OFFSET_X, 0, 0);
 
   // Draw halo first in 3D (no rotation) so planet depth-tests in front of it
   drawAtmosphericEscapeHalo(params.effectiveSphereSize);
@@ -586,14 +593,15 @@ function updateParameters() {
 }
 
 function drawUIPanel() {
+  const { x: baseX, y: baseY } = getControlPanelBasePosition();
   push();
   translate(-width / 2, -height / 2, 0);
   fill(0);
   stroke(255);
   strokeWeight(2);
   rect(
-    width * CONTROL_PANEL_X - PANEL_OFFSET_X,
-    height * CONTROL_PANEL_Y_BASE - PANEL_OFFSET_Y,
+    baseX - PANEL_OFFSET_X,
+    baseY - PANEL_OFFSET_Y,
     PANEL_WIDTH,
     PANEL_HEIGHT,
   );
@@ -629,7 +637,7 @@ function styleLabel(label) {
 function styleButton(button) {
   button.style("width", BUTTON_WIDTH + "px");
   button.style("height", BUTTON_HEIGHT + "px");
-  button.style("font-family", "monospace");
+  button.style("font-family", "Arial, Helvetica, sans-serif");
   button.style("font-size", "11px");
   button.style("color", "black");
   button.style("background", "white");
@@ -651,19 +659,10 @@ function windowResized() {
 }
 
 function positionUIElements() {
-  const baseX = width * CONTROL_PANEL_X;
-  const baseY = height * CONTROL_PANEL_Y_BASE;
-  const panelRight = baseX - PANEL_OFFSET_X + PANEL_WIDTH;
-
-  // Reposition FPS tracker
-  positionElement(ui.fps, panelRight - 90, baseY - PANEL_OFFSET_Y + 6);
+  const { x: baseX, y: baseY } = getControlPanelBasePosition();
+  positionPanelMeta(baseX, baseY);
 
   // Reposition preset controls
-  positionElement(
-    ui.presetLabel,
-    baseX + PRESET_START_X,
-    baseY + PRESET_START_Y - 28,
-  );
   createPresetButtons(baseX, baseY);
   positionPresetExportHelper(baseX, baseY);
 
@@ -681,6 +680,36 @@ function repositionColumnSliders(columnKeys, baseX, baseY) {
   });
 }
 
+function positionPanelMeta(baseX, baseY) {
+  const panelLeft = baseX - PANEL_OFFSET_X;
+  const buttonGridRight =
+    baseX +
+    PRESET_START_X +
+    PRESET_COLUMNS * BUTTON_WIDTH +
+    (PRESET_COLUMNS - 1) * PRESET_GAP_X;
+  const panelBottom = baseY - PANEL_OFFSET_Y + PANEL_HEIGHT;
+
+  if (ui.fps) {
+    const presetRows = Math.ceil(PRESET_BUTTONS.length / PRESET_COLUMNS);
+    const lastPresetRowY =
+      baseY +
+      PRESET_START_Y +
+      (presetRows - 1) * (BUTTON_HEIGHT + PRESET_GAP_Y);
+    positionElement(
+      ui.fps,
+      buttonGridRight - UI_FPS_WIDTH,
+      lastPresetRowY + UI_FPS_ROW_Y_INSET,
+    );
+  }
+  if (ui.scaleNote) {
+    positionElement(
+      ui.scaleNote,
+      panelLeft + (PANEL_WIDTH - UI_NOTE_WIDTH) / 2,
+      panelBottom + UI_NOTE_BOTTOM_OFFSET,
+    );
+  }
+}
+
 // ============================================================================
 // COLOR MANAGEMENT
 // ============================================================================
@@ -696,7 +725,7 @@ function mountainScale(factor) {
 const PLANET_PRESETS = {
   earth: {
     sliders: {
-      size: 288,
+      size: 233.28,
       polygonRes: 80,
       rotation: 0.02,
       obliquity: 23,
@@ -1210,9 +1239,6 @@ function applySpectrumPalette() {
   colors.beach = [random(0, 255), random(0, 255), random(0, 255)];
   colors.grass = [random(0, 255), random(0, 255), random(0, 255)];
   colors.mountain = [random(0, 255), random(0, 255), random(0, 255)];
-  colors.magneticSouth = [random(0, 255), random(0, 255), random(0, 255)];
-  colors.magneticEquator = [random(0, 255), random(0, 255), random(0, 255)];
-  colors.magneticNorth = [random(0, 255), random(0, 255), random(0, 255)];
   colors.atmosphere = [random(0, 255), random(0, 255), random(0, 255)];
   colors.clouds = [random(0, 255), random(0, 255), random(0, 255)];
   colors.magneticField = [random(0, 255), random(0, 255), random(0, 255)];
@@ -1295,10 +1321,6 @@ function applyPaletteFromPreset(palette, presetKey) {
   colors.lavaCore = [...palette.lavaCore];
   colors.lavaEdge = [...palette.lavaEdge];
   colors.biosphereColors = palette.biosphereColors.map((color) => [...color]);
-
-  colors.magneticSouth = [40, 100, 255];
-  colors.magneticEquator = [255, 255, 255];
-  colors.magneticNorth = [255, 60, 60];
 
   colors.palette = presetKey;
   ui.activePresetKey = presetKey;
@@ -1384,7 +1406,8 @@ function showManualPresetCopyDialog(text, key) {
   title.style.marginBottom = "6px";
 
   const help = document.createElement("div");
-  help.textContent = "Clipboard access is blocked here. Select text below and copy.";
+  help.textContent =
+    "Clipboard access is blocked here. Select text below and copy.";
   help.style.fontSize = "12px";
   help.style.marginBottom = "6px";
 
@@ -1505,6 +1528,7 @@ function generatePlanetMesh(radius, segmentsX, segmentsY, timeOffset = 0) {
         cr: 0,
         cg: 0,
         cb: 0,
+        nv: 0,
       };
     }
   }
@@ -1553,6 +1577,9 @@ function generatePlanetMesh(radius, segmentsX, segmentsY, timeOffset = 0) {
       v.z = r * nz;
       v.height = heightVal;
       v.r = r;
+      // Bake noise variation into vertex so colorPlanetVertices avoids a
+      // redundant noise() call per vertex per frame.
+      v.nv = noise(heightVal * 5, v.x * 0.01, v.y * 0.01) * 200 - 100;
     }
   }
 
@@ -1685,11 +1712,6 @@ function lerpColorInto(out, a, b, t) {
   return out;
 }
 
-// Keep the old signature for any callers that still need a returned array.
-function lerpColorArray(a, b, t) {
-  return lerpColorInto([0, 0, 0], a, b, t);
-}
-
 // Write the terrain color for `height` directly into `out`. Returns `out`.
 function getTerrainColorInto(out, height) {
   // Use per-frame caches computed once in updateParameters
@@ -1766,9 +1788,8 @@ function getVertexColor(height, vertex) {
     g = _colorOut[1],
     b = _colorOut[2];
 
-  // Add perlin noise variation
-  const variation =
-    noise(height * 5, vertex.x * 0.01, vertex.y * 0.01) * 200 - 100;
+  // Use pre-baked noise variation from mesh generation
+  const variation = vertex.nv;
   r += variation;
   g += variation * 0.5;
   b += variation * 0.3;
@@ -1777,7 +1798,8 @@ function getVertexColor(height, vertex) {
   const radius = vertex.r;
   const latNorm = radius > 0 ? Math.abs(vertex.y) / radius : 0;
   const capAmount = params.polarCaps;
-  if (capAmount > 0) {
+  // Early rejection: skip noise for vertices clearly outside polar cap zone
+  if (capAmount > 0 && latNorm > 1 - capAmount - 0.12) {
     const edgeNoise = noise(vertex.x * 0.02, vertex.y * 0.02, vertex.z * 0.02);
     const edgeJitter = (edgeNoise - 0.5) * 0.24;
     const capStart = 1 - capAmount + edgeJitter;
@@ -1806,38 +1828,57 @@ function getVertexColor(height, vertex) {
     const vy = vertex.y / radius;
     const vz = vertex.z / radius;
 
-    // One noise sample per vertex to organically jagg hotspot edges
-    const edgeNoise = noise(
-      vx * 4.0 + 300,
-      vy * 4.0 + 300,
-      vz * 4.0 + params.volcanismTime * 0.15,
-    );
-    const noisyThreshold =
-      volcanismCache.cosInfluence + (edgeNoise - 0.5) * 0.9;
-
+    // Quick rejection: skip expensive edge noise if vertex is far from all hotspots
+    let nearAny = false;
     for (let i = 0; i < volcanismCache.activeCount; i++) {
-      const { hx, hy, hz } = volcanismCache.unitVecs[i];
-      const dot = hx * vx + hy * vy + hz * vz;
-      if (dot <= noisyThreshold) continue;
+      const uv = volcanismCache.unitVecs[i];
+      if (
+        uv.hx * vx + uv.hy * vy + uv.hz * vz >
+        volcanismCache.looseCosThreshold
+      ) {
+        nearAny = true;
+        break;
+      }
+    }
 
-      const proximity = (dot - noisyThreshold) / (1 - noisyThreshold);
-      const blend = Math.min(
-        1,
-        Math.pow(proximity, 3.0) *
-          params.volcanism *
-          volcanismCache.pulses[i] *
-          2.5,
+    if (nearAny) {
+      const edgeNoise = noise(
+        vx * 4.0 + 300,
+        vy * 4.0 + 300,
+        vz * 4.0 + params.volcanismTime * 0.15,
       );
+      const noisyThreshold =
+        volcanismCache.cosInfluence + (edgeNoise - 0.5) * 0.9;
 
-      // Lava color → blend into current color, all in scratch arrays
-      lerpColorInto(_colorScratch, colors.lavaEdge, colors.lavaCore, proximity);
-      _colorOut[0] = r;
-      _colorOut[1] = g;
-      _colorOut[2] = b;
-      lerpColorInto(_colorOut, _colorOut, _colorScratch, blend);
-      r = _colorOut[0];
-      g = _colorOut[1];
-      b = _colorOut[2];
+      for (let i = 0; i < volcanismCache.activeCount; i++) {
+        const { hx, hy, hz } = volcanismCache.unitVecs[i];
+        const dot = hx * vx + hy * vy + hz * vz;
+        if (dot <= noisyThreshold) continue;
+
+        const proximity = (dot - noisyThreshold) / (1 - noisyThreshold);
+        const blend = Math.min(
+          1,
+          Math.pow(proximity, 3.0) *
+            params.volcanism *
+            volcanismCache.pulses[i] *
+            2.5,
+        );
+
+        // Lava color → blend into current color, all in scratch arrays
+        lerpColorInto(
+          _colorScratch,
+          colors.lavaEdge,
+          colors.lavaCore,
+          proximity,
+        );
+        _colorOut[0] = r;
+        _colorOut[1] = g;
+        _colorOut[2] = b;
+        lerpColorInto(_colorOut, _colorOut, _colorScratch, blend);
+        r = _colorOut[0];
+        g = _colorOut[1];
+        b = _colorOut[2];
+      }
     }
   }
 
@@ -2171,11 +2212,9 @@ function buildHaloCache(innerRadius, outerRadius, cellSize) {
   const asvArr = new Float32Array(count); // angSpeedVar
   const noiseXArr = new Float32Array(count); // pre-multiplied noise X coord
   const noiseYArr = new Float32Array(count); // pre-multiplied noise Y coord
-  const bayerArr = new Uint8Array(count); // BAYER4 index (0-15)
 
   let k = 0;
   for (let px = -outerRadius; px < outerRadius; px += cellSize) {
-    const bxRaw = Math.floor((px + outerRadius) / cellSize);
     for (let py = -outerRadius; py < outerRadius; py += cellSize) {
       const cx = px + cellHalf;
       const cy = py + cellHalf;
@@ -2187,20 +2226,17 @@ function buildHaloCache(innerRadius, outerRadius, cellSize) {
       const angSpeedVar =
         0.5 + 0.5 * noise((cx / dist) * 2 + 50, (cy / dist) * 2 + 50);
 
-      const byRaw = Math.floor((py + outerRadius) / cellSize);
-
       cxArr[k] = cx;
       cyArr[k] = cy;
       ndArr[k] = (dist - innerRadius) / annulusSpan;
       asvArr[k] = angSpeedVar;
       noiseXArr[k] = cx * 0.012 + 250; // pre-multiplied for the single per-frame noise call
       noiseYArr[k] = cy * 0.012 + 250;
-      bayerArr[k] = (byRaw % 4) * 4 + (bxRaw % 4); // BAYER4 flat index
       k++;
     }
   }
 
-  return { cxArr, cyArr, ndArr, asvArr, noiseXArr, noiseYArr, bayerArr, count };
+  return { cxArr, cyArr, ndArr, asvArr, noiseXArr, noiseYArr, count };
 }
 
 function drawAtmosphericEscapeHalo(radius) {
@@ -2230,7 +2266,7 @@ function drawAtmosphericEscapeHalo(radius) {
     _haloCacheKey.cellSize = cellSize;
   }
 
-  const { cxArr, cyArr, ndArr, asvArr, noiseXArr, noiseYArr, bayerArr, count } =
+  const { cxArr, cyArr, ndArr, asvArr, noiseXArr, noiseYArr, count } =
     _haloCache;
 
   const dotHalf = cellSize * 0.4 * 0.5;

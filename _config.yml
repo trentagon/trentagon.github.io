@@ -1,0 +1,11 @@
+title: Thomas Lab for Planetary Systems Science
+url: https://trentagon.github.io
+theme: empty-jekyll-theme
+
+include:
+  - assets
+
+# Ensure non-standard file types in assets are served
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="Trent, Thomas, Trentagon, MIT, UCLA, UW, NASA, JPL, science, scientist, planetary, planet, astrobiology, chemistry, physics, astrophysics, atmosphere, snowball, exoplanet, mars"
+    />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/favicon-96x96.png' | relative_url }}" />
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" />
+    <title>Home | Thomas Lab</title>
+    {% assign desc = "The Thomas Laboratory for Planetary Systems Science. Research in planetary atmospheres, Snowball Earth, Mars, exoplanets, and complex systems." %}
+    <meta name="description" content="{{ desc }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ desc }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ '/assets/pfp_2023.JPG' | absolute_url }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ desc }}" />
+    <style>
+      :root {
+        --bg: #000;
+        --ink: #000;
+        --paper: #fff;
+        --button-border: #000;
+        --content-pad: 10px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      .site-home {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg);
+      }
+
+      .home-nav-wrap {
+        padding: var(--content-pad) var(--content-pad) 2px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .home-nav {
+        width: 100%;
+        background: var(--paper);
+        padding: 12px 16px;
+        border: 1px solid #000;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .home-nav::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border: 1px solid #fff;
+        pointer-events: none;
+      }
+
+      .home-nav-title {
+        margin: 0;
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.42rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+      }
+
+      .home-nav-links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: auto;
+      }
+
+      .home-nav-link {
+        display: inline-block;
+        padding: 7px 12px;
+        border: 2px solid var(--button-border);
+        color: var(--ink);
+        background: var(--paper);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.82rem;
+        line-height: 1.2;
+      }
+
+      .home-nav-link:hover,
+      .home-nav-link:focus-visible {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .home-nav-link.is-active {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .planet-stage {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--content-pad) 0 0;
+        background: var(--bg);
+      }
+
+      .planet-shell {
+        position: relative;
+        width: 100vw;
+        height: clamp(460px, calc(100vh - 90px), 1020px);
+        background: #000;
+        overflow: hidden;
+        /* Isolate layout/paint so p5 UI updates don't trigger full-page reflow */
+        contain: layout style paint;
+        isolation: isolate;
+      }
+
+      #planet-home-container {
+        position: absolute;
+        inset: 0;
+        /* Promote to own compositing layer for smoother WebGL frames */
+        contain: layout style paint;
+        will-change: transform;
+      }
+
+      @media (max-width: 760px) {
+        .home-nav {
+          padding: 10px 10px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .home-nav-title {
+          font-size: 1.2rem;
+        }
+
+        .home-nav-links {
+          justify-content: flex-start;
+          gap: 8px;
+          margin-left: 0;
+        }
+
+        .home-nav-link {
+          padding: 6px 10px;
+          font-size: 0.76rem;
+        }
+
+        .planet-stage {
+          padding: 10px 0 0;
+        }
+
+        .planet-shell {
+          height: calc(100vh - 82px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site-home">
+      {% assign nav_path = page.url | default: "/" | replace: "index.html", ""
+      %}
+      <div class="home-nav-wrap">
+        <nav class="home-nav" aria-label="Primary">
+          <p class="home-nav-title">
+            THE THOMAS LABORATORY FOR PLANETARY SYSTEMS SCIENCE
+          </p>
+          <div class="home-nav-links">
+            <a
+              class="home-nav-link{% if nav_path == '/' %} is-active{% endif %}"
+              href="{{ '/' | relative_url }}"
+              >Home</a
+            >
+            <a
+              class="home-nav-link{% if nav_path contains '/pages/research' %} is-active{% endif %}"
+              href="{{ '/pages/research.html' | relative_url }}"
+              >Research</a
+            >
+            <a
+              class="home-nav-link{% if nav_path contains '/pages/people' %} is-active{% endif %}"
+              href="{{ '/pages/people.html' | relative_url }}"
+              >People</a
+            >
+            <a
+              class="home-nav-link{% if nav_path contains '/pages/publications' %} is-active{% endif %}"
+              href="{{ '/pages/publications.html' | relative_url }}"
+              >Publications</a
+            >
+            <a
+              class="home-nav-link{% if nav_path contains '/pages/more' or nav_path contains '/pages/art_gallery' or nav_path contains '/pages/art_education' or nav_path contains '/pages/trents_book_club' %} is-active{% endif %}"
+              href="{{ '/pages/more.html' | relative_url }}"
+              >More</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <section class="planet-stage" aria-label="Planet Hero">
+        <div class="planet-shell">
+          <div id="planet-home-container"></div>
+        </div>
+      </section>
+
+      {% assign trimmed_content = content | strip %} {% unless trimmed_content
+      == "" %} {{ content }} {% endunless %}
+    </main>
+
+    <script>
+      window.PLANET_SKETCH_CONTAINER_ID = "planet-home-container";
+      window.PLANET_VIEW_OFFSET_X = -1 / 6;
+    </script>
+    <script src="{{ '/assets/libraries/p5.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/planet/planet.js' | relative_url }}"></script>
+
+  </body>
+</html>
