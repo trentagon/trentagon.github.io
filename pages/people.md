@@ -22,7 +22,7 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
   </div>
 </div>
 
-<p>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW ESS</a></p>
+<p>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW AB</a></p>
 
 <p>I am originally from Southern New Jersey, just outside of Philadelphia. I am a passionate fan of Philadelphia sports teams, <a href="https://www.espn.com/pdf/2016/0406/nba_hinkie_redact.pdf" target="_blank">as painful as it may be</a>, and I have a particular interest in analyzing and visualizing sports data. In my free time, I am an avid soccer player, runner, and <a href="/pages/trents_book_club.html">reader</a>.</p>
 
