@@ -151,23 +151,51 @@
         will-change: transform;
       }
 
+      input[type='range'] {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+      }
+
       input[type='range']::-webkit-slider-thumb {
         -webkit-appearance: none !important;
-        width: 16px !important;
-        height: 20px !important;
+        appearance: none !important;
+        width: var(--thumb-w, 10px) !important;
+        height: var(--thumb-h, 14px) !important;
         background: white !important;
         border: 2px solid white !important;
         border-radius: 0 !important;
-        cursor: pointer;
+        cursor: pointer !important;
+        box-shadow: none !important;
+      }
+
+      input[type='range']::-webkit-slider-thumb:hover {
+        -webkit-appearance: none !important;
+        width: var(--thumb-w, 10px) !important;
+        height: var(--thumb-h, 14px) !important;
+        background: white !important;
+        border: 2px solid white !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
       }
 
       input[type='range']::-moz-range-thumb {
-        width: 16px !important;
-        height: 20px !important;
+        appearance: none !important;
+        width: var(--thumb-w, 10px) !important;
+        height: var(--thumb-h, 14px) !important;
         background: white !important;
         border: 2px solid white !important;
         border-radius: 0 !important;
-        cursor: pointer;
+        cursor: pointer !important;
+        box-shadow: none !important;
+      }
+
+      input[type='range']::-moz-range-thumb:hover {
+        width: var(--thumb-w, 10px) !important;
+        height: var(--thumb-h, 14px) !important;
+        background: white !important;
+        border: 2px solid white !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
       }
 
       @media (max-width: 760px) {

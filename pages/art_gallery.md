@@ -32,11 +32,11 @@ I am passionate about exploring the intersection of [art and science](https://ww
   <div class="art-tile">
     <div style="width: 860px; height: 483px; overflow: hidden; position: relative; border: 2px solid #000;">
       <iframe src="/assets/planet/index.html" allowfullscreen
-        style="width: 100%; height: 100%; border: none;
+        style="width: 100%; height: 100%; border: none; background: #000;
                pointer-events: auto;"></iframe>
     </div>
     <p class="art-tile-title">Planet.Gen &nbsp;<a href="/assets/planet/index.html" target="_blank" style="font-size:0.75rem; font-weight:normal; text-transform:none; letter-spacing:0;">[fullscreen]</a></p>
-    <p class="art-tile-caption">Sculpt your own world, or choose from preset solar system bodies and exoplanets. View sideways on mobile.</p>
+    <p class="art-tile-caption">Sculpt your own world, or choose from preset solar system bodies and exoplanets. View sideways on mobile for sliders.</p>
   </div>
 
 </div>

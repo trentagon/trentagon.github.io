@@ -322,6 +322,11 @@ function updateUIScale(canvasWidth) {
   COLUMN_OFFSET = Math.round(REF_COLUMN_OFFSET * uiScale);
   Y_OFFSETS = REF_Y_OFFSETS.map(v => Math.round(v * uiScale));
   LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map(v => Math.round(v * uiScale));
+  // Update thumb size CSS variable
+  const thumbW = Math.max(6, Math.round(10 * uiScale));
+  const thumbH = Math.max(8, Math.round(14 * uiScale));
+  document.documentElement.style.setProperty('--thumb-w', thumbW + 'px');
+  document.documentElement.style.setProperty('--thumb-h', thumbH + 'px');
 }
 
 function setup() {
@@ -358,8 +363,11 @@ function getSketchDimensions() {
 }
 
 function getControlPanelBasePosition() {
+  const rawX = width * CONTROL_PANEL_CENTER_X - CONTROL_PANEL_BASE_X_OFFSET;
+  // Clamp so the panel right edge never exceeds canvas width
+  const maxX = width - PANEL_WIDTH + PANEL_OFFSET_X - 4;
   return {
-    x: width * CONTROL_PANEL_CENTER_X - CONTROL_PANEL_BASE_X_OFFSET,
+    x: Math.min(rawX, maxX),
     y: height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET,
   };
 }
@@ -684,7 +692,7 @@ function styleSlider(slider) {
 }
 
 function styleLabel(label) {
-  label.style("font-family", "monospace");
+  label.style("font-family", "Arial, Helvetica, sans-serif");
   label.style("font-size", Math.round(14 * uiScale) + "px");
   label.style("line-height", "1");
   label.style("margin", "0");
