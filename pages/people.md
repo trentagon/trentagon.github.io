@@ -10,7 +10,7 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
   <img class="profile-img" src="/assets/pfp_2023.JPG" alt="Trent B. Thomas" />
   <div class="profile-body">
     <h3>Trent B. Thomas</h3>
-    <p class="profile-title-line">[Current] Ph.D. Candidate at the University of Washington -- Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW AB</a></p>
+    <p class="profile-title-line">[Current] Ph.D. Candidate at the University of Washington - <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW AB</a></p>
     <p class="profile-title-line">[Starting Fall 2026] MIT EAPS Distinguished Postdoctoral Fellow and MIT Dean's School of Science Fellow</p>
     <ul class="profile-meta">
       <li><strong>Ph.D.</strong> Earth and Space Sciences and Astrobiology (Dual-Title), University of Washington, Seattle (expected June 2026)</li>
