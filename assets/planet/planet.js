@@ -736,6 +736,10 @@ function restyleAllUI() {
   Object.values(ui.sliders).forEach(s => { if (s) styleSlider(s); });
   Object.values(ui.labels).forEach(l => { if (l) styleLabel(l); });
   Object.values(ui.presetButtons).forEach(b => { if (b) styleButton(b); });
+  if (ui.fps) {
+    ui.fps.style("font-size", Math.round(14 * uiScale) + "px");
+    ui.fps.style("width", UI_FPS_WIDTH + "px");
+  }
   if (ui.scaleNote) {
     ui.scaleNote.style("font-size", Math.round(12 * uiScale) + "px");
     ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
