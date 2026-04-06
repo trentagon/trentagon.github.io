@@ -379,6 +379,7 @@ function initializeUI() {
   attachUIElement(ui.fps);
   styleLabel(ui.fps);
   ui.fps.style("font-family", "Arial, Helvetica, sans-serif");
+  ui.fps.style("font-size", Math.round(14 * uiScale) + "px");
   ui.fps.style("width", UI_FPS_WIDTH + "px");
   ui.fps.style("text-align", "right");
 

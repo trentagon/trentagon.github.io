@@ -151,6 +151,25 @@
         will-change: transform;
       }
 
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        width: 16px !important;
+        height: 20px !important;
+        background: white !important;
+        border: 2px solid white !important;
+        border-radius: 0 !important;
+        cursor: pointer;
+      }
+
+      input[type='range']::-moz-range-thumb {
+        width: 16px !important;
+        height: 20px !important;
+        background: white !important;
+        border: 2px solid white !important;
+        border-radius: 0 !important;
+        cursor: pointer;
+      }
+
       @media (max-width: 760px) {
         .home-nav {
           padding: 10px 10px;
@@ -178,7 +197,7 @@
         }
 
         .planet-shell {
-          height: calc(100vh - 120px);
+          height: calc(100vh - 140px);
         }
       }
     </style>

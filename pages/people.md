@@ -11,8 +11,7 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
   <div class="profile-body">
     <h3>Trent B. Thomas</h3>
     <p class="profile-title-line">Ph.D. Candidate at the University of Washington (current)</p>
-    <p class="profile-title-line">MIT EAPS Distinguished Postdoctoral Fellow (starting Sept. 2026)</p>
-    <p class="profile-title-line">MIT Dean's School of Science Fellow (starting Sept. 2026)</p>
+    <p class="profile-title-line">MIT EAPS Distinguished Postdoctoral Fellow and MIT Dean's School of Science Fellow (starting Sept. 2026)</p>
     <ul class="profile-meta">
       <li><strong>Ph.D.</strong> Earth and Space Sciences and Astrobiology (Dual-Title), University of Washington, Seattle (expected June 2026)</li>
       <li><strong>B.S.</strong> Astrophysics, UCLA, 2020</li>
