@@ -16,7 +16,7 @@ Welcome to Trent's Book Club! We are a group of friends that meet in-person appr
 
 Books are selected based on member suggestions and discussion at each meeting. The guiding rule for selection is that the book is worth reading. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. 
 
-<table class="pub-table">
+<table class="pub-table book-table">
   <thead>
     <tr>
       <th colspan="4" style="background:#444; font-size:1rem; letter-spacing:0.08em; text-align:center; padding:12px 14px;">Seattle, WA</th>
@@ -168,7 +168,7 @@ Books are selected based on member suggestions and discussion at each meeting. T
 
 I like to read other books too. Here are some of my personal favorites:
 
-<table class="pub-table">
+<table class="pub-table book-table">
   <thead>
     <tr>
       <th>Author</th>
