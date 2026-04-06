@@ -12,7 +12,7 @@ I am passionate about exploring the intersection of [art and science](https://ww
 
   <div class="art-tile" style="width: 645px;">
     <div class="art-tile-embed">
-      <iframe src="{{ '/assets/cb_jsMode/index.html' | relative_url }}" allowfullscreen></iframe>
+      <iframe src="{{ '/assets/cb_jsMode/index.html' | relative_url }}" allowfullscreen style="pointer-events: none;"></iframe>
     </div>
     <p class="art-tile-title">Crystal Bouquet &nbsp;<a href="/assets/cb_jsMode/index.html" target="_blank" style="font-size:0.75rem; font-weight:normal; text-transform:none; letter-spacing:0;">[fullscreen]</a></p>
     <p class="art-tile-caption">Each flower's form, color, and movement is randomly generated endlessly.</p>
