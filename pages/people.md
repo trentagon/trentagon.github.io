@@ -18,6 +18,7 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
       <li>&nbsp;</li>
       <li><a href="mailto:tbthomas@uw.edu">tbthomas@uw.edu</a></li>
       <li><a href="/assets/TThomas_CV_pdf.pdf" target="_blank">Curriculum Vitae (PDF)</a></li>
+      <li>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW ESS</a></li>
     </ul>
   </div>
 </div>
