@@ -15,13 +15,14 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
     <ul class="profile-meta">
       <li><strong>Ph.D.</strong> Earth and Space Sciences and Astrobiology (Dual-Title), University of Washington, Seattle (expected June 2026)</li>
       <li><strong>B.S.</strong> Astrophysics, UCLA, 2020</li>
-      <!-- <li>&nbsp;</li> -->
+      <li>&nbsp;</li>
       <li><a href="mailto:tbthomas@uw.edu">tbthomas@uw.edu</a></li>
       <li><a href="/assets/TThomas_CV_pdf.pdf" target="_blank">Curriculum Vitae (PDF)</a></li>
-      <li>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW ESS</a></li>
     </ul>
   </div>
 </div>
+
+<p>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW ESS</a></p>
 
 <p>I am originally from Southern New Jersey, just outside of Philadelphia. I am a passionate fan of Philadelphia sports teams, <a href="https://www.espn.com/pdf/2016/0406/nba_hinkie_redact.pdf" target="_blank">as painful as it may be</a>, and I have a particular interest in analyzing and visualizing sports data. In my free time, I am an avid soccer player, runner, and <a href="/pages/trents_book_club.html">reader</a>.</p>
 
