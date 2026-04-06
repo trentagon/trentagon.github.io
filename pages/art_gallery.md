@@ -19,18 +19,16 @@ I am passionate about exploring the intersection of [art and science](https://ww
   </div>
 
   <div class="art-tile" style="width: 645px;">
-    <div style="width: 645px; height: 645px; overflow: hidden; position: relative; border: 2px solid #000;">
-      <iframe src="/assets/capcarb/index.html?embed=true" allowfullscreen
-        style="width: 1000px; height: 1000px; border: none;
-               transform: scale(0.645); transform-origin: top left;
-               pointer-events: auto;"></iframe>
+    <div id="capcarb-container" style="overflow: hidden; position: relative; border: 2px solid #000;">
+      <iframe id="capcarb-iframe" src="/assets/capcarb/index.html?embed=true" allowfullscreen
+        style="border: none; transform-origin: top left; pointer-events: auto; display: block;"></iframe>
     </div>
     <p class="art-tile-title">Cap Carbonates &nbsp;<a href="/assets/capcarb/index.html" target="_blank" style="font-size:0.75rem; font-weight:normal; text-transform:none; letter-spacing:0;">[fullscreen]</a></p>
     <p class="art-tile-caption">A data sculpture from my research on Snowball Earth. View fullscreen and click for sound.</p>
   </div>
 
   <div class="art-tile">
-    <div style="width: 860px; height: 483px; overflow: hidden; position: relative; border: 2px solid #000;">
+    <div class="art-tile-16-9">
       <iframe src="/assets/planet/index.html" allowfullscreen
         style="width: 100%; height: 100%; border: none; background: #000;
                pointer-events: auto;"></iframe>
@@ -40,3 +38,21 @@ I am passionate about exploring the intersection of [art and science](https://ww
   </div>
 
 </div>
+
+<script>
+  function resizeCapcarb() {
+    const container = document.getElementById('capcarb-container');
+    const iframe = document.getElementById('capcarb-iframe');
+    if (!container || !iframe) return;
+    const w = container.parentElement.offsetWidth;
+    const size = Math.min(w, 645);
+    const scale = size / 1000;
+    container.style.width = size + 'px';
+    container.style.height = size + 'px';
+    iframe.style.width = '1000px';
+    iframe.style.height = '1000px';
+    iframe.style.transform = 'scale(' + scale + ')';
+  }
+  resizeCapcarb();
+  window.addEventListener('resize', resizeCapcarb);
+</script>
