@@ -10,8 +10,8 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
   <img class="profile-img" src="/assets/pfp_2023.JPG" alt="Trent B. Thomas" />
   <div class="profile-body">
     <h3>Trent B. Thomas</h3>
-    <p class="profile-title-line">Ph.D. Candidate at the University of Washington (current)</p>
-    <p class="profile-title-line">MIT EAPS Distinguished Postdoctoral Fellow and MIT Dean's School of Science Fellow (starting Sept. 2026)</p>
+    <p class="profile-title-line">[Current] Ph.D. Candidate at the University of Washington -- Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW AB</a></p>
+    <p class="profile-title-line">[Starting Fall 2026] MIT EAPS Distinguished Postdoctoral Fellow and MIT Dean's School of Science Fellow</p>
     <ul class="profile-meta">
       <li><strong>Ph.D.</strong> Earth and Space Sciences and Astrobiology (Dual-Title), University of Washington, Seattle (expected June 2026)</li>
       <li><strong>B.S.</strong> Astrophysics, UCLA, 2020</li>
@@ -21,8 +21,6 @@ description: "Trent B. Thomas — planetary scientist at MIT studying volatile e
     </ul>
   </div>
 </div>
-
-<p>Official pages: <a href="https://ess.uw.edu/people/trent-thomas/" target="_blank">UW ESS</a> <a href="https://depts.washington.edu/astrobio/wordpress/profile/trent-thomas/" target="_blank">UW AB</a></p>
 
 <p>I am originally from Southern New Jersey, just outside of Philadelphia. I am a passionate fan of Philadelphia sports teams, <a href="https://www.espn.com/pdf/2016/0406/nba_hinkie_redact.pdf" target="_blank">as painful as it may be</a>, and I have a particular interest in analyzing and visualizing sports data. In my free time, I am an avid soccer player, runner, and <a href="/pages/trents_book_club.html">reader</a>.</p>
 
