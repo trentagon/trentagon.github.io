@@ -296,37 +296,59 @@ function windowResized() {
   background(255); // Clear background on resize
 }
 
+// Count how many lines a string wraps into given a max pixel width.
+// Must be called after textSize/textFont/textStyle are set.
+function countWrappedLines(str, maxW) {
+  let words = str.split(" ");
+  let lines = 1;
+  let lineW = 0;
+  let spaceW = textWidth(" ");
+  for (let word of words) {
+    let ww = textWidth(word);
+    if (lineW > 0 && lineW + spaceW + ww > maxW) {
+      lines++;
+      lineW = ww;
+    } else {
+      lineW += (lineW > 0 ? spaceW : 0) + ww;
+    }
+  }
+  return lines;
+}
+
 function displayInfo() {
-  // --- Info textbox in top left, scales with canvas ---
   let scale = min(width, height) / 1000;
   let pad = max(10, 16 * scale);
   let boxX = max(10, 30 * scale);
   let boxY = max(10, 30 * scale);
-  // Minimum width of 180px so text doesn't wrap into an absurd number of lines
+  // Enforce a minimum width so text stays readable; cap at ~55% of canvas
   let boxW = max(180, min(width * 0.55, 420 * scale, width - boxX * 2));
   let ts = max(9, round(15 * scale));
-  let lineH = ts * 1.5;
+  let lineH = ts * 1.55;
+  let textW = boxW - pad * 2;
 
-  // Use shorter text on narrow boxes
   let isNarrow = boxW < 260;
   let titleText = isNarrow
     ? "Marinoan Snowball Earth simulations (ca. 639 Ma)"
     : "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)";
-  let infoLines = [
+  let infoArr = [
     isNarrow ? "x: ocean pH" : "x-axis: ocean pH",
     isNarrow ? "y: carbonate saturation" : "y-axis: ocean carbonate saturation state",
-    isNarrow ? "size: atm. pCO\u2082" : "size: atmospheric pCO\u2082",
+    isNarrow ? "size: atm. pCO2" : "size: atmospheric pCO2",
     isNarrow ? "Thomas & Catling (2024)" : "data source: Thomas and Catling (2024)",
   ];
-  if (EMBED_MODE) infoLines.push("click for sound");
+  if (EMBED_MODE) infoArr.push("click for sound");
 
-  // Measure title wrapping manually to size the box correctly
+  // Measure exact line counts using real font metrics
   textSize(ts);
   textFont("Courier");
-  let charsPerLine = floor((boxW - pad * 2) / (ts * 0.6));
-  let titleWraps = max(2, ceil(titleText.length / charsPerLine));
-  let titleH = lineH * titleWraps;
-  let infoH = lineH * infoLines.length;
+  textStyle(BOLD);
+  let titleLineCount = countWrappedLines(titleText, textW);
+  textStyle(NORMAL);
+  let infoLineCounts = infoArr.map(line => countWrappedLines(line, textW));
+  let totalInfoLines = infoLineCounts.reduce((a, b) => a + b, 0);
+
+  let titleH = titleLineCount * lineH;
+  let infoH = totalInfoLines * lineH;
   let boxH = titleH + infoH + pad * 3;
 
   push();
@@ -341,16 +363,17 @@ function displayInfo() {
   textFont("Courier");
   textAlign(LEFT, TOP);
 
+  // Draw title — no height arg so p5 never clips it
   textStyle(BOLD);
-  text(titleText, boxX + pad, boxY + pad, boxW - pad * 2, titleH);
+  text(titleText, boxX + pad, boxY + pad, textW);
+
+  // Draw each info line individually so Y position is exact
   textStyle(NORMAL);
-  text(
-    infoLines.join("\n"),
-    boxX + pad,
-    boxY + pad + titleH,
-    boxW - pad * 2,
-    infoH + lineH
-  );
+  let infoY = boxY + pad + titleH;
+  for (let i = 0; i < infoArr.length; i++) {
+    text(infoArr[i], boxX + pad, infoY, textW);
+    infoY += infoLineCounts[i] * lineH;
+  }
 
   pop();
 }
