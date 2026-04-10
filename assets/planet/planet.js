@@ -328,9 +328,9 @@ function updateUIScale(canvasWidth, canvasHeight) {
   COLUMN_OFFSET = Math.round(REF_COLUMN_OFFSET * uiScale);
   Y_OFFSETS = REF_Y_OFFSETS.map(v => Math.round(v * uiScale));
   LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map(v => Math.round(v * uiScale));
-  // Update thumb size CSS variable
-  const thumbW = Math.max(6, Math.round(10 * uiScale));
-  const thumbH = Math.max(8, Math.round(14 * uiScale));
+  // Update thumb size CSS variable — larger minimums in portrait for touch usability
+  const thumbW = portraitMode ? Math.max(28, Math.round(10 * uiScale)) : Math.max(6, Math.round(10 * uiScale));
+  const thumbH = portraitMode ? Math.max(32, Math.round(14 * uiScale)) : Math.max(8, Math.round(14 * uiScale));
   document.documentElement.style.setProperty('--thumb-w', thumbW + 'px');
   document.documentElement.style.setProperty('--thumb-h', thumbH + 'px');
 }
