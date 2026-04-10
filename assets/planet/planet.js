@@ -717,6 +717,7 @@ function styleSlider(slider) {
   slider.style("outline", "none");
   slider.style("height", Math.max(2, Math.round(4 * uiScale)) + "px");
   slider.style("border-radius", "0");
+  slider.style("touch-action", "pan-x");
 }
 
 function styleLabel(label) {
