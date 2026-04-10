@@ -87,6 +87,8 @@ const RIGHT_COLUMN_KEYS = [
 const REF_COLUMN_OFFSET = 250;
 const REF_Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
 const REF_LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
+// Portrait: sliders shifted 4px down so 28px thumb doesn't overlap label above
+const PORTRAIT_Y_OFFSETS = [36, 82, 128, 174, 220, 266, 312, 358];
 let COLUMN_OFFSET = REF_COLUMN_OFFSET;
 let Y_OFFSETS = REF_Y_OFFSETS;
 let LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS;
@@ -326,11 +328,11 @@ function updateUIScale(canvasWidth, canvasHeight) {
   UI_FPS_WIDTH = Math.round(REF_UI_FPS_WIDTH * uiScale);
   UI_NOTE_WIDTH = PANEL_WIDTH;
   COLUMN_OFFSET = Math.round(REF_COLUMN_OFFSET * uiScale);
-  Y_OFFSETS = REF_Y_OFFSETS.map(v => Math.round(v * uiScale));
+  Y_OFFSETS = (portraitMode ? PORTRAIT_Y_OFFSETS : REF_Y_OFFSETS).map(v => Math.round(v * uiScale));
   LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map(v => Math.round(v * uiScale));
   // Update thumb size CSS variable — larger minimums in portrait for touch usability
-  const thumbW = portraitMode ? Math.max(28, Math.round(10 * uiScale)) : Math.max(6, Math.round(10 * uiScale));
-  const thumbH = portraitMode ? Math.max(32, Math.round(14 * uiScale)) : Math.max(8, Math.round(14 * uiScale));
+  const thumbW = portraitMode ? Math.max(24, Math.round(10 * uiScale)) : Math.max(6, Math.round(10 * uiScale));
+  const thumbH = portraitMode ? Math.max(28, Math.round(14 * uiScale)) : Math.max(8, Math.round(14 * uiScale));
   document.documentElement.style.setProperty('--thumb-w', thumbW + 'px');
   document.documentElement.style.setProperty('--thumb-h', thumbH + 'px');
 }
@@ -776,6 +778,7 @@ function restyleAllUI() {
   Object.values(ui.sliders).forEach(s => { if (s) styleSlider(s); });
   Object.values(ui.labels).forEach(l => { if (l) styleLabel(l); });
   Object.values(ui.presetButtons).forEach(b => { if (b) styleButton(b); });
+  updatePresetButtons();
   if (ui.fps) {
     ui.fps.style("font-size", Math.round(14 * uiScale) + "px");
     ui.fps.style("width", UI_FPS_WIDTH + "px");
