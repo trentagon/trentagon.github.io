@@ -320,21 +320,17 @@ function displayInfo() {
   let pad = max(10, 16 * scale);
   let boxX = max(10, 30 * scale);
   let boxY = max(10, 30 * scale);
-  // Enforce a minimum width so text stays readable; cap at ~55% of canvas
-  let boxW = max(180, min(width * 0.55, 420 * scale, width - boxX * 2));
+  let boxW = width - boxX * 2;
   let ts = max(9, round(15 * scale));
   let lineH = ts * 1.55;
   let textW = boxW - pad * 2;
 
-  let isNarrow = boxW < 260;
-  let titleText = isNarrow
-    ? "Marinoan Snowball Earth simulations (ca. 639 Ma)"
-    : "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)";
+  let titleText = "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)";
   let infoArr = [
-    isNarrow ? "x: ocean pH" : "x-axis: ocean pH",
-    isNarrow ? "y: carbonate saturation" : "y-axis: ocean carbonate saturation state",
-    isNarrow ? "size: atm. pCO2" : "size: atmospheric pCO2",
-    isNarrow ? "Thomas & Catling (2024)" : "data source: Thomas and Catling (2024)",
+    "x-axis: ocean pH",
+    "y-axis: ocean carbonate saturation state",
+    "size: atmospheric pCO2",
+    "data source: Thomas and Catling (2024)",
   ];
   if (EMBED_MODE) infoArr.push("click for sound");
 
