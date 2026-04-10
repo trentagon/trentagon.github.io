@@ -301,7 +301,7 @@ function displayInfo() {
   let boxX = 30;
   let boxY = 30;
   let boxW = 420;
-  let boxH = 140;
+  let boxH = EMBED_MODE ? 160 : 140;
   push();
   fill(255, 230); // semi-transparent white
   stroke(0); // semi-transparent black border
@@ -329,7 +329,8 @@ function displayInfo() {
     "x-axis: ocean pH\n" +
     "y-axis: ocean carbonate saturation state\n" +
     "size: atmospheric pCO2\n" +
-    "data source: Thomas and Catling (2024)";
+    "data source: Thomas and Catling (2024)" +
+    (EMBED_MODE ? "\nclick for sound" : "");
   text(info, boxX + 16, boxY + 54, boxW - 32, boxH - 58);
 
   pop();

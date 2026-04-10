@@ -53,6 +53,11 @@ I am passionate about exploring the intersection of [art and science](https://ww
     iframe.style.height = '1000px';
     iframe.style.transform = 'scale(' + scale + ')';
   }
-  resizeCapcarb();
+  // Wait for layout to settle before measuring
+  requestAnimationFrame(function() {
+    resizeCapcarb();
+    // Second pass in case images/fonts shifted layout
+    setTimeout(resizeCapcarb, 200);
+  });
   window.addEventListener('resize', resizeCapcarb);
 </script>
