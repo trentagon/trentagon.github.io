@@ -332,7 +332,7 @@ function displayInfo() {
     "size: atmospheric pCO2",
     "data source: Thomas and Catling (2024)",
   ];
-  if (EMBED_MODE) infoArr.push("click for sound");
+  infoArr.push("click for sound");
 
   // Measure exact line counts using real font metrics
   textSize(ts);
@@ -345,7 +345,7 @@ function displayInfo() {
 
   let titleH = titleLineCount * lineH;
   let infoH = totalInfoLines * lineH;
-  let boxH = titleH + infoH + pad * 3;
+  let boxH = titleH + infoH + pad * 2;
 
   push();
   fill(255, 230);
