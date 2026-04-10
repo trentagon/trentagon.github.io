@@ -299,14 +299,35 @@ function windowResized() {
 function displayInfo() {
   // --- Info textbox in top left, scales with canvas ---
   let scale = min(width, height) / 1000;
-  let boxX = 30 * scale;
-  let boxY = 30 * scale;
-  let boxW = min(420 * scale, width - boxX * 2);
+  let pad = max(10, 16 * scale);
+  let boxX = max(10, 30 * scale);
+  let boxY = max(10, 30 * scale);
+  // Minimum width of 180px so text doesn't wrap into an absurd number of lines
+  let boxW = max(180, min(width * 0.55, 420 * scale, width - boxX * 2));
   let ts = max(9, round(15 * scale));
-  let lineH = ts * 1.45;
-  let titleLines = 2;
-  let infoLineCount = EMBED_MODE ? 5 : 4;
-  let boxH = (ts * 1.3 * titleLines) + (lineH * infoLineCount) + (boxX * 2);
+  let lineH = ts * 1.5;
+
+  // Use shorter text on narrow boxes
+  let isNarrow = boxW < 260;
+  let titleText = isNarrow
+    ? "Marinoan Snowball Earth simulations (ca. 639 Ma)"
+    : "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)";
+  let infoLines = [
+    isNarrow ? "x: ocean pH" : "x-axis: ocean pH",
+    isNarrow ? "y: carbonate saturation" : "y-axis: ocean carbonate saturation state",
+    isNarrow ? "size: atm. pCO\u2082" : "size: atmospheric pCO\u2082",
+    isNarrow ? "Thomas & Catling (2024)" : "data source: Thomas and Catling (2024)",
+  ];
+  if (EMBED_MODE) infoLines.push("click for sound");
+
+  // Measure title wrapping manually to size the box correctly
+  textSize(ts);
+  textFont("Courier");
+  let charsPerLine = floor((boxW - pad * 2) / (ts * 0.6));
+  let titleWraps = max(2, ceil(titleText.length / charsPerLine));
+  let titleH = lineH * titleWraps;
+  let infoH = lineH * infoLines.length;
+  let boxH = titleH + infoH + pad * 3;
 
   push();
   fill(255, 230);
@@ -321,21 +342,15 @@ function displayInfo() {
   textAlign(LEFT, TOP);
 
   textStyle(BOLD);
-  text(
-    "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)",
-    boxX + 16 * scale,
-    boxY + 14 * scale,
-    boxW - 32 * scale,
-    ts * 1.3 * titleLines
-  );
+  text(titleText, boxX + pad, boxY + pad, boxW - pad * 2, titleH);
   textStyle(NORMAL);
-  let info =
-    "x-axis: ocean pH\n" +
-    "y-axis: ocean carbonate saturation state\n" +
-    "size: atmospheric pCO2\n" +
-    "data source: Thomas and Catling (2024)" +
-    (EMBED_MODE ? "\nclick for sound" : "");
-  text(info, boxX + 16 * scale, boxY + ts * 1.3 * titleLines + 14 * scale, boxW - 32 * scale, lineH * infoLineCount);
+  text(
+    infoLines.join("\n"),
+    boxX + pad,
+    boxY + pad + titleH,
+    boxW - pad * 2,
+    infoH + lineH
+  );
 
   pop();
 }
