@@ -88,7 +88,7 @@ const REF_COLUMN_OFFSET = 250;
 const REF_Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
 const REF_LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
 // Portrait: sliders shifted 4px down so 28px thumb doesn't overlap label above
-const PORTRAIT_Y_OFFSETS = [36, 82, 128, 174, 220, 266, 312, 358];
+const PORTRAIT_Y_OFFSETS = [40, 86, 132, 178, 224, 270, 316, 362];
 let COLUMN_OFFSET = REF_COLUMN_OFFSET;
 let Y_OFFSETS = REF_Y_OFFSETS;
 let LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS;
