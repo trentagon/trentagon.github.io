@@ -852,7 +852,7 @@ function mountainScale(factor) {
 const PLANET_PRESETS = {
   earth: {
     sliders: {
-      size: 233.28,
+      size: () => radiusToSizeSlider(0.949) + 1,
       polygonRes: 80,
       rotation: 0.02,
       obliquity: 23,
