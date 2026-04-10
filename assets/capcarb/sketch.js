@@ -297,33 +297,37 @@ function windowResized() {
 }
 
 function displayInfo() {
-  // --- Info textbox in top left ---
-  let boxX = 30;
-  let boxY = 30;
-  let boxW = 420;
-  let boxH = EMBED_MODE ? 160 : 140;
-  push();
-  fill(255, 230); // semi-transparent white
-  stroke(0); // semi-transparent black border
-  strokeWeight(2);
-  rect(boxX, boxY, boxW, boxH); // <-- no rounded corners
+  // --- Info textbox in top left, scales with canvas ---
+  let scale = min(width, height) / 1000;
+  let boxX = 30 * scale;
+  let boxY = 30 * scale;
+  let boxW = min(420 * scale, width - boxX * 2);
+  let ts = max(9, round(15 * scale));
+  let lineH = ts * 1.45;
+  let titleLines = 2;
+  let infoLineCount = EMBED_MODE ? 5 : 4;
+  let boxH = (ts * 1.3 * titleLines) + (lineH * infoLineCount) + (boxX * 2);
 
-  fill(0, 200); // black text
+  push();
+  fill(255, 230);
+  stroke(0);
+  strokeWeight(max(1, 2 * scale));
+  rect(boxX, boxY, boxW, boxH);
+
+  fill(0, 200);
   noStroke();
-  textSize(15);
+  textSize(ts);
   textFont("Courier");
   textAlign(LEFT, TOP);
 
-  // Draw title in bold
   textStyle(BOLD);
   text(
     "Each circle is a simulation of the Marinoan Snowball Earth event (ca. 639 Ma)",
-    boxX + 16,
-    boxY + 14,
-    boxW - 32,
-    50
+    boxX + 16 * scale,
+    boxY + 14 * scale,
+    boxW - 32 * scale,
+    ts * 1.3 * titleLines
   );
-  // Draw the rest in normal style
   textStyle(NORMAL);
   let info =
     "x-axis: ocean pH\n" +
@@ -331,7 +335,7 @@ function displayInfo() {
     "size: atmospheric pCO2\n" +
     "data source: Thomas and Catling (2024)" +
     (EMBED_MODE ? "\nclick for sound" : "");
-  text(info, boxX + 16, boxY + 54, boxW - 32, boxH - 58);
+  text(info, boxX + 16 * scale, boxY + ts * 1.3 * titleLines + 14 * scale, boxW - 32 * scale, lineH * infoLineCount);
 
   pop();
 }
