@@ -87,8 +87,7 @@ const RIGHT_COLUMN_KEYS = [
 const REF_COLUMN_OFFSET = 250;
 const REF_Y_OFFSETS = [32, 78, 124, 170, 216, 262, 308, 354];
 const REF_LABEL_Y_OFFSETS = [14, 60, 106, 152, 198, 244, 290, 336];
-// Portrait: sliders shifted 4px down so 28px thumb doesn't overlap label above
-const PORTRAIT_Y_OFFSETS = [40, 86, 132, 178, 224, 270, 316, 362];
+// Portrait layout is computed dynamically in updateUIScale — no constants needed.
 let COLUMN_OFFSET = REF_COLUMN_OFFSET;
 let Y_OFFSETS = REF_Y_OFFSETS;
 let LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS;
@@ -314,7 +313,7 @@ function updateUIScale(canvasWidth, canvasHeight) {
     uiScale = Math.min(1, canvasWidth / REFERENCE_CANVAS_WIDTH);
   }
   PANEL_WIDTH = Math.round(REF_PANEL_WIDTH * uiScale);
-  PANEL_HEIGHT = Math.round(REF_PANEL_HEIGHT * uiScale);
+  PANEL_HEIGHT = Math.round(REF_PANEL_HEIGHT * uiScale); // portrait overrides this below
   PANEL_OFFSET_X = Math.round(REF_PANEL_OFFSET_X * uiScale);
   PANEL_OFFSET_Y = Math.round(REF_PANEL_OFFSET_Y * uiScale);
   CONTROL_PANEL_BASE_X_OFFSET = PANEL_WIDTH / 2 - PANEL_OFFSET_X;
@@ -328,13 +327,41 @@ function updateUIScale(canvasWidth, canvasHeight) {
   UI_FPS_WIDTH = Math.round(REF_UI_FPS_WIDTH * uiScale);
   UI_NOTE_WIDTH = PANEL_WIDTH;
   COLUMN_OFFSET = Math.round(REF_COLUMN_OFFSET * uiScale);
-  Y_OFFSETS = (portraitMode ? PORTRAIT_Y_OFFSETS : REF_Y_OFFSETS).map(v => Math.round(v * uiScale));
-  LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map(v => Math.round(v * uiScale));
+  if (portraitMode) {
+    // Compute layout directly in screen pixels so 3px gaps are exact at any uiScale.
+    // thumbH is clamped at 28px min, so scaled ref arrays break on narrow screens.
+    const labelFontPx = Math.round(14 * uiScale);
+    const trackH = Math.max(2, Math.round(4 * uiScale));
+    const thumbHPx = Math.max(28, Math.round(14 * uiScale));
+    const gap = 3;
+    const rowSpacingPx = labelFontPx + thumbHPx + 2 * gap;
+    // slider element top = label top + labelFont + gap + (thumbH - trackH) / 2
+    // ensures thumb top is exactly `gap` px below label bottom
+    const labelToSliderPx = Math.round(
+      labelFontPx + thumbHPx / 2 - trackH,
+    );
+    const startLabelPx = 20;
+    LABEL_Y_OFFSETS = Array.from(
+      { length: 8 },
+      (_, i) => startLabelPx + i * rowSpacingPx,
+    );
+    Y_OFFSETS = LABEL_Y_OFFSETS.map((l) => l + labelToSliderPx);
+    // Panel tall enough so last thumb bottom has 15px clearance from canvas edge
+    PANEL_HEIGHT =
+      PANEL_OFFSET_Y + Y_OFFSETS[7] + Math.ceil((trackH + thumbHPx) / 2) + 15;
+  } else {
+    Y_OFFSETS = REF_Y_OFFSETS.map((v) => Math.round(v * uiScale));
+    LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map((v) => Math.round(v * uiScale));
+  }
   // Update thumb size CSS variable — larger minimums in portrait for touch usability
-  const thumbW = portraitMode ? Math.max(24, Math.round(10 * uiScale)) : Math.max(6, Math.round(10 * uiScale));
-  const thumbH = portraitMode ? Math.max(28, Math.round(14 * uiScale)) : Math.max(8, Math.round(14 * uiScale));
-  document.documentElement.style.setProperty('--thumb-w', thumbW + 'px');
-  document.documentElement.style.setProperty('--thumb-h', thumbH + 'px');
+  const thumbW = portraitMode
+    ? Math.max(24, Math.round(10 * uiScale))
+    : Math.max(6, Math.round(10 * uiScale));
+  const thumbH = portraitMode
+    ? Math.max(28, Math.round(14 * uiScale))
+    : Math.max(8, Math.round(14 * uiScale));
+  document.documentElement.style.setProperty("--thumb-w", thumbW + "px");
+  document.documentElement.style.setProperty("--thumb-h", thumbH + "px");
 }
 
 function setup() {
@@ -628,7 +655,8 @@ function draw() {
   // Use orthographic camera to eliminate perspective distortion
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
-  let planetTransX = width * (uiVisible && !portraitMode ? PLANET_VIEW_OFFSET_X : 0);
+  let planetTransX =
+    width * (uiVisible && !portraitMode ? PLANET_VIEW_OFFSET_X : 0);
   let planetTransY = 0;
   if (portraitMode) {
     // Shift planet up to center it in the area above the UI panel
@@ -769,15 +797,27 @@ function applyUIVisibility() {
   ];
   if (ui.exportPresetButton) allElements.push(ui.exportPresetButton);
   if (ui.exportPresetStatus) allElements.push(ui.exportPresetStatus);
-  allElements.forEach(el => { if (el) el.style("display", displayVal); });
+  allElements.forEach((el) => {
+    if (el) el.style("display", displayVal);
+  });
   // Hide scale note in portrait (would overflow canvas bottom)
-  if (ui.scaleNote) ui.scaleNote.style("display", (uiVisible && !portraitMode) ? "block" : "none");
+  if (ui.scaleNote)
+    ui.scaleNote.style(
+      "display",
+      uiVisible && !portraitMode ? "block" : "none",
+    );
 }
 
 function restyleAllUI() {
-  Object.values(ui.sliders).forEach(s => { if (s) styleSlider(s); });
-  Object.values(ui.labels).forEach(l => { if (l) styleLabel(l); });
-  Object.values(ui.presetButtons).forEach(b => { if (b) styleButton(b); });
+  Object.values(ui.sliders).forEach((s) => {
+    if (s) styleSlider(s);
+  });
+  Object.values(ui.labels).forEach((l) => {
+    if (l) styleLabel(l);
+  });
+  Object.values(ui.presetButtons).forEach((b) => {
+    if (b) styleButton(b);
+  });
   updatePresetButtons();
   if (ui.fps) {
     ui.fps.style("font-size", Math.round(14 * uiScale) + "px");
