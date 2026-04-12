@@ -408,14 +408,23 @@ function setup() {
   generateInitialMesh();
 }
 
-// In portrait on the homepage, extend the canvas so the planet gets a full-width
-// square area and the UI panel sits below it. Returns the final canvas height.
+// Extend the shell/canvas height when the UI panel would otherwise be clipped.
+// Portrait: planet gets a full-width square area above the panel.
+// Landscape mobile: canvas grows tall enough to show the full panel (page scrolls).
+// Returns the final canvas height to use.
 function applyPortraitCanvasHeight(canvasWidth, canvasHeight) {
   const shell = getShellElement();
   if (portraitMode && shell) {
     const neededH = canvasWidth + PANEL_HEIGHT + 20;
     shell.style.height = neededH + "px";
     return neededH;
+  }
+  if (mobileLandscape && shell) {
+    const neededH = PANEL_HEIGHT + 200;
+    if (neededH > canvasHeight) {
+      shell.style.height = neededH + "px";
+      return neededH;
+    }
   }
   if (shell) shell.style.height = "";
   return canvasHeight;
