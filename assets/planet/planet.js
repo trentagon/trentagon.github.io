@@ -303,7 +303,8 @@ let _panelBasePos = { x: 0, y: 0 };
 
 function updateUIScale(canvasWidth, canvasHeight) {
   portraitMode = canvasWidth < canvasHeight && canvasWidth < 500;
-  mobileLandscape = !portraitMode && canvasWidth > canvasHeight && canvasHeight < 500;
+  mobileLandscape = !portraitMode && canvasWidth > canvasHeight && canvasHeight < 500
+    && canvasWidth >= MIN_UI_CANVAS_WIDTH && "ontouchstart" in window;
   if (portraitMode) {
     uiVisible = true;
     // Scale so panel fills screen width
@@ -396,7 +397,8 @@ function setup() {
   setAttributes("alpha", false);
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
   updateUIScale(canvasWidth, canvasHeight);
-  _canvasRenderer = createCanvas(canvasWidth, canvasHeight, WEBGL);
+  const finalHeight = applyPortraitCanvasHeight(canvasWidth, canvasHeight);
+  _canvasRenderer = createCanvas(canvasWidth, finalHeight, WEBGL);
   const container = getSketchContainer();
   if (container) {
     _canvasRenderer.parent(container);
@@ -406,8 +408,26 @@ function setup() {
   generateInitialMesh();
 }
 
+// In portrait on the homepage, extend the canvas so the planet gets a full-width
+// square area and the UI panel sits below it. Returns the final canvas height.
+function applyPortraitCanvasHeight(canvasWidth, canvasHeight) {
+  const shell = getShellElement();
+  if (portraitMode && shell) {
+    const neededH = canvasWidth + PANEL_HEIGHT + 20;
+    shell.style.height = neededH + "px";
+    return neededH;
+  }
+  if (shell) shell.style.height = "";
+  return canvasHeight;
+}
+
 function getSketchContainer() {
   return document.getElementById(SKETCH_CONTAINER_ID);
+}
+
+function getShellElement() {
+  const container = getSketchContainer();
+  return container ? container.closest(".planet-shell") : null;
 }
 
 function getSketchDimensions() {
@@ -810,10 +830,14 @@ function styleButton(button) {
 // ============================================================================
 
 function windowResized() {
+  // Reset any portrait height override so CSS determines the natural height
+  const shell = getShellElement();
+  if (shell) shell.style.height = "";
   const { width: canvasWidth, height: canvasHeight } = getSketchDimensions();
   updateUIScale(canvasWidth, canvasHeight);
-  if (canvasWidth !== width || canvasHeight !== height) {
-    resizeCanvas(canvasWidth, canvasHeight);
+  const finalHeight = applyPortraitCanvasHeight(canvasWidth, canvasHeight);
+  if (canvasWidth !== width || finalHeight !== height) {
+    resizeCanvas(canvasWidth, finalHeight);
   }
   applyUIVisibility();
   if (uiVisible) {
