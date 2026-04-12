@@ -234,6 +234,35 @@
           height: calc(100vh - 100px);
         }
       }
+
+      @media (max-height: 500px) and (orientation: landscape) {
+        .home-nav {
+          padding: 8px 10px;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .home-nav-title {
+          font-size: 1rem;
+        }
+
+        .home-nav-links {
+          gap: 6px;
+        }
+
+        .home-nav-link {
+          padding: 4px 8px;
+          font-size: 0.72rem;
+        }
+
+        .planet-stage {
+          padding: 0;
+        }
+
+        .planet-shell {
+          height: calc(100vh - 50px);
+        }
+      }
     </style>
   </head>
   <body>

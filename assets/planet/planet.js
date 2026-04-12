@@ -42,6 +42,7 @@ let UI_FPS_WIDTH = REF_UI_FPS_WIDTH;
 let UI_NOTE_WIDTH = PANEL_WIDTH;
 let uiVisible = true;
 let portraitMode = false;
+let mobileLandscape = false;
 const ENABLE_PRESET_EXPORT_HELPER =
   typeof window !== "undefined" && window.PLANET_DEBUG === true;
 const EXPORT_BUTTON_WIDTH = 232;
@@ -294,6 +295,7 @@ let _haloCacheKey = { innerRadius: -1, outerRadius: -1, cellSize: -1 };
 let _canvasRenderer = null;
 let _lastFpsUpdate = 0;
 let _lastFpsValue = 0;
+let _panelBasePos = { x: 0, y: 0 };
 
 // ============================================================================
 // INITIALIZATION & SETUP
@@ -301,10 +303,15 @@ let _lastFpsValue = 0;
 
 function updateUIScale(canvasWidth, canvasHeight) {
   portraitMode = canvasWidth < canvasHeight && canvasWidth < 500;
+  mobileLandscape = !portraitMode && canvasWidth > canvasHeight && canvasHeight < 500;
   if (portraitMode) {
     uiVisible = true;
     // Scale so panel fills screen width
     uiScale = Math.min(0.97, canvasWidth / REF_PANEL_WIDTH);
+  } else if (mobileLandscape) {
+    uiVisible = true;
+    // Floor at 0.65 so labels/buttons stay readable on small landscape screens
+    uiScale = Math.max(0.65, Math.min(1, canvasWidth / REFERENCE_CANVAS_WIDTH));
   } else if (canvasWidth < MIN_UI_CANVAS_WIDTH) {
     uiVisible = false;
     uiScale = 1;
@@ -349,15 +356,34 @@ function updateUIScale(canvasWidth, canvasHeight) {
     // Panel tall enough so last thumb bottom has 15px clearance from canvas edge
     PANEL_HEIGHT =
       PANEL_OFFSET_Y + Y_OFFSETS[7] + Math.ceil((trackH + thumbHPx) / 2) + 15;
+  } else if (mobileLandscape) {
+    // Same approach as portrait: compute row spacing from label + thumb + gaps
+    const labelFontPx = Math.round(14 * uiScale);
+    const trackH = Math.max(2, Math.round(4 * uiScale));
+    const thumbHPx = Math.max(28, Math.round(14 * uiScale));
+    const gap = 3;
+    const rowSpacingPx = labelFontPx + thumbHPx + 2 * gap;
+    const labelToSliderPx = Math.round(
+      labelFontPx + thumbHPx / 2 - trackH,
+    );
+    const startLabelPx = 10;
+    LABEL_Y_OFFSETS = Array.from(
+      { length: 8 },
+      (_, i) => startLabelPx + i * rowSpacingPx,
+    );
+    Y_OFFSETS = LABEL_Y_OFFSETS.map((l) => l + labelToSliderPx);
+    PANEL_HEIGHT =
+      PANEL_OFFSET_Y + Y_OFFSETS[7] + Math.ceil((trackH + thumbHPx) / 2) + 10;
   } else {
     Y_OFFSETS = REF_Y_OFFSETS.map((v) => Math.round(v * uiScale));
     LABEL_Y_OFFSETS = REF_LABEL_Y_OFFSETS.map((v) => Math.round(v * uiScale));
   }
-  // Update thumb size CSS variable — larger minimums in portrait for touch usability
-  const thumbW = portraitMode
+  // Update thumb size CSS variable — larger minimums in portrait/landscape mobile for touch
+  const touchMode = portraitMode || mobileLandscape;
+  const thumbW = touchMode
     ? Math.max(24, Math.round(10 * uiScale))
     : Math.max(6, Math.round(10 * uiScale));
-  const thumbH = portraitMode
+  const thumbH = touchMode
     ? Math.max(28, Math.round(14 * uiScale))
     : Math.max(8, Math.round(14 * uiScale));
   document.documentElement.style.setProperty("--thumb-w", thumbW + "px");
@@ -400,18 +426,20 @@ function getSketchDimensions() {
 function getControlPanelBasePosition() {
   if (portraitMode) {
     // Center panel horizontally, flush to bottom of canvas
-    return {
-      x: (width - PANEL_WIDTH) / 2 + PANEL_OFFSET_X,
-      y: height - PANEL_HEIGHT + PANEL_OFFSET_Y - 4,
-    };
+    _panelBasePos.x = (width - PANEL_WIDTH) / 2 + PANEL_OFFSET_X;
+    _panelBasePos.y = height - PANEL_HEIGHT + PANEL_OFFSET_Y - 4;
+    return _panelBasePos;
   }
   const rawX = width * CONTROL_PANEL_CENTER_X - CONTROL_PANEL_BASE_X_OFFSET;
   // Clamp so the panel right edge never exceeds canvas width
   const maxX = width - PANEL_WIDTH + PANEL_OFFSET_X - 4;
-  return {
-    x: Math.min(rawX, maxX),
-    y: height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET,
-  };
+  _panelBasePos.x = Math.min(rawX, maxX);
+  _panelBasePos.y = height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET;
+  if (mobileLandscape) {
+    // Clamp panel top so it doesn't go above canvas
+    _panelBasePos.y = Math.max(PANEL_OFFSET_Y, _panelBasePos.y);
+  }
+  return _panelBasePos;
 }
 
 function attachUIElement(element) {
@@ -428,8 +456,6 @@ function initializeUI() {
   ui.fps = createP("FPS:");
   attachUIElement(ui.fps);
   styleLabel(ui.fps);
-  ui.fps.style("font-family", "Arial, Helvetica, sans-serif");
-  ui.fps.style("font-size", Math.round(14 * uiScale) + "px");
   ui.fps.style("width", UI_FPS_WIDTH + "px");
   ui.fps.style("text-align", "right");
 
@@ -440,7 +466,6 @@ function initializeUI() {
   styleLabel(ui.scaleNote);
   ui.scaleNote.style("font-size", Math.round(12 * uiScale) + "px");
   ui.scaleNote.style("line-height", "1.2");
-  ui.scaleNote.style("font-family", "Arial, Helvetica, sans-serif");
   ui.scaleNote.style("text-align", "center");
   ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
   ui.scaleNote.style("opacity", "0.75");
@@ -584,10 +609,13 @@ function draw() {
   if (ui.fps) {
     const now = millis();
     if (now - _lastFpsUpdate > 500) {
-      _lastFpsValue = frameRate().toFixed(1);
+      const newFps = frameRate().toFixed(1);
+      if (newFps !== _lastFpsValue) {
+        _lastFpsValue = newFps;
+        ui.fps.html("FPS: " + _lastFpsValue);
+      }
       _lastFpsUpdate = now;
     }
-    ui.fps.html("FPS: " + _lastFpsValue);
   }
   background(0);
   updateParameters();
@@ -656,12 +684,16 @@ function draw() {
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
   let planetTransX =
-    width * (uiVisible && !portraitMode ? PLANET_VIEW_OFFSET_X : 0);
+    width * (uiVisible && !portraitMode && !mobileLandscape ? PLANET_VIEW_OFFSET_X : 0);
   let planetTransY = 0;
   if (portraitMode) {
-    // Shift planet up to center it in the area above the UI panel
-    const planetAreaHeight = height - PANEL_HEIGHT - 4;
-    planetTransY = -(height - planetAreaHeight) / 2;
+    // Center planet in the area above the UI panel
+    const panelTopY = height - PANEL_HEIGHT - 4;
+    planetTransY = (panelTopY - height) / 2;
+  }
+  if (mobileLandscape) {
+    // Offset planet left so it doesn't overlap the control panel
+    planetTransX = -width * 0.18;
   }
   translate(planetTransX, planetTransY, 0);
 
@@ -700,8 +732,12 @@ function updateParameters() {
   // REFERENCE_SIZE_MAX * 2.5. Scale so the planet fits in the smaller canvas dimension.
   let fitDim;
   if (portraitMode) {
+    // Fit planet within the area above the UI panel
     const planetAreaHeight = height - PANEL_HEIGHT - 4;
-    fitDim = Math.min(width * 0.8, planetAreaHeight * 0.8);
+    fitDim = Math.min(width * 0.92, planetAreaHeight * 0.92);
+  } else if (mobileLandscape) {
+    // Landscape mobile: planet on left, panel on right — give planet ~55% of width
+    fitDim = Math.min(width * 0.42, height * 0.85);
   } else if (uiVisible) {
     fitDim = Math.min(width * 0.45, height * 0.85);
   } else {
@@ -716,15 +752,14 @@ function updateParameters() {
 
 function drawUIPanel() {
   if (!uiVisible || portraitMode) return;
-  const { x: baseX, y: baseY } = getControlPanelBasePosition();
   push();
   translate(-width / 2, -height / 2, 0);
   fill(0);
   stroke(255);
   strokeWeight(2);
   rect(
-    baseX - PANEL_OFFSET_X,
-    baseY - PANEL_OFFSET_Y,
+    _panelBasePos.x - PANEL_OFFSET_X,
+    _panelBasePos.y - PANEL_OFFSET_Y,
     PANEL_WIDTH,
     PANEL_HEIGHT,
   );
@@ -800,11 +835,11 @@ function applyUIVisibility() {
   allElements.forEach((el) => {
     if (el) el.style("display", displayVal);
   });
-  // Hide scale note in portrait (would overflow canvas bottom)
+  // Hide scale note in portrait/landscape mobile (would overflow canvas)
   if (ui.scaleNote)
     ui.scaleNote.style(
       "display",
-      uiVisible && !portraitMode ? "block" : "none",
+      uiVisible && !portraitMode && !mobileLandscape ? "block" : "none",
     );
 }
 
