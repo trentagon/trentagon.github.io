@@ -30,6 +30,18 @@ Books are selected based on member suggestions and discussion at each meeting. T
   </thead>
   <tbody>
     <tr>
+      <td>In progress...</td>
+      <td>John Kennedy Toole</td>
+      <td><em>A Confederacy of Dunces</em></td>
+      <td>1980</td>
+    </tr>
+    <tr>
+      <td>05/15/2026</td>
+      <td>Jacqueline Harpman</td>
+      <td><em>I Who Have Never Known Men</em></td>
+      <td>1995</td>
+    </tr>
+    <tr>
       <td>04/03/2026</td>
       <td>Marilynne Robinson</td>
       <td><em>Gilead</em></td>
