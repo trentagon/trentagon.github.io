@@ -14,7 +14,7 @@ Welcome to Trent's Book Club! We are a group of friends that meet in-person appr
 >
 > — Arthur Schopenhauer
 
-Books are selected based on member suggestions and discussion at each meeting. The guiding rule for selection is that the book is worth reading. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best. 
+Books are selected based on member suggestions and discussion at each meeting. The guiding rule for selection is that the book is worth reading. As Arthur said, nobody wants to spend their time slogging through a bad book. Sometimes it's hard to tell if a book is bad ahead of time, but we try our best.
 
 <table class="pub-table book-table">
   <thead>
@@ -30,7 +30,7 @@ Books are selected based on member suggestions and discussion at each meeting. T
   </thead>
   <tbody>
     <tr>
-      <td>In progress...</td>
+      <td>In progress</td>
       <td>John Kennedy Toole</td>
       <td><em>A Confederacy of Dunces</em></td>
       <td>1980</td>
