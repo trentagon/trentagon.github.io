@@ -1,7 +1,7 @@
 ---
 layout: site
 title: More
-description: "Art gallery, art education, and book club — more from Trent Thomas."
+description: "More"
 ---
 
 # More

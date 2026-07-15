@@ -1,12 +1,12 @@
 ---
 layout: site
 title: Art Gallery
-description: "Generative art by Trent Thomas — interactive browser animations exploring the intersection of art, mathematics, and science."
+description: "Art Gallery"
 ---
 
 # Art Gallery
 
-I am passionate about exploring the intersection of [art and science](https://www.embopress.org/doi/full/10.15252/embr.201847061){:target="\_blank"}. I am particularly interested in generative design, where a work unfolds organically from a set of predetermined conditions. The code for the animations below is running in your browser right now.
+I am passionate about exploring the intersection of [art and science](https://www.embopress.org/doi/full/10.15252/embr.201847061){:target="_blank" rel="noopener"}. I am particularly interested in generative design, where a work unfolds organically from a set of predetermined conditions. The code for the animations below is running in your browser right now.
 
 <div class="art-grid">
 

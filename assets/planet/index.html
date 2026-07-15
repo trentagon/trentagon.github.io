@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet.Gen</title>
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <style>
@@ -9,14 +11,21 @@
         padding: 0;
         margin: 0;
         background: #000;
-        overflow: hidden;
+        /* Scroll vertically when the mobile layout grows the shell taller
+           than the viewport (planet above, slider panel below) */
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      canvas {
+        display: block;
       }
 
       #planet-sketch-container {
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 100%;
+        height: 100vh;
       }
 
       input[type='range'] {
@@ -68,7 +77,9 @@
     </style>
   </head>
   <body>
-    <div id="planet-sketch-container"></div>
+    <!-- planet-shell lets planet.js grow the container for mobile layouts,
+         same as the homepage embed -->
+    <div id="planet-sketch-container" class="planet-shell"></div>
     <script src="/assets/libraries/p5.min.js"></script>
     <script src="/assets/planet/planet.js"></script>
   </body>

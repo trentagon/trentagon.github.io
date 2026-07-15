@@ -11,16 +11,16 @@
     <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/favicon-96x96.png' | relative_url }}" />
     <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}" />
-    <title>Home | Thomas Lab</title>
-    {% assign desc = "The Thomas Laboratory for Planetary Systems Science. Research in planetary atmospheres, Snowball Earth, Mars, exoplanets, and complex systems." %}
+    <title>Trent Thomas</title>
+    {% assign desc = "Hello! I am Trent Thomas, a Postdoctoral Fellow at MIT studying planetary science. I am currently on the market for a permanent academic position." %}
     <meta name="description" content="{{ desc }}" />
-    <meta property="og:title" content="The Thomas Lab for Planetary Systems Science" />
+    <meta property="og:title" content="Trent Thomas" />
     <meta property="og:description" content="{{ desc }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:image" content="{{ '/assets/planet_screenshot.png' | absolute_url }}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="The Thomas Lab for Planetary Systems Science" />
+    <meta name="twitter:title" content="Trent Thomas" />
     <meta name="twitter:description" content="{{ desc }}" />
     <style>
       :root {
@@ -85,7 +85,6 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.42rem;
         font-weight: 700;
-        text-transform: uppercase;
         letter-spacing: 0.03em;
         line-height: 1.2;
       }
@@ -121,6 +120,17 @@
       .home-nav-link.is-active {
         background: var(--ink);
         color: var(--paper);
+      }
+
+      /* Mobile intro: shown by planet.js whenever the on-canvas intro is hidden */
+      .home-intro {
+        display: none;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 1.4;
+        text-align: justify;
+        padding: 8px var(--content-pad) 0;
       }
 
       .planet-stage {
@@ -272,7 +282,7 @@
       <div class="home-nav-wrap">
         <nav class="home-nav" aria-label="Primary">
           <p class="home-nav-title">
-            THE THOMAS LABORATORY FOR PLANETARY SYSTEMS SCIENCE
+            TRENT THOMAS'S PERSONAL WEBSITE
           </p>
           <div class="home-nav-links">
             <a
@@ -303,6 +313,8 @@
           </div>
         </nav>
       </div>
+
+      <div id="planet-intro-mobile" class="home-intro"></div>
 
       <section class="planet-stage" aria-label="Planet Hero">
         <div class="planet-shell">

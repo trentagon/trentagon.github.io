@@ -15,6 +15,12 @@ let modelTimer = 0;
 
 let mapMin = -0.3;
 let mapMax = 1.3;
+
+// Sound state — only initialized when not in embed mode
+let sampler;
+let notesOne, notesTwo, notesThree;
+let timeOne, timeTwo, timeThree;
+let masterVol, reverbVol, reverb;
 // At the top of your sketch.js
 let risoLayer1, risoLayer2, risoLayer3, risoLayer4;
 
@@ -31,6 +37,9 @@ function preload() {
   omega = loadTable("data_small/omega.csv", "csv", "header");
   temp = loadTable("data_small/temp.csv", "csv", "header");
   alk = loadTable("data_small/alk.csv", "csv", "header");
+
+  // Sound is disabled in the embedded gallery tile — skip downloading samples
+  if (EMBED_MODE) return;
 
   // Load piano notes
   sampler = new Tone.Sampler(
@@ -110,6 +119,7 @@ function setup() {
   }
 
   // Sound
+  if (EMBED_MODE) return;
   notesOne = [
     "C4",
     "D4",
@@ -175,7 +185,27 @@ function draw() {
 
 function playSynth(note, velocity) {
   if (EMBED_MODE) return;
+  // Don't trigger until samples are loaded and the context is unlocked
+  if (!sampler || sampler.loaded === false) return;
+  if (Tone.context.state !== "running") return;
   sampler.triggerAttackRelease(note, 8, "+0.0", velocity);
+}
+
+// Browsers keep the AudioContext suspended until a user gesture —
+// this is what actually makes "click for sound" work.
+function unlockAudio() {
+  if (EMBED_MODE || typeof Tone === "undefined") return;
+  if (Tone.context.state !== "running") {
+    Tone.context.resume();
+  }
+}
+
+function mousePressed() {
+  unlockAudio();
+}
+
+function touchStarted() {
+  unlockAudio();
 }
 
 class Model {
@@ -193,7 +223,7 @@ class Model {
 
     this.modelColor = color(random(MODEL_COLORS));
 
-    this.note = random(notesOne); // Assign a random note
+    this.note = notesOne ? random(notesOne) : null; // Assign a random note
     this.prevX = null; // For crossing detection
     this.hasCrossed = false; // To avoid repeated triggers
   }
@@ -332,7 +362,7 @@ function displayInfo() {
     "size: atmospheric pCO2",
     "data source: Thomas and Catling (2024)",
   ];
-  infoArr.push("click for sound");
+  if (!EMBED_MODE) infoArr.push("click for sound");
 
   // Measure exact line counts using real font metrics
   textSize(ts);

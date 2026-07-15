@@ -1,7 +1,7 @@
 ---
 layout: site
 title: Trent's Book Club
-description: "Trent's Book Club — a monthly in-person book club in Seattle, WA. Reading list and personal favorites."
+description: "Trent's Book Club"
 ---
 
 <img src="/assets/tbc.png" alt="Logo of Trent's Book Club" style="width: 100%;" />
@@ -31,6 +31,12 @@ Books are selected based on member suggestions and discussion at each meeting. T
   <tbody>
     <tr>
       <td>In progress</td>
+      <td>Haruki Murakami</td>
+      <td><em>Hard-Boiled Wonderland and the End of the World</em></td>
+      <td>1985</td>
+    </tr>
+    <tr>
+      <td>07/14/2026</td>
       <td>John Kennedy Toole</td>
       <td><em>A Confederacy of Dunces</em></td>
       <td>1980</td>

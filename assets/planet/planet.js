@@ -20,6 +20,9 @@ const REF_PRESET_START_Y = -133;
 const REF_UI_FPS_WIDTH = 120;
 const UI_FPS_ROW_Y_INSET = 5;
 const UI_NOTE_BOTTOM_OFFSET = 4;
+const UI_INTRO_BOTTOM_GAP = 14;
+const INTRO_TEXT =
+  'Hello! I am Trent Thomas, a Postdoctoral Fellow at MIT studying planetary science. I am currently on the market for a permanent academic position. <a href="mailto:tbthomas@mit.edu" style="color: white;">[tbthomas@mit.edu]</a>';
 
 // Responsive scaling — UI hides below this width
 const MIN_UI_CANVAS_WIDTH = 600;
@@ -133,6 +136,7 @@ const LABEL_CONFIGS = {
 };
 
 const PRESET_BUTTONS = [
+  { key: "random_dynamic", label: "Morph" },
   { key: "random", label: "Random" },
   { key: "earth", label: "Earth" },
   { key: "mars", label: "Mars" },
@@ -162,6 +166,7 @@ const POLAR_CAP_SOFTNESS = 0.1;
 const ui = {
   fps: null,
   scaleNote: null,
+  introNote: null,
   exportPresetButton: null,
   exportPresetStatus: null,
   presetButtons: {},
@@ -405,6 +410,9 @@ function setup() {
   }
   initializeUI();
   applyEarthPreset();
+  // Start in Morph mode by default (Earth preset above gives the pinned
+  // rotation/obliquity/size and a sane fallback state if morph is toggled off)
+  applyPreset("random_dynamic");
   generateInitialMesh();
 }
 
@@ -498,6 +506,10 @@ function initializeUI() {
   ui.scaleNote.style("text-align", "center");
   ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
   ui.scaleNote.style("opacity", "0.75");
+
+  ui.introNote = createP(INTRO_TEXT);
+  attachUIElement(ui.introNote);
+  styleIntroNote();
 
   positionPanelMeta(baseX, baseY);
 
@@ -647,6 +659,7 @@ function draw() {
     }
   }
   background(0);
+  updateDynamicRandom();
   updateParameters();
   const dtNorm = deltaTime / 16.667; // normalise to 60fps
   params.noiseTime += params.noiseDriftSpeed * dtNorm;
@@ -822,6 +835,15 @@ function styleLabel(label) {
   label.style("color", "white");
 }
 
+function styleIntroNote() {
+  if (!ui.introNote) return;
+  styleLabel(ui.introNote);
+  ui.introNote.style("font-size", Math.round(19 * uiScale) + "px");
+  ui.introNote.style("line-height", "1.4");
+  ui.introNote.style("text-align", "justify");
+  ui.introNote.style("width", PANEL_WIDTH + "px");
+}
+
 function styleButton(button) {
   button.style("width", BUTTON_WIDTH + "px");
   button.style("height", BUTTON_HEIGHT + "px");
@@ -874,6 +896,16 @@ function applyUIVisibility() {
       "display",
       uiVisible && !portraitMode && !mobileLandscape ? "block" : "none",
     );
+  // Intro note lives on the canvas on desktop; on mobile (or any layout where
+  // the canvas version is hidden) it moves to the HTML block under the nav bar.
+  const introOnCanvas = uiVisible && !portraitMode && !mobileLandscape;
+  if (ui.introNote)
+    ui.introNote.style("display", introOnCanvas ? "block" : "none");
+  const mobileIntro = document.getElementById("planet-intro-mobile");
+  if (mobileIntro) {
+    if (!mobileIntro.innerHTML) mobileIntro.innerHTML = INTRO_TEXT;
+    mobileIntro.style.display = introOnCanvas ? "none" : "block";
+  }
 }
 
 function restyleAllUI() {
@@ -895,6 +927,7 @@ function restyleAllUI() {
     ui.scaleNote.style("font-size", Math.round(12 * uiScale) + "px");
     ui.scaleNote.style("width", UI_NOTE_WIDTH + "px");
   }
+  styleIntroNote();
 }
 
 function positionUIElements() {
@@ -945,6 +978,15 @@ function positionPanelMeta(baseX, baseY) {
       ui.scaleNote,
       panelLeft + (PANEL_WIDTH - UI_NOTE_WIDTH) / 2,
       panelBottom + UI_NOTE_BOTTOM_OFFSET,
+    );
+  }
+  if (ui.introNote) {
+    const panelTop = baseY - PANEL_OFFSET_Y;
+    const noteHeight = ui.introNote.elt.offsetHeight || 0;
+    positionElement(
+      ui.introNote,
+      panelLeft,
+      panelTop - noteHeight - UI_INTRO_BOTTOM_GAP,
     );
   }
 }
@@ -1542,6 +1584,94 @@ function applyRandomPreset() {
   applySpectrumPalette();
 }
 
+// --- Random (Dynamic): endless smooth morph of all sliders and colors ---
+// Each animated quantity follows its own 1D Perlin-noise path over time.
+const DYNAMIC_RANDOM_SPEED = 0.0035; // noise-time increment per 60fps frame
+const DYNAMIC_COLOR_KEYS = [
+  "oceanDeep",
+  "ocean",
+  "oceanShallow",
+  "beach",
+  "grass",
+  "mountain",
+  "atmosphere",
+  "clouds",
+  "magneticField",
+  "lavaCore",
+  "lavaEdge",
+];
+const _dynamicRandom = { active: false, t: 0, base: 0 };
+
+// Perlin output clusters around 0.5 — stretch so paths actually reach the
+// ends of each slider/color range.
+function noiseToUnit(n) {
+  const u = (n - 0.2) / 0.6;
+  return u < 0 ? 0 : u > 1 ? 1 : u;
+}
+
+function toggleDynamicRandom() {
+  if (_dynamicRandom.active) {
+    // Second click freezes the current planet
+    _dynamicRandom.active = false;
+    ui.activePresetKey = null;
+    updatePresetButtons();
+    return;
+  }
+  _dynamicRandom.active = true;
+  _dynamicRandom.t = 0;
+  _dynamicRandom.base = random(1000);
+  // Rotation rate, obliquity, and radius are held static at Earth's values
+  // during the morph
+  setSliderValue("rotation", PLANET_PRESETS.earth.sliders.rotation);
+  setSliderValue("obliquity", PLANET_PRESETS.earth.sliders.obliquity);
+  setSliderValue("size", PLANET_PRESETS.earth.sliders.size());
+  colors.palette = "random_dynamic";
+  ui.activePresetKey = "random_dynamic";
+  updatePresetButtons();
+}
+
+function stopDynamicRandom() {
+  _dynamicRandom.active = false;
+}
+
+function updateDynamicRandom() {
+  if (!_dynamicRandom.active) return;
+  _dynamicRandom.t += DYNAMIC_RANDOM_SPEED * (deltaTime / 16.667);
+  const t = _dynamicRandom.t;
+  const base = _dynamicRandom.base;
+
+  Object.keys(ui.sliders).forEach((key, idx) => {
+    if (
+      !ui.sliders[key] ||
+      key === "rotation" ||
+      key === "obliquity" ||
+      key === "size"
+    )
+      return;
+    const { min, max } = getSliderBounds(key);
+    const u = noiseToUnit(noise(base + idx * 37.31, t));
+    setSliderValue(key, min + u * (max - min));
+  });
+
+  DYNAMIC_COLOR_KEYS.forEach((ckey, i) => {
+    const c = colors[ckey];
+    for (let ch = 0; ch < 3; ch++) {
+      c[ch] = 255 * noiseToUnit(noise(base + 500 + i * 11.17 + ch * 3.07, t));
+    }
+  });
+  // Polar caps stay bright, matching the static random palette
+  for (let ch = 0; ch < 3; ch++) {
+    colors.polarCap[ch] =
+      200 + 55 * noiseToUnit(noise(base + 700 + ch * 3.07, t));
+  }
+  for (let i = 0; i < 3; i++) {
+    for (let ch = 0; ch < 3; ch++) {
+      colors.biosphereColors[i][ch] =
+        255 * noiseToUnit(noise(base + 800 + i * 11.3 + ch * 3.07, t));
+    }
+  }
+}
+
 function applyEarthPreset() {
   applyPreset("earth");
 }
@@ -1567,6 +1697,12 @@ function applyPaletteFromPreset(palette, presetKey) {
 }
 
 function applyPreset(key) {
+  if (key === "random_dynamic") {
+    toggleDynamicRandom();
+    return;
+  }
+  stopDynamicRandom();
+
   if (key === "random") {
     applyRandomPreset();
     return;
@@ -2298,11 +2434,31 @@ function drawClouds(radius) {
 // BIOSPHERE PARTICLES
 // ============================================================================
 
+// Orbit radius that keeps a particle skimming just above the local terrain.
+// Mirrors the height formula in generatePlanetMesh so particles clear the
+// mountains instead of flying through them on high land/topography planets.
+function biosphereOrbitRadius(radius, ux, uy, uz) {
+  const t = params.noiseTime;
+  const h = noise(
+    (ux + params.noiseOffsetX + t) * NOISE_SCALE,
+    (uy + params.noiseOffsetY + t * NOISE_DRIFT_SCALE_Y) * NOISE_SCALE,
+    (uz + t * NOISE_DRIFT_SCALE_Z) * NOISE_SCALE,
+  );
+  const landThreshold = params.landThreshold;
+  const landRange = 1 - landThreshold;
+  const elevationFactor =
+    landRange > 0.0001 ? Math.max(0, (h - landThreshold) / landRange) : 0;
+  return (
+    radius +
+    elevationFactor * params.mountainHeight * (radius / 150) +
+    radius * 0.02
+  );
+}
+
 function drawBiosphereParticles(radius) {
   if (params.biosphere <= 0) return;
 
   const particleCount = Math.floor(params.biosphere * 200);
-  const surfaceRadius = radius * 1.02;
   const tailSegments = 10;
   const invTail = 1 / tailSegments;
   const half = radius * 0.005 * 0.75; // box(radius*0.005) → half-extent, 50% larger
@@ -2336,9 +2492,13 @@ function drawBiosphereParticles(radius) {
       const pastOrbitPhi = Math.max(0, Math.min(PI, phi + pastChaoticPhi));
 
       const sinPOP = Math.sin(pastOrbitPhi);
-      const cx = surfaceRadius * sinPOP * Math.cos(pastOrbitLon);
-      const cy = surfaceRadius * Math.cos(pastOrbitPhi);
-      const cz = surfaceRadius * sinPOP * Math.sin(pastOrbitLon);
+      const ux = sinPOP * Math.cos(pastOrbitLon);
+      const uy = Math.cos(pastOrbitPhi);
+      const uz = sinPOP * Math.sin(pastOrbitLon);
+      const segRadius = biosphereOrbitRadius(radius, ux, uy, uz);
+      const cx = segRadius * ux;
+      const cy = segRadius * uy;
+      const cz = segRadius * uz;
 
       const fade = 1 - seg * invTail;
       fill(pr, pg, pb, opacity * fade);
@@ -2364,9 +2524,13 @@ function drawBiosphereParticles(radius) {
     const orbitLon = lon + chaoticLon;
     const orbitPhi = Math.max(0, Math.min(PI, phi + chaoticPhi));
     const sinOP = Math.sin(orbitPhi);
-    const ppx = surfaceRadius * sinOP * Math.cos(orbitLon);
-    const ppy = surfaceRadius * Math.cos(orbitPhi);
-    const ppz = surfaceRadius * sinOP * Math.sin(orbitLon);
+    const hux = sinOP * Math.cos(orbitLon);
+    const huy = Math.cos(orbitPhi);
+    const huz = sinOP * Math.sin(orbitLon);
+    const headRadius = biosphereOrbitRadius(radius, hux, huy, huz);
+    const ppx = headRadius * hux;
+    const ppy = headRadius * huy;
+    const ppz = headRadius * huz;
 
     fill(pr, pg, pb, opacity);
     // Cross-shaped billboard (XY + YZ quads)
@@ -2488,10 +2652,13 @@ function drawAtmosphericEscapeHalo(radius) {
     0.35 * escapeSlider + 0.65 * Math.pow(escapeSlider, 0.55);
 
   const atmosphereRadius = radius * params.scaleHeight;
-  const innerRadius = atmosphereRadius * 1.02;
-  const outerRadius =
-    atmosphereRadius + radius * 0.1 + radius * 0.8 * escapeStrength;
-  const cellSize = Math.max(3, radius * 0.03);
+  // Quantize geometry so smoothly-varying sliders (drag, Random Dynamic) hit
+  // the cache instead of rebuilding it every frame.
+  const innerRadius = Math.round(atmosphereRadius * 1.02);
+  const outerRadius = Math.round(
+    (atmosphereRadius + radius * 0.1 + radius * 0.8 * escapeStrength) / 4,
+  ) * 4;
+  const cellSize = Math.max(3, Math.round(radius * 0.03 * 2) / 2);
 
   // Rebuild the static cell cache only when geometry changes.
   if (
