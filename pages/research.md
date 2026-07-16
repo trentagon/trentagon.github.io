@@ -12,6 +12,11 @@ description: "Research"
 
 <p class="intro-text">See the <a href="/pages/publications.html">publications</a> page for more detailed information.</p>
 
+<div class="join-section">
+  <h2>Work with Me</h2>
+  <p>As a postdoctoral fellow at MIT, I am looking to provide research mentorship for undergraduate and graduate students starting Fall 2026. If you are interested in the research I do and you'd like to work with me, please reach out via email (<a href="mailto:tbthomas@mit.edu">tbthomas@mit.edu</a>).</p>
+</div>
+
 <h2>Snowball Earth</h2>
 <div class="topic">
   <div class="topic-img-wrap">

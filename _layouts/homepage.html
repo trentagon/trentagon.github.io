@@ -282,7 +282,7 @@
       <div class="home-nav-wrap">
         <nav class="home-nav" aria-label="Primary">
           <p class="home-nav-title">
-            TRENT THOMAS'S PERSONAL WEBSITE
+            TRENT B. THOMAS
           </p>
           <div class="home-nav-links">
             <a
@@ -298,12 +298,19 @@
             <a
               class="home-nav-link{% if nav_path contains '/pages/people' %} is-active{% endif %}"
               href="{{ '/pages/people.html' | relative_url }}"
-              >People</a
+              >About Me</a
             >
             <a
               class="home-nav-link{% if nav_path contains '/pages/publications' %} is-active{% endif %}"
               href="{{ '/pages/publications.html' | relative_url }}"
               >Publications</a
+            >
+            <a
+              class="home-nav-link"
+              href="{{ '/assets/TThomas_CV_pdf.pdf' | relative_url }}"
+              target="_blank"
+              rel="noopener"
+              >CV</a
             >
             <a
               class="home-nav-link{% if nav_path contains '/pages/more' or nav_path contains '/pages/art_gallery' or nav_path contains '/pages/art_education' or nav_path contains '/pages/trents_book_club' %} is-active{% endif %}"

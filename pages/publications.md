@@ -7,7 +7,7 @@ description: "Publications"
 # Publications
 
 <p class="summary-text">
-Below are my publications and open-source code. For more, see my <a href="https://trentagon.github.io/assets/TThomas_CV_pdf.pdf" target="_blank">CV</a> or <a href="https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar profile</a>.
+Below are my publications and open-source code. For more, see my <a href="https://trentagon.github.io/assets/TThomas_CV_pdf.pdf" target="_blank">CV</a> or <a href="https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.
 </p>
 
 <table class="pub-table">
