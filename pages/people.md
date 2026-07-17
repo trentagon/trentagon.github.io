@@ -11,7 +11,7 @@ description: "About Me"
   <div class="profile-body">
     <h3>Trent B. Thomas</h3>
     <p class="profile-title-line"><em>Crosby Distinguished Postdoctoral Fellow</em></p>
-    <p class="profile-title-line"><em>Dean's School of Science Fellow</em></p>
+    <p class="profile-title-line"><em>School of Science Dean's Postdoctoral Fellow</em></p>
     <p class="profile-title-line">Department of Earth, Atmospheric & Planetary Sciences</p>
     <p class="profile-title-line">Massachusetts Institute of Technology</p>
     <p class="profile-title-line"><a href="mailto:tbthomas@mit.edu">tbthomas@mit.edu</a></p>
