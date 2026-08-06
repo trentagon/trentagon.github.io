@@ -22,7 +22,7 @@ const UI_FPS_ROW_Y_INSET = 5;
 const UI_NOTE_BOTTOM_OFFSET = 4;
 const UI_INTRO_BOTTOM_GAP = 14;
 const INTRO_TEXT =
-  'Hello! I am Trent Thomas, a Postdoctoral Fellow at MIT studying planetary science. I am currently on the market for a permanent academic position. <a href="mailto:tbthomas@mit.edu" style="color: white;">[tbthomas@mit.edu]</a>';
+  'Hello! I am Trent Thomas, a Postdoctoral Research Fellow at MIT studying planetary science. <a href="mailto:tbthomas@mit.edu" style="color: white;">[tbthomas@mit.edu]</a>';
 
 // Responsive scaling — UI hides below this width
 const MIN_UI_CANVAS_WIDTH = 600;
@@ -308,8 +308,12 @@ let _panelBasePos = { x: 0, y: 0 };
 
 function updateUIScale(canvasWidth, canvasHeight) {
   portraitMode = canvasWidth < canvasHeight && canvasWidth < 500;
-  mobileLandscape = !portraitMode && canvasWidth > canvasHeight && canvasHeight < 500
-    && canvasWidth >= MIN_UI_CANVAS_WIDTH && "ontouchstart" in window;
+  mobileLandscape =
+    !portraitMode &&
+    canvasWidth > canvasHeight &&
+    canvasHeight < 500 &&
+    canvasWidth >= MIN_UI_CANVAS_WIDTH &&
+    "ontouchstart" in window;
   if (portraitMode) {
     uiVisible = true;
     // Scale so panel fills screen width
@@ -350,9 +354,7 @@ function updateUIScale(canvasWidth, canvasHeight) {
     const rowSpacingPx = labelFontPx + thumbHPx + 2 * gap;
     // slider element top = label top + labelFont + gap + (thumbH - trackH) / 2
     // ensures thumb top is exactly `gap` px below label bottom
-    const labelToSliderPx = Math.round(
-      labelFontPx + thumbHPx / 2 - trackH,
-    );
+    const labelToSliderPx = Math.round(labelFontPx + thumbHPx / 2 - trackH);
     const startLabelPx = 20;
     LABEL_Y_OFFSETS = Array.from(
       { length: 8 },
@@ -369,9 +371,7 @@ function updateUIScale(canvasWidth, canvasHeight) {
     const thumbHPx = Math.max(28, Math.round(14 * uiScale));
     const gap = 3;
     const rowSpacingPx = labelFontPx + thumbHPx + 2 * gap;
-    const labelToSliderPx = Math.round(
-      labelFontPx + thumbHPx / 2 - trackH,
-    );
+    const labelToSliderPx = Math.round(labelFontPx + thumbHPx / 2 - trackH);
     const startLabelPx = 10;
     LABEL_Y_OFFSETS = Array.from(
       { length: 8 },
@@ -471,7 +471,8 @@ function getControlPanelBasePosition() {
   // Clamp so the panel right edge never exceeds canvas width
   const maxX = width - PANEL_WIDTH + PANEL_OFFSET_X - 4;
   _panelBasePos.x = Math.min(rawX, maxX);
-  _panelBasePos.y = height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET;
+  _panelBasePos.y =
+    height * CONTROL_PANEL_CENTER_Y - CONTROL_PANEL_BASE_Y_OFFSET;
   if (mobileLandscape) {
     // Clamp panel top so it doesn't go above canvas
     _panelBasePos.y = Math.max(PANEL_OFFSET_Y, _panelBasePos.y);
@@ -726,7 +727,8 @@ function draw() {
   ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 2000);
 
   let planetTransX =
-    width * (uiVisible && !portraitMode && !mobileLandscape ? PLANET_VIEW_OFFSET_X : 0);
+    width *
+    (uiVisible && !portraitMode && !mobileLandscape ? PLANET_VIEW_OFFSET_X : 0);
   let planetTransY = 0;
   if (portraitMode) {
     // Center planet in the area above the UI panel
@@ -2655,9 +2657,10 @@ function drawAtmosphericEscapeHalo(radius) {
   // Quantize geometry so smoothly-varying sliders (drag, Random Dynamic) hit
   // the cache instead of rebuilding it every frame.
   const innerRadius = Math.round(atmosphereRadius * 1.02);
-  const outerRadius = Math.round(
-    (atmosphereRadius + radius * 0.1 + radius * 0.8 * escapeStrength) / 4,
-  ) * 4;
+  const outerRadius =
+    Math.round(
+      (atmosphereRadius + radius * 0.1 + radius * 0.8 * escapeStrength) / 4,
+    ) * 4;
   const cellSize = Math.max(3, Math.round(radius * 0.03 * 2) / 2);
 
   // Rebuild the static cell cache only when geometry changes.
