@@ -235,5 +235,10 @@ I like to read other books too. Here are some of my personal favorites:
       <td><em>CivilWarLand in Bad Decline</em></td>
       <td>1996</td>
     </tr>
+    <tr>
+      <td>John Steinbeck</td>
+      <td><em>East of Eden</em></td>
+      <td>1952</td>
+    </tr>
   </tbody>
 </table>

@@ -10,8 +10,8 @@ description: "About Me"
   <img class="profile-img" src="/assets/pfp_2023.JPG" alt="Trent B. Thomas" />
   <div class="profile-body">
     <h3>Trent B. Thomas</h3>
-    <p class="profile-title-line"><em>Crosby Distinguished Postdoctoral Fellow</em></p>
-    <p class="profile-title-line"><em>School of Science Dean's Postdoctoral Fellow</em></p>
+    <p class="profile-title-line"><em>Crosby Distinguished Postdoctoral Research Fellow</em></p>
+    <p class="profile-title-line"><em>School of Science Dean's Postdoctoral Research Fellow</em></p>
     <p class="profile-title-line">Department of Earth, Atmospheric & Planetary Sciences</p>
     <p class="profile-title-line">Massachusetts Institute of Technology</p>
     <p class="profile-title-line"><a href="mailto:tbthomas@mit.edu">tbthomas@mit.edu</a></p>
