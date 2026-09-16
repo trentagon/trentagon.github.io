@@ -30,7 +30,7 @@ Books are selected based on member suggestions and discussion at each meeting. T
   </thead>
   <tbody>
     <tr>
-      <td>In progress</td>
+      <td>08/21/2026</td>
       <td>Haruki Murakami</td>
       <td><em>Hard-Boiled Wonderland and the End of the World</em></td>
       <td>1985</td>
