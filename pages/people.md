@@ -20,7 +20,7 @@ description: "About Me"
       <li><strong>Ph.D.</strong> Earth and Space Sciences and Astrobiology (Dual-Title), University of Washington, Seattle, 2026</li>
       <li><strong>B.S.</strong> Astrophysics, UCLA, 2020</li>
       <li><a href="/assets/TThomas_CV_pdf.pdf" target="_blank">Curriculum Vitae (PDF)</a></li>
-      <li><a href="https://scholar.google.com/citations?user=e_IjiKcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://scholar.google.com/citations?user=fzro7sIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
     </ul>
   </div>
 </div>
