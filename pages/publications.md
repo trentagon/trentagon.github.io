@@ -52,7 +52,7 @@ Below are my publications and open-source code. For more, see my <a href="https:
     </tr>
     <tr>
       <td>
-        <strong>Thomas, T. B.</strong>, &amp; Catling, D.C. <em>Three-stage Formation of Cap Carbonates after Marinoan Snowball Glaciations Consistent with Depositional Timescales and Geochemistry</em>. 2024. <a href="https://www.nature.com/articles/s41467-024-51412-8" target="_blank">Nature Communications</a>, <a href="https://arxiv.org/abs/2408.10179" target="_blank">arXiv</a>.
+        <strong>Thomas, T. B.</strong>, &amp; Catling, D.C. <em>Three-stage Formation of Cap Carbonates after Marinoan Snowball Glaciation Consistent with Depositional Timescales and Geochemistry</em>. 2024. <a href="https://www.nature.com/articles/s41467-024-51412-8" target="_blank">Nature Communications</a>, <a href="https://arxiv.org/abs/2408.10179" target="_blank">arXiv</a>.
       </td>
       <td class="pub-code">
         <a href="https://github.com/trentagon/goose" target="_blank">GitHub</a>, <a href="https://doi.org/10.5281/zenodo.12786460" target="_blank">Zenodo</a>
